@@ -418,6 +418,7 @@
     transition:opacity .15s ease;
   }
   .logo-card img:hover{opacity:1}
+  .logo-card img[alt="Babson College"]{height:96px}
   .logo-note{text-align:center;color:var(--chalk-dim);font-size:.82rem;margin-top:10px;font-style:italic}
   .logo-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}
   .logo-ph{
