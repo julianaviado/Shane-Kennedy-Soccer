@@ -536,7 +536,6 @@
     nav .brand-logo{height:16px}
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
-    .split.flip > .split-img{order:0}
     .band .img-ph{height:240px}
     .map-wrap{grid-template-columns:1fr;gap:24px}
   }
