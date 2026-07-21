@@ -149,8 +149,8 @@
     margin:18px auto 0;
     line-height:1.05;
   }
-  .hero h1 em{font-style:normal;color:var(--accent);display:block;white-space:nowrap}
-  .hero h1 .line1{display:block;white-space:nowrap}
+  .hero h1 em{font-style:normal;color:var(--accent);display:block}
+  .hero h1 .line1{display:block}
   .hero-sub{
     font-size:clamp(1.05rem,2.4vw,1.3rem);
     color:var(--chalk-dim);max-width:50ch;margin:22px auto 0;font-weight:400;
@@ -378,6 +378,19 @@
   /* split section image+text */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
   .split.flip > .split-img{order:2}
+  /* audience blocks */
+  .audiences .aud{padding:26px 0}
+  .audiences .aud + .aud{border-top:1px solid var(--line)}
+  .aud h3{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3.4vw,2.1rem);color:var(--chalk);margin-top:12px;line-height:1.08}
+  .aud p{color:var(--chalk-dim);margin-top:14px;max-width:52ch}
+  .aud .aud-img{width:100%;aspect-ratio:4/3;border:2px dashed var(--line);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
+    color:var(--chalk-dim);font-size:.82rem}
+  .aud .aud-img .ph{color:var(--signal-text);letter-spacing:.04em}
+  .aud .cta-line{margin-top:18px}
+  .aud .cta-line a{color:var(--signal-text);font-weight:600;text-decoration:none;font-family:'Oswald',sans-serif;
+    text-transform:uppercase;letter-spacing:.08em;font-size:.82rem}
+  .aud .cta-line a:hover{text-decoration:underline}
 
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
@@ -447,11 +460,6 @@
   .form-status.ok{color:#4ade80}
   .form-status.err{color:#ff6b6b}
 
-  /* ---------- offer / who it's for ---------- */
-  .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px}
-  .who{border:1px solid var(--line);border-radius:3px;padding:28px;background:var(--pitch-dark)}
-  .who h3{font-size:clamp(1rem,2vw,1.05rem);color:var(--signal-text)}
-  .who p{color:var(--chalk-dim);font-size:.94rem;margin-top:10px}
 
   /* ---------- CTA / book ---------- */
   .book{background:var(--pitch);border-top:3px solid var(--royal);color:var(--chalk);text-align:center;padding:88px 0}
@@ -486,7 +494,6 @@
     .cred-grid{grid-template-columns:1fr}
     .proof-grid{grid-template-columns:1fr}
     .voices-grid{grid-template-columns:1fr}
-    .who-grid{grid-template-columns:1fr}
     .nav-links a:not(.nav-cta){display:none}
     .nav-links{gap:10px}
     .nav-links a.nav-cta{padding:9px 14px;font-size:.82rem}
@@ -533,13 +540,13 @@
 <header class="hero">
   <div class="wrap hero-inner">
     <p class="eyebrow">Marin, CA · Limited spots</p>
-    <h1><span class="line1">Play with confidence.</span><em>Train with Shane.</em></h1>
+    <h1><span class="line1">Play with confidence.</span><em>Train with Coach Shane.</em></h1>
     <p class="hero-sub">Get specialized goalkeeper coaching from a record-setting NCAA keeper, New York Cosmos alum, and CIF Coach of the Year.</p>
     <div class="hero-cta-row">
       <a href="#book" class="btn btn-primary">Book a Session</a>
       <a href="#record" class="btn btn-ghost">See the Record</a>
     </div>
-    <p class="trigger"><b>Play with confidence.</b> 1-on-1 and small-group keeper training · All ages, all levels</p>
+    <p class="trigger">1-on-1 and small-group · boys &amp; girls, all ages and levels</p>
     <div class="hero-photo">
       <img class="img-ph photo" src="assets/images/IMG_0216.WEBP" alt="Goalkeeper making a full-extension diving save" loading="eager">
     </div>
@@ -578,7 +585,7 @@
   <div class="wrap">
     <p class="eyebrow">Why private coaching</p>
     <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:24ch">Team practice can't give one player the attention they need.</h2>
-    <p style="color:var(--chalk-dim);margin-top:18px;max-width:64ch">In a squad of twenty, your player gets a fraction of the coaching, and the details that actually move their game rarely get touched. One-on-one and small-group sessions with Shane fix that, for any position.</p>
+    <p style="color:var(--chalk-dim);margin-top:18px;max-width:64ch">In a squad of twenty, your player gets a fraction of the coaching, and the details that actually move their game rarely get touched. One-on-one and small-group sessions with Coach Shane fix that, for any position.</p>
     <div class="pillar-grid" style="margin-top:34px">
       <div class="pillar">
         <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
@@ -601,7 +608,88 @@
         <p>Composure, confidence, and how to reset after a mistake, the part almost no one coaches.</p>
       </div>
     </div>
-    <p style="color:var(--chalk-dim);margin-top:26px;max-width:64ch">And where a player wants it, Shane goes deepest on the position he knows better than anyone: <b>goalkeeper</b>, the one spot most team coaches were never trained to teach. Explore it below.</p>
+    <p style="color:var(--chalk-dim);margin-top:26px;max-width:64ch">And where a player wants it, Coach Shane goes deepest on the position he knows better than anyone: <b>goalkeeper</b>, the one spot most team coaches were never trained to teach. Explore it below.</p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="creds audiences">
+  <div class="wrap">
+    <p class="eyebrow">Who Coach Shane coaches</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;margin-bottom:12px">Wherever your player is, there's a next step.</h2>
+
+    <div class="aud">
+      <div class="split">
+        <div class="split-text">
+          <p class="eyebrow">Just starting out</p>
+          <h3>The habits they build now are the ones they keep.</h3>
+          <p>The first few years decide whether a player falls in love with the game or quietly drifts away from it. Coach Shane gives young players a clean first touch and real technique from the start, so the fundamentals become second nature instead of something to unlearn later. They leave sessions wanting to play more, not less.</p>
+          <p class="cta-line"><a href="#book">Book a first session →</a></p>
+        </div>
+        <div class="split-img">
+          <div class="aud-img"><span><span class="ph">IMAGE</span><br>young player learning the ball · landscape 4:3</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="aud">
+      <div class="split flip">
+        <div class="split-img">
+          <div class="aud-img"><span><span class="ph">IMAGE</span><br>high school player in a match · landscape 4:3</span></div>
+        </div>
+        <div class="split-text">
+          <p class="eyebrow">Chasing a starting spot</p>
+          <h3>Show up to tryouts as the obvious pick.</h3>
+          <p>The gap between the bench and the starting eleven is rarely fitness. It's the details, positioning, decisions, the reads a team coach never has time to teach one player. Coach Shane works those with your player one-on-one, so when the roster gets cut, the coach already knows exactly what they bring.</p>
+          <p class="cta-line"><a href="#book">Get ready for the season →</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="aud">
+      <div class="split">
+        <div class="split-text">
+          <p class="eyebrow">Recruiting &amp; college</p>
+          <h3>Stop guessing whether you're good enough.</h3>
+          <p>You've sent the emails and paid for the camps, and you still can't tell if a single coach is watching. Coach Shane coaches at the college level and knows what recruiters actually look for in your position. He'll tell you honestly where you stand, then build the specific game that gets you seen, so recruiting stops feeling like shouting into the dark.</p>
+          <p class="cta-line"><a href="#book">Start your recruiting plan →</a></p>
+        </div>
+        <div class="split-img">
+          <div class="aud-img"><span><span class="ph">IMAGE</span><br>college-track player in action · landscape 4:3</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALL POSITIONS -->
+<section class="pillars" id="allpositions">
+  <div class="wrap">
+    <p class="eyebrow">Every position on the field</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">From making the goal to saving it, and everything in between.</h2>
+    <p style="color:var(--chalk-dim);margin-top:16px;max-width:60ch">Whatever your player plays, Coach Shane coaches the details their role actually demands, the same fundamentals that made his teams among the hardest in the league to beat.</p>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <span class="pnum">Defenders</span>
+        <h3>Back line</h3>
+        <p>Positioning, 1-v-1 defending, clean first touch under pressure, and playing out of the back with composure.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Midfield</span>
+        <h3>The engine</h3>
+        <p>Receiving on the half-turn, scanning before the ball arrives, passing range, and controlling tempo in both directions.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Attackers</span>
+        <h3>Final third</h3>
+        <p>First touch into space, finishing with both feet, movement off the ball, and the decision-making that creates chances.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Every player</span>
+        <h3>The whole game</h3>
+        <p>Technique, game intelligence, fitness, and the confidence to try things, the foundation every position is built on.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -695,42 +783,11 @@
   })();
 </script>
 
-<!-- ALL POSITIONS -->
-<section class="pillars" id="allpositions">
-  <div class="wrap">
-    <p class="eyebrow">Every position on the field</p>
-    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Goalkeeping is the specialty. Soccer is the whole job.</h2>
-    <p style="color:var(--chalk-dim);margin-top:16px;max-width:60ch">Field players build the same fundamentals that made Shane's teams among the hardest in the league to beat.</p>
-    <div class="pillar-grid">
-      <div class="pillar">
-        <span class="pnum">Defenders</span>
-        <h3>Back line</h3>
-        <p>Positioning, 1-v-1 defending, clean first touch under pressure, and playing out of the back with composure.</p>
-      </div>
-      <div class="pillar">
-        <span class="pnum">Midfield</span>
-        <h3>The engine</h3>
-        <p>Receiving on the half-turn, scanning before the ball arrives, passing range, and controlling tempo in both directions.</p>
-      </div>
-      <div class="pillar">
-        <span class="pnum">Attackers</span>
-        <h3>Final third</h3>
-        <p>First touch into space, finishing with both feet, movement off the ball, and the decision-making that creates chances.</p>
-      </div>
-      <div class="pillar">
-        <span class="pnum">Every player</span>
-        <h3>The whole game</h3>
-        <p>Technique, game intelligence, fitness, and the confidence to try things, the foundation every position is built on.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CREDENTIALS -->
 <section class="creds" id="about">
   <div class="wrap">
-    <p class="eyebrow">The résumé behind the coaching</p>
-    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:18ch">He didn't read about the position. He set records in it.</h2>
+    <p class="eyebrow">Meet Coach Shane</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:20ch">A record-setting keeper. A championship-winning coach.</h2>
     <div class="img-ph" style="margin-top:28px;max-width:560px">
       <span><span class="ph">PHOTO OF SHANE</span><br>Headshot or coaching portrait. This is the trust anchor, so use a real, recent photo. Landscape 3:2</span>
     </div>
@@ -752,13 +809,13 @@
     <div class="split">
       <div class="split-img">
         <div class="img-ph tall">
-          <span><span class="ph">IMAGE</span><br>Shane demonstrating technique with a keeper · portrait 4:5</span>
+          <span><span class="ph">IMAGE</span><br>Coach Shane demonstrating technique with a keeper · portrait 4:5</span>
         </div>
       </div>
       <div>
         <p class="eyebrow">Coaching philosophy</p>
         <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Development is the goal.</h2>
-        <p style="color:var(--chalk-dim);margin-top:18px">Shane has coached players privately since 2008 and led high school and club teams to titles. He works with every kind of player, and goes deepest on the position he knows better than anyone.</p>
+        <p style="color:var(--chalk-dim);margin-top:18px">Coach Shane has coached players privately since 2008 and led high school and club teams to titles. He works with every kind of player, and goes deepest on the position he knows better than anyone.</p>
         <p style="color:var(--chalk-dim);margin-top:14px">Every player gets the individual attention a team setting can't give: technique, position-specific work, game intelligence, and the mental side that almost no one coaches. And when a player commits to goalkeeping, they train with someone who set records in the position and coaches it at the college level.</p>
         <p style="color:var(--chalk-dim);margin-top:14px">The measure of success is development, not the scoreline. A player who competes, works hard, and gets a little better every session is doing it right, win or lose.</p>
         <div class="phil-stats">
@@ -783,23 +840,23 @@
 <!-- COACHING PROOF -->
 <section class="pillars">
   <div class="wrap">
-    <p class="eyebrow">What Shane builds</p>
+    <p class="eyebrow">What Coach Shane builds</p>
     <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Three things every player leaves with.</h2>
     <div class="pillar-grid">
       <div class="pillar">
         <span class="pnum">01</span>
         <h3>Confidence</h3>
-        <p>Confidence is a trainable skill, not something a player is born with. Fear of failure holds players back, so Shane builds the habits and the composure to play free, take risks, and step on the field expecting to compete.</p>
+        <p>Confidence is a trainable skill, not something a player is born with. Fear of failure holds players back, so Coach Shane builds the habits and the composure to play free, take risks, and step on the field expecting to compete.</p>
       </div>
       <div class="pillar">
         <span class="pnum">02</span>
         <h3>Individuality</h3>
-        <p>Every player comes in at a different point, with a different body, personality, and set of strengths. Shane coaches the player in front of him and gives their game the room and the time it needs to grow.</p>
+        <p>Every player comes in at a different point, with a different body, personality, and set of strengths. Coach Shane coaches the player in front of him and gives their game the room and the time it needs to grow.</p>
       </div>
       <div class="pillar">
         <span class="pnum">03</span>
         <h3>Leadership</h3>
-        <p>The best players lift the team around them. Shane develops the composure to organize teammates, communicate under pressure, and lead by example, on the field and off it.</p>
+        <p>The best players lift the team around them. Coach Shane develops the composure to organize teammates, communicate under pressure, and lead by example, on the field and off it.</p>
       </div>
     </div>
   </div>
@@ -828,7 +885,7 @@
   <div class="wrap">
     <p class="eyebrow">Win or lose</p>
     <blockquote>"I believe you can win and play well. I believe you can lose and play well. If you competed, and you gave the effort, I'm fine with that."</blockquote>
-    <p class="cite">What Shane tells a keeper after a hard result, the same thing a great coach once told him</p>
+    <p class="cite">What Coach Shane tells a keeper after a hard result, the same thing a great coach once told him</p>
   </div>
 </section>
 
@@ -845,28 +902,28 @@
         <p class="eyebrow">What we build</p>
         <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Confidence is a trainable skill.</h2>
         <p style="color:var(--chalk-dim);margin-top:18px">Every player faces the moment after a mistake, when the head is still on the last play and the next one is already coming. Telling a young player to "just be confident" is not coaching.</p>
-        <p style="color:var(--chalk-dim);margin-top:14px">Shane develops the mental game alongside the technical one: composure, focus, and a reset that turns one bad moment into a fresh start. The chart below shows how a young goalkeeper grows under real coaching. Tap the chart to explore.</p>
+        <p style="color:var(--chalk-dim);margin-top:14px">Coach Shane develops the mental game alongside the technical one: composure, focus, and a reset that turns one bad moment into a fresh start. The chart below shows how a young goalkeeper grows under real coaching. Tap the chart to explore.</p>
       </div>
 
       <div class="radar-open">
         <div class="radar-legend">
           <span><i class="sw-dash" style="border-color:#8b9099"></i>Untrained keeper</span>
-          <span><i class="sw-solid" style="background:#FF3C00"></i>After training with Shane</span>
+          <span><i class="sw-solid" style="background:#FF3C00"></i>After training with Coach Shane</span>
         </div>
         <div class="radar-canvas-box">
-          <canvas id="skillRadar" role="img" aria-label="Radar chart of seven goalkeeper skills before and after training with Shane: footwork, set and positioning, command of the box, one-v-one and breakaways, distribution, confidence and reset, and communication.">Footwork, positioning, command of the box, 1-v-1, distribution, confidence, and communication all rise after training.</canvas>
+          <canvas id="skillRadar" role="img" aria-label="Radar chart of seven goalkeeper skills before and after training with Coach Shane: footwork, set and positioning, command of the box, one-v-one and breakaways, distribution, confidence and reset, and communication.">Footwork, positioning, command of the box, 1-v-1, distribution, confidence, and communication all rise after training.</canvas>
         </div>
         <div class="radar-toggle" role="group" aria-label="Choose which keeper to show">
           <button id="rBefore" type="button" aria-pressed="false" onclick="setRadar('before')">Before</button>
-          <button id="rAfter" class="on" type="button" aria-pressed="true" onclick="setRadar('after')">After Shane</button>
+          <button id="rAfter" class="on" type="button" aria-pressed="true" onclick="setRadar('after')">After Coach Shane</button>
           <button id="rBoth" type="button" aria-pressed="false" onclick="setRadar('both')">Compare</button>
         </div>
-        <p id="radarStatus" class="sr-only" aria-live="polite">Showing skills after training with Shane.</p>
+        <p id="radarStatus" class="sr-only" aria-live="polite">Showing skills after training with Coach Shane.</p>
         <p class="radar-disclaimer">
           Center to edge: developing to elite · illustrative comparison
           <span class="tip" tabindex="0" role="button" aria-label="What does illustrative mean?">
             <i aria-hidden="true">i</i>
-            <span class="tip-bubble">Each spoke is a goalkeeping skill. The closer a point sits to the outer ring, the stronger that skill. This chart shows the skills Shane develops in a young keeper and the kind of growth coaching builds. It is illustrative and does not represent measured data from any one player.</span>
+            <span class="tip-bubble">Each spoke is a goalkeeping skill. The closer a point sits to the outer ring, the stronger that skill. This chart shows the skills Coach Shane develops in a young keeper and the kind of growth coaching builds. It is illustrative and does not represent measured data from any one player.</span>
           </span>
         </p>
       </div>
@@ -935,7 +992,7 @@
       };
       var chart=new Chart(document.getElementById('skillRadar'),{
         type:'radar',
-        data:{labels:LABELS,datasets:[ds('After Shane',AFTER,GOLD,'rgba(255,60,0,.22)',false)]},
+        data:{labels:LABELS,datasets:[ds('After Coach Shane',AFTER,GOLD,'rgba(255,60,0,.22)',false)]},
         options:common
       });
       window.__refreshChartTheme=function(){
@@ -961,11 +1018,11 @@
       }
       window.setRadar=function(v){
         if(v==='before'){chart.data.datasets=[ds('Untrained keeper',BEFORE,GRAY,'rgba(154,163,154,.20)',true)];setOn('rBefore');say('Showing skills of an untrained keeper.');}
-        else if(v==='after'){chart.data.datasets=[ds('After Shane',AFTER,GOLD,'rgba(255,60,0,.22)',false)];setOn('rAfter');say('Showing skills after training with Shane.');}
+        else if(v==='after'){chart.data.datasets=[ds('After Coach Shane',AFTER,GOLD,'rgba(255,60,0,.22)',false)];setOn('rAfter');say('Showing skills after training with Coach Shane.');}
         else{chart.data.datasets=[
-          ds('After Shane',AFTER,GOLD,'rgba(255,60,0,.16)',false),
+          ds('After Coach Shane',AFTER,GOLD,'rgba(255,60,0,.16)',false),
           ds('Untrained keeper',BEFORE,GRAY,'rgba(154,163,154,.06)',true)
-        ];setOn('rBoth');say('Comparing an untrained keeper with a keeper after training with Shane.');}
+        ];setOn('rBoth');say('Comparing an untrained keeper with a keeper after training with Coach Shane.');}
         chart.update();
       };
     }
@@ -981,7 +1038,7 @@
     <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Players compete for him. Coaches send players to him.</h2>
     <div class="voices-grid">
       <div class="voice">
-        <p>"Playing for Shane is always exciting. He expects a lot from you, but puts so much into every team that playing for him becomes such a joy."</p>
+        <p>"Playing for Coach Shane is always exciting. He expects a lot from you, but puts so much into every team that playing for him becomes such a joy."</p>
         <div class="who-said">Emlen Janetos<span>Four-year varsity player, Tamalpais High</span></div>
       </div>
       <div class="voice">
@@ -989,7 +1046,7 @@
         <div class="who-said">Tyler Gottschalk<span>Head Coach, Branson School</span></div>
       </div>
       <div class="voice">
-        <p>"More than anything, Shane has been a mentor and a guy I have the utmost respect for, someone I leaned on for advice in my first years coaching."</p>
+        <p>"More than anything, Coach Shane has been a mentor and a guy I have the utmost respect for, someone I leaned on for advice in my first years coaching."</p>
         <div class="who-said">Dustin Nygaard<span>Former Tam High Head Coach</span></div>
       </div>
       <div class="voice">
@@ -998,32 +1055,6 @@
       </div>
     </div>
     <p class="voice-note">Coach and player comments as reported by the Marin Independent Journal and Staples Soccer. More reviews from Shane Kennedy Soccer clients coming soon.</p>
-  </div>
-</section>
-
-<!-- WHO IT'S FOR -->
-<section class="creds">
-  <div class="wrap">
-    <p class="eyebrow">Who trains here</p>
-    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Built for the player. Picked by the parent.</h2>
-    <div class="who-grid">
-      <div class="who">
-        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>young player</span></div>
-        <h3>The young player</h3><p>New to the game or just getting serious. Build a clean first touch, sound technique, and a love for the ball the right way, before bad habits set in.</p>
-      </div>
-      <div class="who">
-        <img class="img-ph square photo" style="margin-bottom:18px;object-position:35% 35%" src="assets/images/IMG_0218.WEBP" alt="Club and high school player striking the ball in a match" loading="lazy">
-        <h3>The club &amp; HS competitor</h3><p>Already competing and tired of plateauing. Sharper technique, smarter positioning, and the position-specific details that move a player from the bench toward the starting lineup.</p>
-      </div>
-      <div class="who">
-        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>college-track player</span></div>
-        <h3>The college hopeful</h3><p>You've sent the emails and been to the camps, and you still don't know if a coach is watching. Train with someone who coaches at the college level, knows what recruiters look for in your position, and will tell you the truth about where you stand.</p>
-      </div>
-      <div class="who">
-        <img class="img-ph square photo" style="margin-bottom:18px;object-position:50% 25%" src="assets/images/IMG_0216.WEBP" alt="Goalkeeper making a diving save" loading="lazy">
-        <h3>The goalkeeper</h3><p>The specialty. Footwork, angles, command of the box, distribution, and the mental reset, coached by a record-setting NCAA keeper who develops the whole position most team coaches were never trained to teach.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1039,7 +1070,7 @@
       </details>
       <details class="faq">
         <summary>How long is a session, and how often should we train?<span class="chev" aria-hidden="true"></span></summary>
-        <p class="faq-body">Private sessions run 60 minutes; group sessions run 90. Most players train once or twice a week. Shane will set a cadence that fits your season, your club schedule, and your goals, whether that's steady development or a recruiting push.</p>
+        <p class="faq-body">Private sessions run 60 minutes; group sessions run 90. Most players train once or twice a week. Coach Shane will set a cadence that fits your season, your club schedule, and your goals, whether that's steady development or a recruiting push.</p>
       </details>
       <details class="faq">
         <summary>My player already trains with their club. Why add private sessions?<span class="chev" aria-hidden="true"></span></summary>
@@ -1047,15 +1078,15 @@
       </details>
       <details class="faq">
         <summary>Is my kid good enough, or too new, for this?<span class="chev" aria-hidden="true"></span></summary>
-        <p class="faq-body">Every player is welcome, from a first-timer to a college-bound starter. Shane builds each session around the player in front of him, newer players learn the fundamentals before bad habits set in, and experienced players sharpen the details that move their game.</p>
+        <p class="faq-body">Every player is welcome, from a first-timer to a college-bound starter. Coach Shane builds each session around the player in front of him, newer players learn the fundamentals before bad habits set in, and experienced players sharpen the details that move their game.</p>
       </details>
       <details class="faq">
         <summary>Do you actually help players get recruited?<span class="chev" aria-hidden="true"></span></summary>
-        <p class="faq-body"><span class="ph">PLACEHOLDER: confirm with Shane which players/commits can be named</span>. Shane coaches at the college level and has helped players in multiple positions move on to college soccer. He knows what recruiters look for and prepares players for the moment a coach is watching.</p>
+        <p class="faq-body"><span class="ph">PLACEHOLDER: confirm with Coach Shane which players/commits can be named</span>. Coach Shane coaches at the college level and has helped players in multiple positions move on to college soccer. He knows what recruiters look for and prepares players for the moment a coach is watching.</p>
       </details>
       <details class="faq">
         <summary>My player lost confidence after a rough season. Can that be trained?<span class="chev" aria-hidden="true"></span></summary>
-        <p class="faq-body">Yes. Confidence is a trainable skill, not something a player either has or doesn't. Shane works on the routine before the moment, the reset after a mistake, and the composure to keep competing, so one bad play stops becoming three and your player steps on the field expecting to do well.</p>
+        <p class="faq-body">Yes. Confidence is a trainable skill, not something a player either has or doesn't. Coach Shane works on the routine before the moment, the reset after a mistake, and the composure to keep competing, so one bad play stops becoming three and your player steps on the field expecting to do well.</p>
       </details>
       <details class="faq">
         <summary>Do you coach all positions, or just goalkeepers?<span class="chev" aria-hidden="true"></span></summary>
@@ -1071,11 +1102,11 @@
       </details>
       <details class="faq">
         <summary>What should my player bring to a session?<span class="chev" aria-hidden="true"></span></summary>
-        <p class="faq-body"><span class="ph">PLACEHOLDER: confirm what to bring</span>. e.g. "Cleats, shin guards, water, and a ball, plus gloves for goalkeepers. Shane brings the rest."</p>
+        <p class="faq-body"><span class="ph">PLACEHOLDER: confirm what to bring</span>. e.g. "Cleats, shin guards, water, and a ball, plus gloves for goalkeepers. Coach Shane brings the rest."</p>
       </details>
       <details class="faq">
         <summary>How do we get started?<span class="chev" aria-hidden="true"></span></summary>
-        <p class="faq-body">Fill out the booking request below with your player's age, position, and what you want to work on. Shane will follow up to confirm a time and location and to talk through where your player is now and where they want to be.</p>
+        <p class="faq-body">Fill out the booking request below with your player's age, position, and what you want to work on. Coach Shane will follow up to confirm a time and location and to talk through where your player is now and where they want to be.</p>
       </details>
     </div>
   </div>
@@ -1087,7 +1118,7 @@
     <button class="book-close" id="bookClose" aria-label="Close booking form" type="button">&times;</button>
     <p class="eyebrow">Marin County</p>
     <h2 id="bookModalTitle">Book a private session.</h2>
-    <p class="book-intro">Tell Shane about your player and what you want to work on. He'll follow up to confirm a time.</p>
+    <p class="book-intro">Tell Coach Shane about your player and what you want to work on. He'll follow up to confirm a time.</p>
 
     <div class="form-wrap">
       <div class="form-row">
@@ -1097,7 +1128,7 @@
         </div>
         <div class="field">
           <label for="contact">Phone or email</label>
-          <input id="contact" type="text" autocomplete="email" placeholder="How should Shane reach you?">
+          <input id="contact" type="text" autocomplete="email" placeholder="How should Coach Shane reach you?">
         </div>
       </div>
 
@@ -1117,7 +1148,7 @@
           <label for="format">Session format</label>
           <select id="format">
             <option value="" disabled selected>Select…</option>
-            <!-- PLACEHOLDER: confirm formats Shane offers -->
+            <!-- PLACEHOLDER: confirm formats Coach Shane offers -->
             <option>1-on-1 private</option>
             <option>Small group (2 to 4 players)</option>
             <option>Goalkeeper session (specialty)</option>
@@ -1148,6 +1179,7 @@
       </div>
 
       <button class="form-submit" id="bookBtn" type="button">Request My Session</button>
+      <p class="click-trigger" style="text-align:center;margin-top:12px;font-size:.85rem;color:var(--chalk-dim)">This is a request, not a payment. Coach Shane replies to every one personally.</p>
       <p class="form-status" id="formStatus"></p>
 
       <p class="triggers" style="margin-top:18px;text-align:center">
@@ -1193,7 +1225,7 @@
       })
       .then(function(res){
         if(!res.ok) throw new Error('Request failed');
-        setStatus("Thanks, your request is in. Shane will follow up to confirm a time.", true);
+        setStatus("Thanks, your request is in. Coach Shane will follow up to confirm a time.", true);
         btn.textContent = 'Request Sent ✓';
       })
       .catch(function(){
