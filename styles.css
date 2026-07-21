@@ -510,6 +510,7 @@
   .foot-bottom a{color:var(--chalk-dim);text-decoration:none;margin-left:16px}
   .foot-bottom a:hover{color:var(--signal-text)}
   .legal-page{display:none;max-width:720px;margin:0 auto;text-align:left}
+  .legal-page.standalone{display:block;padding:48px 0 72px}
   .legal-page:target{display:block;padding:40px 0}
   .legal-page h2{font-size:clamp(1.25rem,3vw,1.5rem);color:var(--chalk)}
   .legal-page p{color:var(--chalk-dim);font-size:.9rem;line-height:1.6;margin-top:14px}
