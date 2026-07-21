@@ -38,6 +38,7 @@
     --nav-bg:rgba(255,255,255,.86);
     --ground:#eaeef3;
     --logo-filter:invert(1); /* wordmark SVG is white-only; flip to black on light backgrounds */
+    --aff-logo-filter:invert(0); /* affiliation logos: greyscale as-is on light backgrounds */
   }
   [data-theme="dark"]{
     --pitch:#0b0d10;
@@ -63,6 +64,7 @@
     --nav-bg:rgba(11,13,16,.86);
     --ground:#050608;
     --logo-filter:none;
+    --aff-logo-filter:invert(1);
   }
   /* AUTO: follow device when no manual choice set */
   @media (prefers-color-scheme: dark){
@@ -72,7 +74,7 @@
       --royal:#00BFFF; --royal-deep:#00A6DE; --ink:#0e1116; --line:rgba(255,255,255,.16);
       --card:#111417; --field-bg:#0e1116; --field-text:#ffffff;
       --blueprint:#050608; --bp-line:#00BFFF; --bp-line-dim:rgba(0,191,255,.32); --bp-grid:rgba(0,191,255,.10);
-      --nav-bg:rgba(11,13,16,.86); --ground:#050608; --logo-filter:none;
+      --nav-bg:rgba(11,13,16,.86); --ground:#050608; --logo-filter:none; --aff-logo-filter:invert(1);
     }
   }
 
@@ -380,13 +382,14 @@
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
   .aff-group{text-align:center}
-  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px}
-  .logo-card{
-    display:inline-flex;align-items:center;justify-content:center;
-    background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;
-    padding:12px 20px;box-shadow:0 1px 3px rgba(0,0,0,.12);
+  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:36px}
+  .logo-card{display:inline-flex;align-items:center;justify-content:center}
+  .logo-card img{
+    height:42px;width:auto;max-width:150px;display:block;object-fit:contain;
+    filter:grayscale(1) var(--aff-logo-filter,invert(0));opacity:.8;
+    transition:opacity .15s ease;
   }
-  .logo-card img{height:36px;width:auto;max-width:150px;display:block;object-fit:contain}
+  .logo-card img:hover{opacity:1}
   .logo-note{text-align:center;color:var(--chalk-dim);font-size:.82rem;margin-top:10px;font-style:italic}
   .logo-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}
   .logo-ph{
