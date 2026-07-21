@@ -118,6 +118,7 @@
   }
   .brand{display:inline-flex;align-items:center}
   .brand-logo{height:34px;width:auto;display:block;filter:var(--logo-filter);transition:filter .15s ease}
+  nav .brand-logo{height:20px}
   .nav-links a.nav-cta{
     font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-size:.82rem;font-weight:600;
@@ -165,7 +166,9 @@
   .btn-primary:hover{transform:translateY(-2px);background:var(--signal-deep)}
   .btn-ghost{background:var(--card);border:1.5px solid var(--chalk);color:var(--chalk)}
   .btn-ghost:hover{border-color:var(--signal-text);color:var(--signal-text);background:var(--card)}
-  .trigger{margin-top:16px;font-size:.82rem;color:var(--chalk-dim);letter-spacing:.04em}
+  .trigger{margin-top:16px;font-size:.82rem;color:var(--chalk-dim);letter-spacing:.04em;display:flex;justify-content:center;gap:8px 20px;flex-wrap:wrap}
+  .trigger .tick{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+  .trigger .tick svg{width:16px;height:16px;flex:0 0 auto;color:var(--chalk)}
   .trigger b{color:var(--chalk)}
 
   /* ---------- record strip ---------- */
@@ -292,6 +295,17 @@
   .pillar{border:1px solid var(--line);border-radius:5px;padding:28px 24px;background:var(--pitch)}
   .pillar .pnum{font-family:'Oswald',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--signal-text)}
   .pillar .pmotif{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,191,255,.12);color:var(--signal);margin-bottom:14px}
+  /* why private coaching (centered, borderless) */
+  .why-head{text-align:center;max-width:64ch;margin:0 auto}
+  .why-head h2{font-size:clamp(2rem,5vw,3rem)}
+  .why-head .why-sub{color:var(--chalk-dim);margin-top:14px;font-size:1.05rem;font-weight:500}
+  .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:44px 28px;margin-top:56px;text-align:center}
+  .why-item .wicon{display:inline-flex;color:var(--signal);margin-bottom:20px}
+  .why-item .wicon svg{width:64px;height:64px}
+  .why-item h3{font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,3vw,1.8rem);color:var(--chalk)}
+  .why-item .why-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:.95rem;color:var(--chalk);margin-top:10px}
+  .why-item p{color:var(--chalk-dim);font-size:.95rem;line-height:1.6;margin:12px auto 0;max-width:34ch}
+  .why-outro{color:var(--chalk-dim);margin:52px auto 0;max-width:64ch;text-align:center}
   .pillar h3{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,2.6vw,1.45rem);color:var(--chalk);margin-top:10px}
   .pillar p{color:var(--chalk-dim);font-size:.92rem;line-height:1.55;margin-top:10px}
   .phil-stat .psn{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(1.4rem,3.4vw,1.6rem);color:var(--signal-text);line-height:1}
@@ -304,10 +318,14 @@
   .proof p{margin-top:12px;color:var(--chalk-dim)}
   .proof p b{color:var(--chalk)}
 
-  /* ---------- quote ---------- */
-  .quote{padding:90px 0;text-align:center;position:relative}
-  .quote blockquote{font-family:'Oswald',sans-serif;font-weight:500;text-transform:none;
-    font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;max-width:24ch;margin:0 auto;letter-spacing:.005em}
+  /* ---------- quote over action band ---------- */
+  .quote-band{position:relative;padding:0;overflow:hidden}
+  .quote-band .band-img{width:100%;height:520px;object-fit:cover;display:block}
+  .quote-band::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.62)}
+  .quote-band .band-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px}
+  .quote-band blockquote{font-family:'Oswald',sans-serif;font-weight:500;text-transform:none;color:#fff;
+    font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;max-width:24ch;margin:14px auto 0;letter-spacing:.005em}
+  @media(max-width:780px){.quote-band .band-img{height:440px}}
 
   /* ---------- testimonials ---------- */
   .voices{background:var(--pitch)}
@@ -386,6 +404,7 @@
   .audiences .aud + .aud{border-top:1px solid var(--line)}
   .aud h3{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3.4vw,2.1rem);color:var(--chalk);margin-top:12px;line-height:1.08}
   .aud p{color:var(--chalk-dim);margin-top:14px;max-width:52ch}
+  .aud p.eyebrow{color:var(--royal);margin-top:0}
   .aud .aud-img{width:100%;aspect-ratio:4/3;border:2px dashed var(--line);border-radius:8px;
     display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
     color:var(--chalk-dim);font-size:.82rem}
@@ -395,10 +414,10 @@
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
   .aff-group{text-align:center}
-  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:36px}
+  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:48px}
   .logo-card{display:inline-flex;align-items:center;justify-content:center}
   .logo-card img{
-    height:42px;width:auto;max-width:150px;display:block;object-fit:contain;
+    height:72px;width:auto;max-width:220px;display:block;object-fit:contain;
     filter:grayscale(1) var(--aff-logo-filter,invert(0));opacity:.8;
     transition:opacity .15s ease;
   }
@@ -470,14 +489,21 @@
   .book .triggers{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--chalk-dim);font-weight:600}
   .book .triggers span{margin:0 10px;white-space:nowrap}
 
-  footer{background:var(--pitch-dark);padding:40px 0;border-top:1px solid var(--line);text-align:center}
-  footer .brand-logo{height:30px}
-  footer p{color:var(--chalk-dim);font-size:.85rem;margin-top:12px}
-  .disclaimer{max-width:760px;margin:26px auto 0;padding-top:22px;border-top:1px solid var(--line)}
-  .disclaimer p{color:var(--chalk-dim);font-size:.72rem;line-height:1.6;opacity:.75;margin-top:8px}
-  .foot-links{margin-top:18px;font-size:.78rem}
-  .foot-links a{color:var(--chalk-dim);text-decoration:none;margin:0 10px}
-  .foot-links a:hover{color:var(--signal-text)}
+  footer{background:var(--pitch-dark);padding:64px 0 36px;border-top:1px solid var(--line)}
+  footer .brand-logo{height:38px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;align-items:start}
+  .foot-tag{color:var(--chalk-dim);font-size:.92rem;line-height:1.6;margin-top:18px;max-width:36ch}
+  .foot-head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:600;color:var(--chalk);margin-bottom:6px}
+  .foot-col a{display:block;color:var(--chalk-dim);text-decoration:none;font-size:.92rem;margin-top:12px;transition:color .15s ease}
+  .foot-col a:hover{color:var(--signal-text)}
+  .foot-col p{color:var(--chalk-dim);font-size:.92rem;margin-top:12px}
+  .foot-col a.book-link{text-decoration:underline;text-underline-offset:3px}
+  .foot-note{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--chalk-dim);font-size:.78rem;line-height:1.6;opacity:.8}
+  .foot-note a{color:var(--chalk-dim);text-decoration:underline;text-underline-offset:2px}
+  .foot-note a:hover{color:var(--signal-text)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px;color:var(--chalk-dim);font-size:.82rem}
+  .foot-bottom a{color:var(--chalk-dim);text-decoration:none;margin-left:16px}
+  .foot-bottom a:hover{color:var(--signal-text)}
   .legal-page{display:none;max-width:720px;margin:0 auto;text-align:left}
   .legal-page:target{display:block;padding:40px 0}
   .legal-page h2{font-size:clamp(1.25rem,3vw,1.5rem);color:var(--chalk)}
@@ -487,6 +513,7 @@
 
   /* ---------- responsive ---------- */
   @media(max-width:780px){
+    .foot-grid{grid-template-columns:1fr;gap:34px}
     .record .wrap{grid-template-columns:1fr 1fr}
     .stat{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
     .stat:nth-child(even){border-right:none}
@@ -499,7 +526,7 @@
     .nav-links a.nav-cta{padding:9px 14px;font-size:.82rem}
     .theme-toggle{margin-left:4px;width:34px;height:34px}
     nav .wrap{gap:10px}
-    .brand-logo{height:28px}
+    nav .brand-logo{height:16px}
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
     .split.flip > .split-img{order:0}
@@ -510,7 +537,7 @@
   @media(max-width:430px){
     .wrap{padding-left:16px;padding-right:16px}
     nav .wrap{gap:8px}
-    .brand-logo{height:24px}
+    nav .brand-logo{height:13px}
     .nav-links{gap:8px}
     .nav-links a.nav-cta{padding:8px 11px;font-size:.76rem;letter-spacing:.04em}
     .theme-toggle{width:32px;height:32px;margin-left:2px;font-size:.9rem}
@@ -522,7 +549,7 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand"><img class="brand-logo" src="assets/logo/Shane%20Kennedy%20Soccer%20Wordmark.svg" alt="Shane Kennedy Soccer" width="885" height="348"></div>
+    <div class="brand"><img class="brand-logo" src="assets/logo/Shane%20Kennedy%20Soccer%20Wordmark%20One%20Liner.svg" alt="Shane Kennedy Soccer" width="1686" height="176"></div>
     <div class="nav-links">
       <a href="#approach">Approach</a>
       <a href="#about">About</a>
@@ -546,23 +573,16 @@
       <a href="#book" class="btn btn-primary">Book a Session</a>
       <a href="#record" class="btn btn-ghost">See the Record</a>
     </div>
-    <p class="trigger">1-on-1 and small-groups · Boys &amp; girls · All ages and levels</p>
+    <p class="trigger">
+      <span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M6 10.3l2.5 2.5L14 7.4" fill="none" stroke="var(--ground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>1-on-1 and small-groups</span>
+      <span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M6 10.3l2.5 2.5L14 7.4" fill="none" stroke="var(--ground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Boys &amp; girls</span>
+      <span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M6 10.3l2.5 2.5L14 7.4" fill="none" stroke="var(--ground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All ages and levels</span>
+    </p>
     <div class="hero-photo">
       <img class="img-ph photo" src="assets/images/IMG_0216.WEBP" alt="Goalkeeper making a full-extension diving save" loading="eager">
     </div>
   </div>
 </header>
-
-<!-- RECORD STRIP -->
-<section class="record" id="record" style="padding:0">
-  <div class="wrap">
-    <div class="stat"><div class="num">41</div><div class="lab">Career shutouts at Babson, a then-NCAA Division III record</div></div>
-    <div class="stat"><div class="num">.910</div><div class="lab">Save % he coached a keeper to, best in all of NCAA D-II that year</div></div>
-    <div class="stat"><div class="num">137</div><div class="lab">Wins as head coach at Tam (137-39-31). CIF Coach of the Year</div></div>
-    <div class="stat"><div class="num">2008</div><div class="lab">Coaching players privately with Shane Kennedy Soccer since</div></div>
-    <div class="stat"><div class="num">Cosmos</div><div class="lab">Drafted by the NASL's New York Cosmos, 1977</div></div>
-  </div>
-</section>
 
 <!-- AFFILIATION STRIP -->
 <section class="logos">
@@ -583,41 +603,43 @@
 <!-- WHY PRIVATE COACHING -->
 <section id="approach" class="approach-bp">
   <div class="wrap">
-    <p class="eyebrow">Why private coaching</p>
-    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px"><span style="display:block">Team practice can't give one player</span><span style="display:block">the attention they need.</span></h2>
-    <p style="color:var(--chalk-dim);margin-top:18px;max-width:64ch">In a squad of twenty, your player gets a fraction of the coaching, and the details that actually move their game rarely get touched. One-on-one and small-group sessions with Coach Shane fix that, for any position.</p>
-    <div class="pillar-grid" style="margin-top:34px">
-      <div class="pillar">
-        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
-        <h3>The fundamentals</h3>
-        <p>First touch, striking, receiving under pressure, the fundamentals cleaned up before bad habits set in.</p>
+    <div class="why-head">
+      <h2>Why private coaching</h2>
+      <p class="why-sub">Team practice can't give one player the attention they need.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="wicon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+        <h3>Fundamentals</h3>
+        <p class="why-tag">Clean technique from the start</p>
+        <p>First touch, striking, and receiving under pressure, cleaned up before bad habits set in.</p>
       </div>
-      <div class="pillar">
-        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="1.5"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="7" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+      <div class="why-item">
+        <span class="wicon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><rect x="4" y="3.5" width="16" height="17" rx="1.5"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="12" cy="12" r="3"/><circle cx="12" cy="7" r="1.2" fill="currentColor" stroke="none"/></svg></span>
         <h3>Their role</h3>
+        <p class="why-tag">Position-specific training</p>
         <p>Whether they play the back line, midfield, up top, or in goal, the reads and movements their role actually demands.</p>
       </div>
-      <div class="pillar">
-        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <div class="why-item">
+        <span class="wicon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M2.5 12S6 5.8 12 5.8 21.5 12 21.5 12 18 18.2 12 18.2 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3"/></svg></span>
         <h3>Reading the play</h3>
+        <p class="why-tag">Game intelligence</p>
         <p>Decisions, positioning, and how to read the play a step ahead.</p>
       </div>
-      <div class="pillar">
-        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12a7.5 7.5 0 0 1 12.8-5.3M19.5 12a7.5 7.5 0 0 1-12.8 5.3"/><path d="M17.3 3.2v3.9h-3.9M6.7 20.8v-3.9h3.9"/></svg></span>
+      <div class="why-item">
+        <span class="wicon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12a7.5 7.5 0 0 1 12.8-5.3M19.5 12a7.5 7.5 0 0 1-12.8 5.3"/><path d="M17.3 3.2v3.9h-3.9M6.7 20.8v-3.9h3.9"/></svg></span>
         <h3>The mental game</h3>
-        <p>Composure, confidence, and how to reset after a mistake, the part almost no one coaches.</p>
+        <p class="why-tag">Confidence and composure</p>
+        <p>How to reset after a mistake, the part almost no one coaches.</p>
       </div>
     </div>
-    <p style="color:var(--chalk-dim);margin-top:26px;max-width:64ch">And where a player wants it, Coach Shane goes deepest on the position he knows better than anyone: <b>goalkeeper</b>, the one spot most team coaches were never trained to teach. Explore it below.</p>
+    <p class="why-outro">And where a player wants it, Coach Shane goes deepest on the position he knows better than anyone: <b>goalkeeper</b>, the one spot most team coaches were never trained to teach. Explore it below.</p>
   </div>
 </section>
 
 <!-- WHO IT'S FOR -->
 <section class="creds audiences">
   <div class="wrap">
-    <p class="eyebrow">Who Coach Shane coaches</p>
-    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;margin-bottom:12px">Wherever your player is, there's a next step.</h2>
-
     <div class="aud">
       <div class="split">
         <div class="split-text">
@@ -783,6 +805,17 @@
   })();
 </script>
 
+<!-- RECORD STRIP -->
+<section class="record" id="record" style="padding:0">
+  <div class="wrap">
+    <div class="stat"><div class="num">41</div><div class="lab">Career shutouts at Babson, a then-NCAA Division III record</div></div>
+    <div class="stat"><div class="num">.910</div><div class="lab">Save % he coached a keeper to, best in all of NCAA D-II that year</div></div>
+    <div class="stat"><div class="num">137</div><div class="lab">Wins as head coach at Tam (137-39-31). CIF Coach of the Year</div></div>
+    <div class="stat"><div class="num">2008</div><div class="lab">Coaching players privately with Shane Kennedy Soccer since</div></div>
+    <div class="stat"><div class="num">Cosmos</div><div class="lab">Drafted by the NASL's New York Cosmos, 1977</div></div>
+  </div>
+</section>
+
 <!-- CREDENTIALS -->
 <section class="creds" id="about">
   <div class="wrap">
@@ -815,9 +848,7 @@
   <div class="wrap">
     <div class="split">
       <div class="split-img">
-        <div class="img-ph tall">
-          <span><span class="ph">IMAGE</span><br>Coach Shane demonstrating technique with a keeper · portrait 4:5</span>
-        </div>
+        <img class="img-ph tall photo" src="assets/images/SPORTS_180419883_AR_0_LWWKJLROFMBU.webp" alt="Coach Shane working with a player on the field" loading="lazy">
       </div>
       <div>
         <p class="eyebrow">Coaching philosophy</p>
@@ -887,17 +918,13 @@
   </div>
 </section>
 
-<!-- QUOTE -->
-<section class="quote">
-  <div class="wrap">
+<!-- QUOTE OVER ACTION BAND -->
+<section class="band quote-band">
+  <img class="band-img" src="assets/images/IMG_0214.WEBP" alt="Goalkeeper making a save in a goalmouth scramble" loading="lazy">
+  <div class="band-content">
     <p class="eyebrow">Win or lose</p>
     <blockquote>"I believe you can win and play well. I believe you can lose and play well. If you competed, and you gave the effort, I'm fine with that."</blockquote>
   </div>
-</section>
-
-<!-- FULL-BLEED ACTION BAND -->
-<section class="band">
-  <img class="img-ph photo" src="assets/images/IMG_0214.WEBP" alt="Goalkeeper making a save in a goalmouth scramble" loading="lazy">
 </section>
 
 <!-- MENTAL GAME -->
@@ -1243,20 +1270,42 @@
   })();
 </script>
 
+<!-- FINAL CTA -->
+<section class="book" id="finalcta">
+  <div class="wrap">
+    <h2><span style="display:block">Start with</span><span style="display:block">a first session.</span></h2>
+    <p>Tell Coach Shane where your player is now and where they want to go. He'll build the session around them.</p>
+    <a href="#book" class="btn btn-primary">Book a Session</a>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
-    <div class="brand"><img class="brand-logo" src="assets/logo/Shane%20Kennedy%20Soccer%20Wordmark.svg" alt="Shane Kennedy Soccer" width="885" height="348"></div>
-    <p>Private goalkeeper training with Shane Kennedy · Marin, California</p>
-    <p><a href="tel:+14157133029" style="color:var(--chalk-dim)">(415) 713-3029</a> · <a href="mailto:dominatethebox@gmail.com" style="color:var(--chalk-dim)">dominatethebox@gmail.com</a></p>
-    <div class="disclaimer">
-      <p>Individual results vary. Skill development depends on each athlete's effort, starting level, and consistency, and no specific outcome, playing time, team selection, scholarship, or recruitment result is guaranteed. The skill chart on this page is illustrative and does not represent measured data from any individual player.</p>
-      <p>Quotes and references to coaches, players, schools, and organizations describe Shane Kennedy's coaching and playing history and do not imply any endorsement, sponsorship, or current affiliation. Team, school, league, and organization names and marks are the property of their respective owners and are used for identification only.</p>
-      <p>Goalkeeper training involves physical activity and inherent risk of injury. Shane Kennedy is a licensed soccer coach, not a medical or strength-and-conditioning professional; consult a physician before beginning any training program.</p>
-      <p>© <span id="yr"></span> Shane Kennedy Soccer. All rights reserved.</p>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="brand"><img class="brand-logo" src="assets/logo/Shane%20Kennedy%20Soccer%20Wordmark.svg" alt="Shane Kennedy Soccer" width="885" height="348"></div>
+        <p class="foot-tag">Private soccer coaching in Marin County. Development is the goal — technique, game intelligence, and confidence, for every position.</p>
+      </div>
+      <div class="foot-col">
+        <p class="foot-head">Training</p>
+        <a href="#book">1-on-1 private sessions</a>
+        <a href="#book">Small-group sessions</a>
+        <a href="#skillmap">Goalkeeper specialty</a>
+        <a href="#results">Success stories</a>
+      </div>
+      <div class="foot-col">
+        <p class="foot-head">Contact</p>
+        <p>Marin County, California</p>
+        <a href="tel:+14157133029">(415) 713-3029</a>
+        <a href="mailto:dominatethebox@gmail.com">dominatethebox@gmail.com</a>
+        <a href="#book" class="book-link">Book a Session</a>
+      </div>
     </div>
-    <p class="foot-links">
-      <a href="#privacy">Privacy Policy</a>·<a href="#terms">Terms of Service</a>
-    </p>
+    <p class="foot-note">Results vary; no specific outcome is guaranteed. Training involves physical activity and risk of injury. See <a href="#terms">Terms</a> for full details.</p>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> Shane Kennedy Soccer. All rights reserved.</span>
+      <span><a href="#privacy">Privacy Policy</a><a href="#terms">Terms of Service</a></span>
+    </div>
   </div>
 </footer>
 
@@ -1264,9 +1313,16 @@
   <div class="wrap">
     <p class="eyebrow">Shane Kennedy Soccer</p>
     <h2>Privacy Policy</h2>
-    <p><span class="ph">PLACEHOLDER: replace with a reviewed privacy policy before launch.</span></p>
-    <p>This site collects the information you enter in the booking form (your name, contact details, and information about the player) for the sole purpose of responding to your inquiry and scheduling training. We do not sell your information or share it with third parties except as needed to operate this site.</p>
-    <p>For booking inquiries involving a minor, information should be submitted by a parent or legal guardian. To ask what information we hold or to request its deletion, contact <a href="mailto:dominatethebox@gmail.com" style="color:var(--chalk-dim)">dominatethebox@gmail.com</a>.</p>
+    <p><b>Last updated: <span class="ph">set date before launch</span></b></p>
+    <p><b>Who we are.</b> Shane Kennedy Soccer ("we," "us") provides private soccer coaching in Marin County, California. This policy explains what information this website collects and how it is used. For questions, contact <a href="mailto:dominatethebox@gmail.com" style="color:var(--chalk-dim)">dominatethebox@gmail.com</a> or (415) 713-3029.</p>
+    <p><b>Information we collect.</b> When you submit the booking form, we collect the information you enter: your name, your phone number or email address, the player's name and age, session format, current level, training goals, and preferred availability. If you contact us directly by phone or email, we receive the information you choose to share. This site does not run advertising or analytics trackers and does not set tracking cookies; your light/dark theme preference is stored only in your own browser and is never sent to us.</p>
+    <p><b>How we use it.</b> We use booking information solely to respond to your inquiry, schedule and manage training sessions, and communicate with you about coaching. We do not sell, rent, or trade your information, and we do not use it for third-party marketing.</p>
+    <p><b>Children's privacy.</b> Training clients are typically minors, so booking inquiries should be submitted by a parent or legal guardian. We do not knowingly collect information directly from children under 13. If you believe a child has submitted information without parental consent, contact us and we will delete it.</p>
+    <p><b>Sharing.</b> We share information only with the service providers needed to operate this site (such as our website hosting provider, which may automatically log IP addresses and standard technical data), or if required by law. This site loads fonts and scripts from third-party content delivery networks (Google Fonts, cdnjs); those services may receive your IP address when your browser requests those files, and their own privacy policies apply.</p>
+    <p><b>Retention.</b> We keep inquiry and scheduling information only as long as needed to manage training and reasonable business records, then delete it.</p>
+    <p><b>Your rights.</b> You may ask what information we hold about you or your player, request a correction, or request deletion at any time by emailing <a href="mailto:dominatethebox@gmail.com" style="color:var(--chalk-dim)">dominatethebox@gmail.com</a>. California residents may exercise these rights under the CCPA/CPRA without any difference in service.</p>
+    <p><b>Security.</b> We take reasonable measures to protect your information, but no method of transmission or storage is completely secure.</p>
+    <p><b>Changes.</b> We may update this policy from time to time; the current version will always be posted on this page.</p>
     <a href="#" class="close">Close</a>
   </div>
 </section>
@@ -1275,9 +1331,17 @@
   <div class="wrap">
     <p class="eyebrow">Shane Kennedy Soccer</p>
     <h2>Terms of Service</h2>
-    <p><span class="ph">PLACEHOLDER: replace with reviewed terms before launch.</span></p>
-    <p>Submitting the booking form is a request for training, not a confirmed booking. Sessions are scheduled only after direct confirmation from Shane Kennedy. Pricing, scheduling, and cancellation terms will be confirmed at that time.</p>
-    <p>Training involves physical activity and an inherent risk of injury. Participants take part at their own risk, and a waiver may be required before the first session. No specific athletic, competitive, or recruitment outcome is guaranteed. These terms are governed by the laws of the State of California.</p>
+    <p><b>Last updated: <span class="ph">set date before launch</span></b></p>
+    <p><b>Acceptance.</b> By using this website or booking training with Shane Kennedy Soccer, you agree to these terms. If you are booking on behalf of a minor, you confirm you are the player's parent or legal guardian and accept these terms on their behalf.</p>
+    <p><b>Services.</b> Shane Kennedy Soccer provides private 1-on-1 and small-group soccer coaching, including goalkeeper training, in Marin County, California.</p>
+    <p><b>Booking.</b> Submitting the booking form is a request for training, not a confirmed booking and not a payment. Sessions are scheduled only after direct confirmation from Coach Shane Kennedy. Pricing, payment methods, scheduling, and cancellation terms will be confirmed at that time.</p>
+    <p><b>Cancellations &amp; weather.</b> Please give reasonable notice if you need to cancel or reschedule. Sessions affected by weather, field closures, or illness will be rescheduled where possible.</p>
+    <p><b>Assumption of risk.</b> Soccer training involves physical activity and inherent risk of injury. Coach Shane Kennedy is a licensed soccer coach, not a medical or strength-and-conditioning professional; consult a physician before beginning any training program. Participants take part at their own risk, and a signed waiver may be required before the first session. Participants should be covered by their own health insurance.</p>
+    <p><b>No guarantees.</b> Individual results vary. Skill development depends on each athlete's effort, starting level, and consistency, and no specific outcome, playing time, team selection, scholarship, or recruitment result is guaranteed. The skill chart on this site is illustrative and does not represent measured data from any individual player.</p>
+    <p><b>Third-party marks.</b> Quotes and references to coaches, players, schools, and organizations describe Shane Kennedy's coaching and playing history and do not imply any endorsement, sponsorship, or current affiliation. Team, school, league, and organization names and marks are the property of their respective owners and are used for identification only.</p>
+    <p><b>Limitation of liability.</b> To the fullest extent permitted by law, Shane Kennedy Soccer is not liable for indirect, incidental, or consequential damages arising from use of this website or participation in training, beyond amounts paid for the sessions at issue. Nothing in these terms limits liability that cannot be limited under California law.</p>
+    <p><b>Governing law.</b> These terms are governed by the laws of the State of California. Any dispute will be resolved in the courts of Marin County, California.</p>
+    <p><b>Changes.</b> We may update these terms from time to time; the current version will always be posted on this page. Continued use of the site or services after changes means you accept the updated terms.</p>
     <a href="#" class="close">Close</a>
   </div>
 </section>
