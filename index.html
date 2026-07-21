@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shane Kennedy Soccer | Private Soccer Coaching, Marin</title>
+<meta name="description" content="Private soccer coaching in Marin County with Shane Kennedy: record-setting NCAA keeper, New York Cosmos alum, and CIF Coach of the Year. Boys and girls, kids to college, all positions, with a specialty in goalkeeping.">
+<meta name="keywords" content="soccer coach Marin County, private soccer training Mill Valley, youth soccer coaching, college recruiting soccer, goalkeeper training Marin, Shane Kennedy soccer">
+<meta property="og:title" content="Shane Kennedy Soccer | Private Soccer Coaching">
+<meta property="og:description" content="Private soccer coaching in Marin County, all positions with a goalkeeper specialty, from a record-setting NCAA keeper and CIF Coach of the Year.">
+<meta property="og:type" content="website">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  :root{
+    /* LIGHT MODE (default) */
+    --pitch:#ffffff;         /* page ground */
+    --pitch-dark:#f4f6f8;    /* subtle alt section */
+    --chalk:#0e1116;         /* primary text (dark on light) */
+    --chalk-dim:#5b636e;     /* muted text */
+    --net:#e8ede4;
+    --signal:#00BFFF;        /* sky blue: PRIMARY */
+    --signal-deep:#00A6DE;   /* deeper sky blue (hover) */
+    --signal-text:#0077B3;   /* readable blue for text on light bg */
+    --accent:#FF3C00;        /* orange-red: ACCENT */
+    --accent-deep:#D93200;
+    --royal:#00BFFF;         /* alias kept for existing rules -> sky blue */
+    --royal-deep:#00A6DE;
+    --ink:#0e1116;           /* dark text on colored buttons (contrast) */
+    --line:rgba(14,17,22,.14);
+    --card:#ffffff;          /* card surface */
+    --field-bg:#ffffff;
+    --field-text:#0e1116;
+    --blueprint:#eef3f8;
+    --bp-line:#00BFFF;
+    --bp-line-dim:rgba(0,191,255,.30);
+    --bp-grid:rgba(0,191,255,.09);
+    --nav-bg:rgba(255,255,255,.86);
+    --ground:#eaeef3;
+  }
+  [data-theme="dark"]{
+    --pitch:#0b0d10;
+    --pitch-dark:#050608;
+    --chalk:#ffffff;
+    --chalk-dim:#b7bcc4;
+    --signal:#00BFFF;
+    --signal-deep:#00A6DE;
+    --signal-text:#00BFFF;
+    --accent:#FF3C00;
+    --accent-deep:#D93200;
+    --royal:#00BFFF;
+    --royal-deep:#00A6DE;
+    --ink:#0e1116;
+    --line:rgba(255,255,255,.16);
+    --card:#111417;
+    --field-bg:#0e1116;
+    --field-text:#ffffff;
+    --blueprint:#050608;
+    --bp-line:#00BFFF;
+    --bp-line-dim:rgba(0,191,255,.32);
+    --bp-grid:rgba(0,191,255,.10);
+    --nav-bg:rgba(11,13,16,.86);
+    --ground:#050608;
+  }
+  /* AUTO: follow device when no manual choice set */
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --pitch:#0b0d10; --pitch-dark:#050608; --chalk:#ffffff; --chalk-dim:#b7bcc4;
+      --signal:#00BFFF; --signal-deep:#00A6DE; --signal-text:#00BFFF; --accent:#FF3C00; --accent-deep:#D93200;
+      --royal:#00BFFF; --royal-deep:#00A6DE; --ink:#0e1116; --line:rgba(255,255,255,.16);
+      --card:#111417; --field-bg:#0e1116; --field-text:#ffffff;
+      --blueprint:#050608; --bp-line:#00BFFF; --bp-line-dim:rgba(0,191,255,.32); --bp-grid:rgba(0,191,255,.10);
+      --nav-bg:rgba(11,13,16,.86); --ground:#050608;
+    }
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Archivo',system-ui,sans-serif;
+    background:var(--ground);
+    color:var(--chalk);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ---------- chalk-line motif ---------- */
+  .eyebrow{
+    font-family:'Oswald',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.28em;
+    font-size:.72rem;
+    color:var(--royal);
+    font-weight:600;
+  }
+  h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.02;text-transform:uppercase}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:14px;z-index:50;
+    background:transparent;
+    border-bottom:none;
+  }
+  nav .wrap{
+    display:flex;align-items:center;justify-content:space-between;height:58px;
+    background:var(--nav-bg);
+    backdrop-filter:blur(12px);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:0 10px 0 24px;
+    box-shadow:0 10px 34px rgba(0,0,0,.12);
+  }
+  .brand{font-family:'Oswald',sans-serif;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:1.05rem}
+  .brand span{color:var(--signal-text)}
+  .nav-links a.nav-cta{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+    font-size:.82rem;font-weight:600;
+    background:var(--signal);color:var(--ink);
+    padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
+    transition:transform .15s ease,background .15s ease;
+  }
+  .nav-links a.nav-cta:hover{background:var(--signal-deep);color:var(--ink);transform:translateY(-2px)}
+  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-size:.78rem;font-weight:500;color:var(--chalk-dim);text-decoration:none;
+    transition:color .15s ease;
+  }
+  .nav-links a:hover{color:var(--signal-text)}
+  section[id], header{scroll-margin-top:74px}
+
+  /* ---------- hero: the box ---------- */
+  .hero{position:relative;overflow:hidden;padding:84px 0 72px}
+  .hero::before{
+    /* the 18-yard box drawn in chalk, viewed from the keeper's line */
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.05), transparent 60%),
+      repeating-linear-gradient(180deg, transparent 0 38px, rgba(255,255,255,.018) 38px 76px);
+    pointer-events:none;
+  }
+  .box-lines{
+    position:absolute;left:50%;top:38px;transform:translateX(-50%);
+    width:min(680px,86%);height:calc(100% - 38px);
+    border:2px solid var(--line);
+    border-top:none;
+    border-radius:0 0 4px 4px;
+    pointer-events:none;
+  }
+  .box-lines::after{
+    /* the goal-area (6-yard) box */
+    content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+    width:52%;height:44%;
+    border:2px solid var(--line);border-top:none;border-radius:0 0 3px 3px;
+  }
+  .pen-spot{
+    position:absolute;left:50%;top:64%;transform:translate(-50%,-50%);
+    width:9px;height:9px;border-radius:50%;background:var(--chalk-dim);pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;text-align:center}
+  .hero h1{
+    font-size:clamp(1.7rem,8.5vw,5.6rem);
+    letter-spacing:.005em;
+    margin:18px auto 0;
+    line-height:1.05;
+  }
+  .hero h1 em{font-style:normal;color:var(--accent);display:block;white-space:nowrap}
+  .hero h1 .line1{display:block;white-space:nowrap}
+  .hero-sub{
+    font-size:clamp(1.05rem,2.4vw,1.3rem);
+    color:var(--chalk-dim);max-width:50ch;margin:22px auto 0;font-weight:400;
+  }
+  .hero-cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+    font-weight:600;font-size:.92rem;text-decoration:none;border-radius:999px;
+    padding:15px 30px;display:inline-block;transition:transform .15s ease,background .15s ease;
+  }
+  .btn-primary{background:var(--signal);color:var(--ink)}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--signal-deep)}
+  .btn-ghost{background:var(--card);border:1.5px solid var(--chalk);color:var(--chalk)}
+  .btn-ghost:hover{border-color:var(--signal-text);color:var(--signal-text);background:var(--card)}
+  .trigger{margin-top:16px;font-size:.82rem;color:var(--chalk-dim);letter-spacing:.04em}
+  .trigger b{color:var(--chalk)}
+
+  /* ---------- record strip ---------- */
+  .record{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .record .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0;text-align:center}
+  .stat{padding:34px 14px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:none}
+  .stat .num{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3rem);color:var(--accent);line-height:1}
+  .stat .lab{font-size:.78rem;color:var(--chalk-dim);margin-top:8px;letter-spacing:.04em}
+
+  /* ---------- generic section ---------- */
+  section{padding:78px 0}
+  /* inset rounded panels (alternating rhythm) */
+  .map-section,.creds,.pillars,.voices{
+    border-radius:32px;
+    width:calc(100% - 48px);
+    max-width:1340px;
+    margin:20px auto;
+    border-top:none;
+    border-bottom:none;
+    overflow:hidden;
+    padding:88px 0;
+  }
+  @media(max-width:900px){
+    .map-section,.creds,.pillars,.voices{border-radius:22px;width:calc(100% - 24px);padding:64px 0}
+  }
+  .section-head{max-width:60ch}
+  .section-head h2{font-size:clamp(1.9rem,4.4vw,2.9rem);margin-top:14px}
+  .section-head p{color:var(--chalk-dim);margin-top:16px;font-size:1.06rem}
+
+  /* ---------- the pitch (problem → outcome) ---------- */
+  .pitch-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:8px;align-items:center}
+  .pain-list{list-style:none;margin-top:26px;display:flex;flex-direction:column;gap:16px}
+  .pain-list li{padding-left:28px;position:relative;color:var(--chalk-dim)}
+  .pain-list li::before{content:"";position:absolute;left:0;top:.5em;width:12px;height:12px;border:2px solid var(--signal);border-radius:50%}
+  .win-card{
+    background:var(--pitch-dark);border:1px solid var(--line);border-left:4px solid var(--signal);
+    border-radius:3px;padding:30px 30px 30px 30px;
+  }
+  .win-card h3{font-size:clamp(1.2rem,2.4vw,1.35rem);color:var(--signal-text)}
+  .win-card ul{list-style:none;margin-top:18px;display:flex;flex-direction:column;gap:14px}
+  .win-card li{padding-left:24px;position:relative}
+  .win-card li::before{content:"›";position:absolute;left:0;color:var(--signal-text);font-weight:700}
+
+  /* ---------- interactive skill map (clean) ---------- */
+  .approach-bp{background:transparent}
+  .approach-single{max-width:760px}
+  .bp-card{background:var(--pitch-dark);border-color:var(--line);border-left:4px solid var(--signal)}
+  .bp-card h3{color:var(--signal-text);margin-top:6px}
+  .bp-card li::before{color:var(--signal-text)}
+  .map-section{background:var(--pitch)}
+  .map-stamp{display:inline-block;margin-top:14px;font-size:.9rem;color:var(--chalk-dim);font-style:italic}
+  .map-wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center;margin-top:36px}
+  .map-svg .zone{cursor:pointer;transition:opacity .15s}
+  .map-svg .zone:hover{opacity:.82}
+  .map-svg .zone rect,.map-svg .zone circle{fill:var(--bp-grid);stroke:var(--line);stroke-width:1}
+  .map-svg .zone.active rect,.map-svg .zone.active circle{fill:rgba(255,60,0,.16);stroke:var(--signal);stroke-width:2}
+  .map-svg .zone:focus{outline:none}
+  .map-svg .zone:focus-visible{outline:none}
+  .map-svg .zone:focus-visible rect,.map-svg .zone:focus-visible circle{stroke:var(--signal);stroke-width:3;fill:rgba(255,60,0,.14)}
+  .map-chalk{stroke:var(--chalk);stroke-width:1.5;fill:none;opacity:.45}
+  .map-dim{stroke:var(--chalk);stroke-width:1;fill:none;opacity:.3}
+  .zlabel{fill:var(--chalk);font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.02em;pointer-events:none}
+  .map-svg .zone.active .zlabel{fill:var(--signal)}
+  .ztick{fill:var(--chalk-dim);font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.02em;pointer-events:none;opacity:.55}
+  .map-readout{background:var(--pitch);border:1px solid var(--line);border-left:4px solid var(--signal);border-radius:3px;padding:28px;min-height:210px}
+  .map-readout .rtag{font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.1em;color:var(--signal-text);text-transform:uppercase}
+  .map-readout h3{font-size:clamp(1.25rem,2.6vw,1.4rem);color:var(--chalk);margin-top:8px}
+  .map-readout p{color:var(--chalk-dim);margin-top:12px;line-height:1.55}
+  .map-hint{font-size:.8rem;color:var(--chalk-dim);margin-top:16px;font-style:italic;opacity:.85}
+  @keyframes shotfly{0%{opacity:0;transform:translateY(0)}10%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translateY(-150px)}}
+  #mapBall{animation:shotfly 2.8s ease-in infinite}
+  #mapBall circle{fill:none;stroke:var(--signal);stroke-width:1.5}
+  #mapBall line{stroke:var(--signal);stroke-width:.75;opacity:.5}
+
+  /* ---------- skill radar (open, full width) ---------- */
+  .radar-open{margin-top:0}
+  .radar-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:.82rem;color:var(--chalk-dim);margin:0 0 4px;justify-content:center}
+  .radar-legend span{display:flex;align-items:center;gap:6px}
+  .radar-legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+  .radar-legend .sw-solid{width:14px;height:14px}
+  .radar-legend .sw-dash{width:16px;height:0;border-radius:0;border-top:2px dashed #8b9099;align-self:center}
+  .radar-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 0;justify-content:center}
+  .radar-toggle button{
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.74rem;font-weight:600;
+    cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--chalk-dim);
+    padding:9px 18px;border-radius:2px;transition:all .15s;
+  }
+  .radar-toggle button.on{background:var(--signal);color:var(--ink);border-color:var(--signal-text)}
+  .radar-canvas-box{position:relative;width:100%;max-width:620px;height:460px;margin:0 auto}
+  .radar-disclaimer{text-align:center;font-size:.8rem;color:var(--chalk-dim);margin-top:18px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+  .tip{position:relative;display:inline-flex;cursor:help;outline:none}
+  .tip > i{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:.66rem;font-weight:500;
+    width:16px;height:16px;border:1px solid var(--chalk-dim);border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;color:var(--chalk-dim);transition:all .15s}
+  .tip:hover > i,.tip:focus > i{border-color:var(--signal-text);color:var(--signal-text)}
+  .tip-bubble{
+    position:absolute;bottom:140%;left:50%;transform:translateX(-50%) translateY(4px);
+    width:280px;max-width:78vw;background:var(--pitch-dark);border:1px solid var(--line);border-radius:4px;
+    padding:14px 16px;font-size:.78rem;line-height:1.5;color:var(--chalk-dim);text-align:left;
+    opacity:0;visibility:hidden;transition:opacity .15s,transform .15s;z-index:20;pointer-events:none;
+  }
+  .tip-bubble::after{content:"";position:absolute;top:100%;left:50%;transform:translateX(-50%);
+    border:6px solid transparent;border-top-color:var(--line)}
+  .tip:hover .tip-bubble,.tip:focus .tip-bubble,.tip:focus-within .tip-bubble{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+
+  /* ---------- credentials ---------- */
+  .creds{background:var(--pitch)}
+  .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px;border-radius:3px;overflow:hidden}
+  .cred{background:var(--pitch-dark);padding:30px 26px}
+  .cred .yr{font-family:'Oswald',sans-serif;color:var(--signal-text);font-weight:600;letter-spacing:.1em;font-size:.82rem}
+  .cred h3{font-size:clamp(1.05rem,2.2vw,1.12rem);margin-top:10px;line-height:1.15}
+  .cred p{color:var(--chalk-dim);font-size:.92rem;margin-top:8px}
+  .cosmos-note{margin-top:30px;color:var(--chalk-dim);font-size:.95rem;text-align:center;font-style:italic}
+  .phil-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+  .phil-stat{flex:1;min-width:120px}
+  /* pillars */
+  .pillars{background:var(--pitch)}
+  .pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:34px}
+  .pillar{border:1px solid var(--line);border-radius:5px;padding:28px 24px;background:var(--pitch)}
+  .pillar .pnum{font-family:'Oswald',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--signal-text)}
+  .pillar .pmotif{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,191,255,.12);color:var(--signal);margin-bottom:14px}
+  .pillar h3{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,2.6vw,1.45rem);color:var(--chalk);margin-top:10px}
+  .pillar p{color:var(--chalk-dim);font-size:.92rem;line-height:1.55;margin-top:10px}
+  .phil-stat .psn{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(1.4rem,3.4vw,1.6rem);color:var(--signal-text);line-height:1}
+  .phil-stat .psl{font-size:.82rem;color:var(--chalk-dim);margin-top:7px;line-height:1.35}
+
+  /* ---------- proof / coaching results ---------- */
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+  .proof{background:var(--pitch-dark);border:1px solid var(--line);border-radius:3px;padding:30px}
+  .proof .big{font-family:'Oswald',sans-serif;color:var(--accent);font-weight:700;font-size:clamp(1.8rem,4.5vw,2.2rem);line-height:1}
+  .proof p{margin-top:12px;color:var(--chalk-dim)}
+  .proof p b{color:var(--chalk)}
+
+  /* ---------- quote ---------- */
+  .quote{padding:90px 0;text-align:center;position:relative}
+  .quote blockquote{font-family:'Oswald',sans-serif;font-weight:500;text-transform:none;
+    font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;max-width:24ch;margin:0 auto;letter-spacing:.005em}
+  .quote .cite{margin-top:24px;color:var(--chalk-dim);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+
+  /* ---------- testimonials ---------- */
+  .voices{background:var(--pitch)}
+  .voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
+  .voice{background:var(--pitch);border:1px solid var(--line);border-top:3px solid var(--signal);border-radius:3px;padding:30px}
+  .voice p{font-size:1.08rem;line-height:1.45}
+  .voice .who-said{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--signal-text)}
+  .voice .who-said span{display:block;color:var(--chalk-dim);letter-spacing:.04em;text-transform:none;font-family:'Archivo',sans-serif;font-size:.82rem;margin-top:4px}
+  .voice-note{margin-top:30px;text-align:center;color:var(--chalk-dim);font-size:.9rem;font-style:italic}
+
+  /* ---------- faq ---------- */
+  .faq-list{margin-top:42px;border-top:1px solid var(--line)}
+  /* theme toggle */
+  .theme-toggle{margin-left:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);
+    background:transparent;color:var(--chalk);cursor:pointer;font-size:1rem;line-height:1;
+    display:inline-flex;align-items:center;justify-content:center;transition:background .15s ease,border-color .15s ease}
+  .theme-toggle:hover{border-color:var(--signal-text)}
+  .theme-toggle .tt-icon{display:block}
+  /* pricing */
+  .pricing{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:34px}
+  .price-card{background:var(--pitch);border:1px solid var(--line);border-radius:5px;padding:26px 22px;display:flex;flex-direction:column}
+  .price-card.feature{border-color:var(--signal-text);box-shadow:0 0 0 1px var(--signal) inset}
+  .price-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--signal-text);font-weight:600}
+  .price-name{font-family:'Oswald',sans-serif;font-size:clamp(1.15rem,2.4vw,1.35rem);color:var(--chalk);margin-top:8px;font-weight:600}
+  .price-amt{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,2.6rem);color:var(--signal-text);line-height:1;margin:14px 0 2px}
+  .price-unit{font-size:.8rem;color:var(--chalk-dim);margin-bottom:14px}
+  .price-desc{font-size:.9rem;color:var(--chalk-dim);line-height:1.5;flex:1}
+  .price-meta{font-size:.78rem;color:var(--chalk-dim);margin-top:16px;padding-top:14px;border-top:1px solid var(--line);letter-spacing:.02em}
+  .price-note{text-align:center;color:var(--chalk-dim);font-size:.85rem;margin-top:26px;font-style:italic}
+  .faq{border-bottom:1px solid var(--line)}
+  .faq summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding:24px 0;font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.18rem);letter-spacing:.01em;
+    color:var(--chalk);transition:color .15s;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary:hover{color:var(--signal-text)}
+  .faq summary .chev{flex:0 0 auto;width:14px;height:14px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+    transform:rotate(45deg);transition:transform .2s;margin-bottom:4px}
+  .faq[open] summary .chev{transform:rotate(225deg);margin-bottom:0;margin-top:4px}
+  .faq .faq-body{color:var(--chalk-dim);font-size:1rem;max-width:64ch;padding:0 0 24px;margin:0}
+  .faq summary:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:2px}
+  .ph{color:var(--signal-text);font-style:italic}
+  .ph::before{content:"⟨ ";opacity:.7}
+  .ph::after{content:" ⟩";opacity:.7}
+
+  /* image placeholder */
+  .img-ph{
+    width:100%;aspect-ratio:3/2;border:2px dashed var(--line);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    background:repeating-linear-gradient(45deg,transparent 0 12px,rgba(244,246,240,.025) 12px 24px);
+    color:var(--chalk-dim);font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.1em;font-size:.8rem;padding:24px;
+  }
+  .img-ph span{display:block}
+  .img-ph .ph{color:var(--signal-text);letter-spacing:.04em}
+  .img-ph.tall{aspect-ratio:4/5}
+  .img-ph.wide{aspect-ratio:16/7}
+  .img-ph.square{aspect-ratio:1/1}
+
+  /* hero image */
+  .hero-photo{margin:34px auto 0;max-width:760px}
+  .hero-photo .img-ph{aspect-ratio:16/8;border-color:var(--line)}
+
+  /* full-bleed band */
+  .band{position:relative;padding:0}
+  .band .img-ph{aspect-ratio:auto;height:340px;border-radius:0;border-left:none;border-right:none}
+
+  /* split section image+text */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .split.flip > .split-img{order:2}
+
+  /* logo / affiliation strip */
+  .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
+  .logos .eyebrow{text-align:center;display:block}
+  .aff-group{margin-top:26px;text-align:center}
+  .aff-label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;color:var(--chalk-dim)}
+  .aff-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
+  .aff-chip{
+    font-family:'Oswald',sans-serif;font-weight:500;font-size:.85rem;letter-spacing:.02em;
+    color:var(--chalk);background:rgba(244,246,240,.04);
+    border:1px solid var(--line);border-radius:3px;padding:8px 14px;white-space:nowrap;
+  }
+  .aff-chip.gold{border-color:rgba(255,60,0,.45);color:var(--signal-text)}
+  .logo-note{text-align:center;color:var(--chalk-dim);font-size:.82rem;margin-top:10px;font-style:italic}
+  .logo-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}
+  .logo-ph{
+    flex:0 0 auto;width:130px;height:78px;border:1.5px dashed var(--line);border-radius:4px;
+    display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;
+    color:var(--chalk-dim);font-family:'Oswald',sans-serif;text-transform:uppercase;
+    letter-spacing:.06em;font-size:.66rem;line-height:1.25;
+    background:repeating-linear-gradient(45deg,transparent 0 10px,rgba(244,246,240,.02) 10px 20px);
+  }
+  .logo-ph b{color:var(--signal-text);font-weight:600}
+
+  /* click triggers under CTA */
+  .clicktriggers{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .ct{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;
+    background:rgba(255,255,255,.08);color:var(--chalk);padding:8px 14px;border-radius:2px;border:1px solid var(--line)}
+
+  /* ---------- booking form ---------- */
+  .form-wrap{max-width:640px;margin:30px auto 0;text-align:left}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .field{margin-top:16px}
+  .field.full{grid-column:1/-1}
+  .field label{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;
+    font-size:.72rem;font-weight:600;color:var(--chalk);margin-bottom:6px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:3px;
+    background:var(--field-bg);color:var(--field-text);font-family:'Archivo',sans-serif;font-size:1rem;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--signal-text)}
+  .field textarea{resize:vertical;min-height:90px}
+  .field .hint{font-size:.78rem;color:#5a5f66;margin-top:5px}
+  .form-submit{
+    width:100%;margin-top:22px;border:none;cursor:pointer;
+    background:var(--signal);color:var(--ink);
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:1rem;
+    padding:16px;border-radius:999px;transition:background .15s ease;
+  }
+  .form-submit:hover{background:var(--signal-deep)}
+  /* booking modal overlay */
+  .book-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.6);backdrop-filter:blur(3px);
+    display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:5vh 16px}
+  .book-overlay.open{display:flex}
+  .book-modal{position:relative;background:var(--pitch);border:1px solid var(--line);border-top:3px solid var(--signal);
+    border-radius:10px;max-width:640px;width:100%;padding:38px 34px 34px;margin:auto;
+    box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  .book-modal h2{font-size:clamp(1.7rem,4vw,2.6rem);color:var(--chalk);margin-top:6px}
+  .book-modal .book-intro{margin:12px 0 8px;color:var(--chalk-dim);max-width:46ch}
+  .book-close{position:absolute;top:12px;right:14px;width:38px;height:38px;border-radius:50%;
+    border:1px solid var(--line);background:transparent;color:var(--chalk);font-size:1.5rem;line-height:1;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .15s ease}
+  .book-close:hover{border-color:var(--signal)}
+  body.modal-open{overflow:hidden}
+  @media(max-width:520px){ .book-modal{padding:32px 20px 26px} .book-overlay{padding:3vh 10px} }
+  .form-status{margin-top:14px;font-weight:600;display:none}
+  .form-status.show{display:block}
+  .form-status.ok{color:#4ade80}
+  .form-status.err{color:#ff6b6b}
+
+  /* ---------- offer / who it's for ---------- */
+  .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px}
+  .who{border:1px solid var(--line);border-radius:3px;padding:28px;background:var(--pitch-dark)}
+  .who h3{font-size:clamp(1rem,2vw,1.05rem);color:var(--signal-text)}
+  .who p{color:var(--chalk-dim);font-size:.94rem;margin-top:10px}
+
+  /* ---------- CTA / book ---------- */
+  .book{background:var(--pitch);border-top:3px solid var(--royal);color:var(--chalk);text-align:center;padding:88px 0}
+  .book h2{font-size:clamp(2rem,5vw,3.2rem);color:var(--chalk)}
+  .book p{margin:18px auto 0;max-width:46ch;font-weight:500;color:var(--chalk-dim)}
+  .book .btn-primary{background:var(--signal);color:var(--ink);margin-top:30px}
+  .book .btn-primary:hover{background:var(--signal-deep)}
+  .book .triggers{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--chalk-dim);font-weight:600}
+  .book .triggers span{margin:0 10px;white-space:nowrap}
+
+  footer{background:var(--pitch-dark);padding:40px 0;border-top:1px solid var(--line);text-align:center}
+  footer .brand{font-size:1.2rem}
+  footer p{color:var(--chalk-dim);font-size:.85rem;margin-top:12px}
+  .disclaimer{max-width:760px;margin:26px auto 0;padding-top:22px;border-top:1px solid var(--line)}
+  .disclaimer p{color:var(--chalk-dim);font-size:.72rem;line-height:1.6;opacity:.75;margin-top:8px}
+  .foot-links{margin-top:18px;font-size:.78rem}
+  .foot-links a{color:var(--chalk-dim);text-decoration:none;margin:0 10px}
+  .foot-links a:hover{color:var(--signal-text)}
+  .legal-page{display:none;max-width:720px;margin:0 auto;text-align:left}
+  .legal-page:target{display:block;padding:40px 0}
+  .legal-page h2{font-size:clamp(1.25rem,3vw,1.5rem);color:var(--chalk)}
+  .legal-page p{color:var(--chalk-dim);font-size:.9rem;line-height:1.6;margin-top:14px}
+  .legal-page .ph{color:var(--signal-text);font-style:italic}
+  .legal-page a.close{color:var(--chalk-dim);font-size:.8rem;display:inline-block;margin-top:20px}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:780px){
+    .record .wrap{grid-template-columns:1fr 1fr}
+    .stat{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .stat:nth-child(even){border-right:none}
+    .pitch-grid{grid-template-columns:1fr;gap:34px}
+    .cred-grid{grid-template-columns:1fr}
+    .proof-grid{grid-template-columns:1fr}
+    .voices-grid{grid-template-columns:1fr}
+    .who-grid{grid-template-columns:1fr}
+    .box-lines{display:none}
+    .nav-links a:not(.nav-cta){display:none}
+    .nav-links{gap:10px}
+    .nav-links a.nav-cta{padding:9px 14px;font-size:.82rem}
+    .theme-toggle{margin-left:4px;width:34px;height:34px}
+    nav .wrap{gap:10px}
+    .brand{font-size:1rem}
+    .form-row{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:28px}
+    .split.flip > .split-img{order:0}
+    .band .img-ph{height:240px}
+    .map-wrap{grid-template-columns:1fr;gap:24px}
+  }
+  @media(max-width:359px){
+    .brand-suffix{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){*{transition:none!important}#mapBall{animation:none!important}}
+  @media(max-width:430px){
+    .wrap{padding-left:16px;padding-right:16px}
+    nav .wrap{gap:8px}
+    .brand{font-size:.92rem}
+    .nav-links{gap:8px}
+    .nav-links a.nav-cta{padding:8px 11px;font-size:.76rem;letter-spacing:.04em}
+    .theme-toggle{width:32px;height:32px;margin-left:2px;font-size:.9rem}
+  }
+  a:focus-visible,.btn:focus-visible,button:focus-visible,.tip:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Shane Kennedy<span class="brand-suffix"><span>·</span>Soccer</span></div>
+    <div class="nav-links">
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="#results">Success Stories</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book" class="nav-cta">Book a Session</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle light and dark mode" title="Toggle theme">
+        <span class="tt-icon" aria-hidden="true">☾</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="box-lines"><span class="pen-spot"></span></div>
+  <div class="wrap hero-inner">
+    <p class="eyebrow">Marin, CA · Limited spots</p>
+    <h1><span class="line1">Play with confidence.</span><em>Train with Shane.</em></h1>
+    <p class="hero-sub">Get specialized goalkeeper coaching from a record-setting NCAA keeper, New York Cosmos alum, and CIF Coach of the Year.</p>
+    <div class="hero-cta-row">
+      <a href="#book" class="btn btn-primary">Book a Session</a>
+      <a href="#record" class="btn btn-ghost">See the Record</a>
+    </div>
+    <p class="trigger"><b>Play with confidence.</b> 1-on-1 and small-group keeper training · All ages, all levels</p>
+    <div class="hero-photo">
+      <div class="img-ph">
+        <span><span class="ph">HERO IMAGE</span><br>Shane coaching a player on the field · wide 16:8 · landscape</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- RECORD STRIP -->
+<section class="record" id="record" style="padding:0">
+  <div class="wrap">
+    <div class="stat"><div class="num">41</div><div class="lab">Career shutouts at Babson, a then-NCAA Division III record</div></div>
+    <div class="stat"><div class="num">.910</div><div class="lab">Save % he coached a keeper to, best in all of NCAA D-II that year</div></div>
+    <div class="stat"><div class="num">137</div><div class="lab">Wins as head coach at Tam (137-39-31). CIF Coach of the Year</div></div>
+    <div class="stat"><div class="num">2008</div><div class="lab">Coaching players privately with Shane Kennedy Soccer since</div></div>
+    <div class="stat"><div class="num">Cosmos</div><div class="lab">Drafted by the NASL's New York Cosmos, 1977</div></div>
+  </div>
+</section>
+
+<!-- AFFILIATION STRIP -->
+<section class="logos">
+  <div class="wrap">
+    <p class="eyebrow">The track record</p>
+    <div class="aff-group">
+      <p class="aff-label">Coached &amp; played at</p>
+      <div class="aff-chips">
+        <span class="aff-chip">Tamalpais High School</span>
+        <span class="aff-chip">Dominican University</span>
+        <span class="aff-chip">Marin FC</span>
+        <span class="aff-chip">New York Cosmos (NASL)</span>
+        <span class="aff-chip">Babson College</span>
+      </div>
+    </div>
+    <div class="aff-group">
+      <p class="aff-label">His players compete in</p>
+      <div class="aff-chips">
+        <span class="aff-chip gold">ECNL</span>
+        <span class="aff-chip gold">NPL</span>
+        <span class="aff-chip gold">NorCal Premier</span>
+        <span class="aff-chip gold">Club</span>
+        <span class="aff-chip gold">High school</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY PRIVATE COACHING -->
+<section id="approach" class="approach-bp">
+  <div class="wrap">
+    <p class="eyebrow">Why private coaching</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:24ch">Team practice can't give one player the attention they need.</h2>
+    <p style="color:var(--chalk-dim);margin-top:18px;max-width:64ch">In a squad of twenty, your player gets a fraction of the coaching, and the details that actually move their game rarely get touched. One-on-one and small-group sessions with Shane fix that, for any position.</p>
+    <div class="pillar-grid" style="margin-top:34px">
+      <div class="pillar">
+        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+        <h3>The fundamentals</h3>
+        <p>First touch, striking, receiving under pressure, the fundamentals cleaned up before bad habits set in.</p>
+      </div>
+      <div class="pillar">
+        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+        <h3>Their role</h3>
+        <p>Whether they play the back line, midfield, up top, or in goal, the reads and movements their role actually demands.</p>
+      </div>
+      <div class="pillar">
+        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+        <h3>Reading the play</h3>
+        <p>Decisions, positioning, and how to read the play a step ahead.</p>
+      </div>
+      <div class="pillar">
+        <span class="pmotif" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 7.2l3 2.2-1.15 3.5h-3.7L9 9.4z" fill="currentColor"/><path d="M12 7.2V4.2M15 9.4l2.8-1M13.85 12.9l1.8 2.4M10.15 12.9l-1.8 2.4M9 9.4l-2.8-1" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></span>
+        <h3>The mental game</h3>
+        <p>Composure, confidence, and how to reset after a mistake, the part almost no one coaches.</p>
+      </div>
+    </div>
+    <p style="color:var(--chalk-dim);margin-top:26px;max-width:64ch">And where a player wants it, Shane goes deepest on the position he knows better than anyone: <b>goalkeeper</b>, the one spot most team coaches were never trained to teach. Explore it below.</p>
+  </div>
+</section>
+
+<!-- INTERACTIVE SKILL MAP -->
+<section class="map-section" id="skillmap">
+  <div class="wrap">
+    <p class="eyebrow">The goalkeeper specialty</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:22ch">Every part of the goal asks something different.</h2>
+    <span class="map-stamp">The goalkeeper's box · Tap a zone to explore</span>
+    <div class="map-wrap">
+      <svg class="map-svg" width="100%" viewBox="0 0 560 430" role="img" aria-label="Interactive map of the goal. Tap a zone to see the skill trained there.">
+        <line x1="20" y1="56" x2="540" y2="56" class="map-chalk"/>
+        <line x1="20" y1="56" x2="20" y2="384" class="map-chalk"/>
+        <line x1="540" y1="56" x2="540" y2="384" class="map-chalk"/>
+        <rect x="150" y="56" width="260" height="120" class="map-chalk"/>
+        <rect x="210" y="56" width="140" height="56" class="map-dim"/>
+        <rect x="170" y="46" width="220" height="10" class="map-dim"/>
+        <line x1="170" y1="40" x2="170" y2="56" class="map-chalk"/>
+        <line x1="390" y1="40" x2="390" y2="56" class="map-chalk"/>
+
+        <circle cx="280" cy="300" r="2.5" class="map-dim" fill="var(--chalk)" opacity=".4"/>
+        <text class="ztick" x="280" y="320" text-anchor="middle">Penalty spot</text>
+
+        <g class="zone active" data-skill="crosses" role="button" tabindex="0" aria-label="Command of the box" onclick="pickSkill('crosses',this)" onkeydown="zoneKey(event,'crosses',this)">
+          <rect x="170" y="64" width="220" height="40" rx="3"/>
+          <text class="zlabel" x="280" y="88" text-anchor="middle">Command of the box</text>
+        </g>
+        <g class="zone" data-skill="angles" role="button" tabindex="0" aria-label="Angles and set position" onclick="pickSkill('angles',this)" onkeydown="zoneKey(event,'angles',this)">
+          <rect x="208" y="120" width="144" height="38" rx="3"/>
+          <text class="zlabel" x="280" y="143" text-anchor="middle">Angles &amp; set</text>
+        </g>
+        <g class="zone" data-skill="onevone" role="button" tabindex="0" aria-label="One v one and breakaways" onclick="pickSkill('onevone',this)" onkeydown="zoneKey(event,'onevone',this)">
+          <circle cx="280" cy="240" r="34"/>
+          <text class="zlabel" x="280" y="244" text-anchor="middle">1-v-1</text>
+        </g>
+        <g class="zone" data-skill="footwork" role="button" tabindex="0" aria-label="Footwork" onclick="pickSkill('footwork',this)" onkeydown="zoneKey(event,'footwork',this)">
+          <rect x="56" y="150" width="106" height="120" rx="3"/>
+          <text class="zlabel" x="109" y="214" text-anchor="middle">Footwork</text>
+        </g>
+        <g class="zone" data-skill="distribution" role="button" tabindex="0" aria-label="Distribution" onclick="pickSkill('distribution',this)" onkeydown="zoneKey(event,'distribution',this)">
+          <rect x="398" y="150" width="106" height="120" rx="3"/>
+          <text class="zlabel" x="451" y="214" text-anchor="middle">Distribution</text>
+        </g>
+
+        <g id="mapBall" style="transform-origin:center">
+          <line x1="280" y1="330" x2="280" y2="318"/>
+          <circle cx="280" cy="312" r="6"/>
+        </g>
+
+        <g class="zone" data-skill="mental" role="button" tabindex="0" aria-label="The reset and mental game" onclick="pickSkill('mental',this)" onkeydown="zoneKey(event,'mental',this)">
+          <rect x="170" y="332" width="220" height="38" rx="3"/>
+          <text class="zlabel" x="280" y="355" text-anchor="middle">The reset</text>
+        </g>
+      </svg>
+
+      <div class="map-readout" aria-live="polite">
+        <p class="rtag">Technical</p>
+        <h3 id="skTitle">Command of the box</h3>
+        <p id="skBody">Crosses, corners and high balls. Footwork to attack the ball at its highest point, decide catch or punch, and own the six-yard box so a keeper rules the air with confidence.</p>
+        <p class="map-hint">Tap any zone to explore the skill.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var SK = {
+      crosses:["Technical","Command of the box","Crosses, corners and high balls. Footwork to attack the ball at its highest point, decide catch or punch, and own the six-yard box so a keeper rules the air with confidence."],
+      angles:["Tactical","Angles & the set","Where to stand and when to set. Cutting down the shooter's angle, a balanced set position before every strike, and reading the play to be in position before the ball is hit."],
+      onevone:["Tactical","1-v-1 & breakaways","The moment that decides games. Closing space, staying big, and timing the spread to win the breakaway with intention."],
+      footwork:["Technical","Footwork","The foundation under everything. Hands make the save, but feet get you there. Quick, balanced steps to get behind the ball and set in time, the fault most keepers never have corrected."],
+      distribution:["Technical","Distribution","Start the attack. Beat the press with a composed short pass and switch the field with an accurate long ball, the skill college coaches now check first."],
+      mental:["Mental","The reset & mental game","Confidence is a trainable skill. A pre-shot routine and a reset ritual so one goal doesn't become three, plus the voice to organize a back line under pressure."]
+    };
+    var prev = document.querySelector('.map-svg .zone.active');
+    window.pickSkill = function(key, el){
+      var d = SK[key]; if(!d) return;
+      document.querySelector('.map-readout .rtag').textContent = d[0];
+      document.getElementById('skTitle').textContent = d[1];
+      document.getElementById('skBody').textContent = d[2];
+      if(prev) prev.classList.remove('active');
+      el.classList.add('active'); prev = el;
+    };
+    window.zoneKey = function(e, key, el){
+      if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
+        e.preventDefault();
+        window.pickSkill(key, el);
+      }
+    };
+  })();
+</script>
+
+<!-- ALL POSITIONS -->
+<section class="pillars" id="allpositions">
+  <div class="wrap">
+    <p class="eyebrow">Every position on the field</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Goalkeeping is the specialty. Soccer is the whole job.</h2>
+    <p style="color:var(--chalk-dim);margin-top:16px;max-width:60ch">Field players build the same fundamentals that made Shane's teams among the hardest in the league to beat.</p>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <span class="pnum">Defenders</span>
+        <h3>Back line</h3>
+        <p>Positioning, 1-v-1 defending, clean first touch under pressure, and playing out of the back with composure.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Midfield</span>
+        <h3>The engine</h3>
+        <p>Receiving on the half-turn, scanning before the ball arrives, passing range, and controlling tempo in both directions.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Attackers</span>
+        <h3>Final third</h3>
+        <p>First touch into space, finishing with both feet, movement off the ball, and the decision-making that creates chances.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Every player</span>
+        <h3>The whole game</h3>
+        <p>Technique, game intelligence, fitness, and the confidence to try things, the foundation every position is built on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="creds" id="about">
+  <div class="wrap">
+    <p class="eyebrow">The résumé behind the coaching</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:18ch">He didn't read about the position. He set records in it.</h2>
+    <div class="img-ph" style="margin-top:28px;max-width:560px">
+      <span><span class="ph">PHOTO OF SHANE</span><br>Headshot or coaching portrait. This is the trust anchor, so use a real, recent photo. Landscape 3:2</span>
+    </div>
+    <div class="cred-grid">
+      <div class="cred"><span class="yr">Player</span><h3>New York Cosmos, NASL</h3><p>Drafted by the New York Cosmos in 1977 and signed with the Connecticut Yankees (ASL) the same year.</p></div>
+      <div class="cred"><span class="yr">College</span><h3>Babson College Keeper</h3><p>Starting goalkeeper at Babson, NCAA Division III national champions, with a BS in Communications.</p></div>
+      <div class="cred"><span class="yr">License</span><h3>NSCAA National Diploma</h3><p>Holds the NSCAA (United Soccer Coaches) National coaching license.</p></div>
+      <div class="cred"><span class="yr">2011–21</span><h3>Tam High Head Coach</h3><p>Head coach of both the boys and girls programs at Tamalpais High School.</p></div>
+      <div class="cred"><span class="yr">2012–21</span><h3>Dominican University</h3><p>Assistant men's coach and goalkeeper trainer at Dominican University.</p></div>
+      <div class="cred"><span class="yr">2013–25</span><h3>Marin FC GK Director</h3><p>Coach and Goalkeeper Director at Marin FC.</p></div>
+    </div>
+    <p class="cosmos-note">Coach of the Year honors: CIF Soccer Coach of the Year (2016–17), CIF Model Coach Award (2016–17), and Prep2Prep Coach of the Year (2019–20).</p>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philosophy">
+  <div class="wrap">
+    <div class="split">
+      <div class="split-img">
+        <div class="img-ph tall">
+          <span><span class="ph">IMAGE</span><br>Shane demonstrating technique with a keeper · portrait 4:5</span>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Coaching philosophy</p>
+        <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Development is the goal.</h2>
+        <p style="color:var(--chalk-dim);margin-top:18px">Shane has coached players privately since 2008 and led high school and club teams to titles. He works with every kind of player, and goes deepest on the position he knows better than anyone.</p>
+        <p style="color:var(--chalk-dim);margin-top:14px">Every player gets the individual attention a team setting can't give: technique, position-specific work, game intelligence, and the mental side that almost no one coaches. And when a player commits to goalkeeping, they train with someone who set records in the position and coaches it at the college level.</p>
+        <p style="color:var(--chalk-dim);margin-top:14px">The measure of success is development, not the scoreline. A player who competes, works hard, and gets a little better every session is doing it right, win or lose.</p>
+        <div class="phil-stats">
+          <div class="phil-stat">
+            <div class="psn">Since 2008</div>
+            <div class="psl">Coaching players privately</div>
+          </div>
+          <div class="phil-stat">
+            <div class="psn">500+</div>
+            <div class="psl">Players trained (placeholder, confirm real number)</div>
+          </div>
+          <div class="phil-stat">
+            <div class="psn">Ages 8+</div>
+            <div class="psl">First-timers to college-bound</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING PROOF -->
+<section class="pillars">
+  <div class="wrap">
+    <p class="eyebrow">What Shane builds</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Three things every player leaves with.</h2>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <span class="pnum">01</span>
+        <h3>Confidence</h3>
+        <p>Confidence is a trainable skill, not something a player is born with. Fear of failure holds players back, so Shane builds the habits and the composure to play free, take risks, and step on the field expecting to compete.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">02</span>
+        <h3>Individuality</h3>
+        <p>Every player comes in at a different point, with a different body, personality, and set of strengths. Shane coaches the player in front of him and gives their game the room and the time it needs to grow.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">03</span>
+        <h3>Leadership</h3>
+        <p>The best players lift the team around them. Shane develops the composure to organize teammates, communicate under pressure, and lead by example, on the field and off it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COACHING PROOF -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">His players put up numbers too</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">The players he coaches put up numbers too.</h2>
+    <div class="proof-grid">
+      <div class="proof">
+        <div class="big">.910</div>
+        <p>In his first season at Dominican University, he trained a goalkeeper to a <b>.910 save percentage, the best in all of NCAA Division II</b> that year.</p>
+      </div>
+      <div class="proof">
+        <div class="big">3 + 3 + 2</div>
+        <p>The Tam High girls program he built piled up the most MCAL points of the decade: <b>three league titles, three tournament titles, and two North Coast Section titles.</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote">
+  <div class="wrap">
+    <p class="eyebrow">Win or lose</p>
+    <blockquote>"I believe you can win and play well. I believe you can lose and play well. If you competed, and you gave the effort, I'm fine with that."</blockquote>
+    <p class="cite">What Shane tells a keeper after a hard result, the same thing a great coach once told him</p>
+  </div>
+</section>
+
+<!-- FULL-BLEED ACTION BAND -->
+<section class="band">
+  <div class="img-ph">
+    <span><span class="ph">FULL-WIDTH ACTION IMAGE</span><br>A keeper fully extended for a save, or training in the box · wide cinematic crop</span>
+  </div>
+</section>
+
+<!-- MENTAL GAME -->
+<section id="mentalgame">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">What we build</p>
+        <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Confidence is a trainable skill.</h2>
+        <p style="color:var(--chalk-dim);margin-top:18px">Every player faces the moment after a mistake, when the head is still on the last play and the next one is already coming. Telling a young player to "just be confident" is not coaching.</p>
+        <p style="color:var(--chalk-dim);margin-top:14px">Shane develops the mental game alongside the technical one: composure, focus, and a reset that turns one bad moment into a fresh start. The chart below shows how a young goalkeeper grows under real coaching. Tap the chart to explore.</p>
+      </div>
+
+      <div class="radar-open">
+        <div class="radar-legend">
+          <span><i class="sw-dash" style="border-color:#8b9099"></i>Untrained keeper</span>
+          <span><i class="sw-solid" style="background:#FF3C00"></i>After training with Shane</span>
+        </div>
+        <div class="radar-canvas-box">
+          <canvas id="skillRadar" role="img" aria-label="Radar chart of seven goalkeeper skills before and after training with Shane: footwork, set and positioning, command of the box, one-v-one and breakaways, distribution, confidence and reset, and communication.">Footwork, positioning, command of the box, 1-v-1, distribution, confidence, and communication all rise after training.</canvas>
+        </div>
+        <div class="radar-toggle" role="group" aria-label="Choose which keeper to show">
+          <button id="rBefore" type="button" aria-pressed="false" onclick="setRadar('before')">Before</button>
+          <button id="rAfter" class="on" type="button" aria-pressed="true" onclick="setRadar('after')">After Shane</button>
+          <button id="rBoth" type="button" aria-pressed="false" onclick="setRadar('both')">Compare</button>
+        </div>
+        <p id="radarStatus" class="sr-only" aria-live="polite">Showing skills after training with Shane.</p>
+        <p class="radar-disclaimer">
+          Center to edge: developing to elite · illustrative comparison
+          <span class="tip" tabindex="0" role="button" aria-label="What does illustrative mean?">
+            <i aria-hidden="true">i</i>
+            <span class="tip-bubble">Each spoke is a goalkeeping skill. The closer a point sits to the outer ring, the stronger that skill. This chart shows the skills Shane develops in a young keeper and the kind of growth coaching builds. It is illustrative and does not represent measured data from any one player.</span>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="win-card" style="margin-top:40px">
+      <h3>Trained, not hoped for</h3>
+      <ul>
+        <li>A pre-game routine that gets the mind set before the whistle</li>
+        <li>A reset ritual to clear a mistake in seconds, not minutes</li>
+        <li>Composure on the ball when the press arrives</li>
+        <li>The voice to organize a back line and own the box</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+  (function(){
+    function build(){
+      if(typeof Chart==='undefined'){return setTimeout(build,60);}
+      var LABELS=['Footwork','Set & positioning','Command of the box','1-v-1 & breakaways','Distribution','Confidence & reset','Communication'];
+      var BEFORE=[4,3,3,4,2,3,3];
+      var AFTER=[9,8,8,9,7,9,8];
+      var GRAY='#8b9099', GOLD='#FF3C00';
+      function themeColors(){
+        var dark = (document.documentElement.getAttribute('data-theme')||
+          (window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'))==='dark';
+        return {
+          grid: dark ? 'rgba(201,210,196,.16)' : 'rgba(14,17,22,.12)',
+          label: dark ? '#b7bcc4' : '#5b636e'
+        };
+      }
+      var _tc = themeColors();
+      function level(v){
+        if(v<=3) return 'Developing';
+        if(v<=6) return 'Competitive';
+        if(v<=8) return 'Advanced';
+        return 'Elite';
+      }
+      function ds(label,data,color,fill,dashed){
+        return {label:label,data:data,borderColor:color,backgroundColor:fill,borderWidth:2,
+          borderDash:dashed?[6,4]:[],pointBackgroundColor:color,pointBorderColor:color,
+          pointRadius:4,pointHoverRadius:6,fill:true};
+      }
+      var common={
+        responsive:true,maintainAspectRatio:false,
+        layout:{padding:{top:8,bottom:8,left:24,right:24}},
+        plugins:{
+          legend:{display:false},
+          tooltip:{
+            callbacks:{
+              label:function(ctx){return ctx.dataset.label+': '+level(ctx.raw)+' level';}
+            }
+          }
+        },
+        scales:{r:{
+          min:0,max:10,beginAtZero:true,
+          ticks:{display:false,stepSize:2.5},
+          grid:{color:_tc.grid},
+          angleLines:{color:_tc.grid},
+          pointLabels:{font:{size:14,family:'Archivo, system-ui'},color:_tc.label,padding:6}
+        }},
+        elements:{line:{tension:0}}
+      };
+      var chart=new Chart(document.getElementById('skillRadar'),{
+        type:'radar',
+        data:{labels:LABELS,datasets:[ds('After Shane',AFTER,GOLD,'rgba(255,60,0,.22)',false)]},
+        options:common
+      });
+      window.__refreshChartTheme=function(){
+        var tc=themeColors();
+        chart.options.scales.r.grid.color=tc.grid;
+        chart.options.scales.r.angleLines.color=tc.grid;
+        chart.options.scales.r.pointLabels.color=tc.label;
+        chart.update();
+      };
+      function setOn(id){
+        ['rBefore','rAfter','rBoth'].forEach(function(b){
+          var el=document.getElementById(b);
+          el.classList.remove('on');
+          el.setAttribute('aria-pressed','false');
+        });
+        var on=document.getElementById(id);
+        on.classList.add('on');
+        on.setAttribute('aria-pressed','true');
+      }
+      function say(msg){
+        var s=document.getElementById('radarStatus');
+        if(s) s.textContent=msg;
+      }
+      window.setRadar=function(v){
+        if(v==='before'){chart.data.datasets=[ds('Untrained keeper',BEFORE,GRAY,'rgba(154,163,154,.20)',true)];setOn('rBefore');say('Showing skills of an untrained keeper.');}
+        else if(v==='after'){chart.data.datasets=[ds('After Shane',AFTER,GOLD,'rgba(255,60,0,.22)',false)];setOn('rAfter');say('Showing skills after training with Shane.');}
+        else{chart.data.datasets=[
+          ds('After Shane',AFTER,GOLD,'rgba(255,60,0,.16)',false),
+          ds('Untrained keeper',BEFORE,GRAY,'rgba(154,163,154,.06)',true)
+        ];setOn('rBoth');say('Comparing an untrained keeper with a keeper after training with Shane.');}
+        chart.update();
+      };
+    }
+    build();
+  })();
+</script>
+
+<!-- PLAYER QUOTE -->
+<!-- TESTIMONIALS -->
+<section class="voices" id="results">
+  <div class="wrap">
+    <p class="eyebrow">What people say</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Players compete for him. Coaches send players to him.</h2>
+    <div class="voices-grid">
+      <div class="voice">
+        <p>"Playing for Shane is always exciting. He expects a lot from you, but puts so much into every team that playing for him becomes such a joy."</p>
+        <div class="who-said">Emlen Janetos<span>Four-year varsity player, Tamalpais High</span></div>
+      </div>
+      <div class="voice">
+        <p>"What makes him special is how he relates to players and gets them to give everything for one another. His teams are always full of belief, regardless of the situation."</p>
+        <div class="who-said">Tyler Gottschalk<span>Head Coach, Branson School</span></div>
+      </div>
+      <div class="voice">
+        <p>"More than anything, Shane has been a mentor and a guy I have the utmost respect for, someone I leaned on for advice in my first years coaching."</p>
+        <div class="who-said">Dustin Nygaard<span>Former Tam High Head Coach</span></div>
+      </div>
+      <div class="voice">
+        <p>"You want to build a program and a legacy, to build something with the parents, coaches and players, and be acknowledged for it. It's a very rewarding thing."</p>
+        <div class="who-said">Shane Kennedy<span>On 137 wins and CIF Coach of the Year</span></div>
+      </div>
+    </div>
+    <p class="voice-note">Coach and player comments as reported by the Marin Independent Journal and Staples Soccer. More reviews from Shane Kennedy Soccer clients coming soon.</p>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="creds">
+  <div class="wrap">
+    <p class="eyebrow">Who trains here</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Built for the player. Picked by the parent.</h2>
+    <div class="who-grid">
+      <div class="who">
+        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>young player</span></div>
+        <h3>The young player</h3><p>New to the game or just getting serious. Build a clean first touch, sound technique, and a love for the ball the right way, before bad habits set in.</p>
+      </div>
+      <div class="who">
+        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>club / HS player</span></div>
+        <h3>The club &amp; HS competitor</h3><p>Already competing and tired of plateauing. Sharper technique, smarter positioning, and the position-specific details that move a player from the bench toward the starting lineup.</p>
+      </div>
+      <div class="who">
+        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>college-track player</span></div>
+        <h3>The college hopeful</h3><p>You've sent the emails and been to the camps, and you still don't know if a coach is watching. Train with someone who coaches at the college level, knows what recruiters look for in your position, and will tell you the truth about where you stand.</p>
+      </div>
+      <div class="who">
+        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>goalkeeper</span></div>
+        <h3>The goalkeeper</h3><p>The specialty. Footwork, angles, command of the box, distribution, and the mental reset, coached by a record-setting NCAA keeper who develops the whole position most team coaches were never trained to teach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <p class="eyebrow">Before you book</p>
+    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">The questions every parent asks.</h2>
+    <div class="faq-list">
+      <details class="faq">
+        <summary>What does a session cost?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Sessions are available as private 1-on-1 training and small-group sessions. Reach out for current rates and to find the option that fits your player and your goals.</p>
+      </details>
+      <details class="faq">
+        <summary>How long is a session, and how often should we train?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Private sessions run 60 minutes; group sessions run 90. Most players train once or twice a week. Shane will set a cadence that fits your season, your club schedule, and your goals, whether that's steady development or a recruiting push.</p>
+      </details>
+      <details class="faq">
+        <summary>My player already trains with their club. Why add private sessions?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Club practice is built around the whole team, so any one player gets a fraction of the coaching. Private sessions are the focused, one-on-one time club can't give: the specific technical and tactical work your player needs, at their pace. For goalkeepers especially, it's the position-specific coaching most club coaches were never trained to provide.</p>
+      </details>
+      <details class="faq">
+        <summary>Is my kid good enough, or too new, for this?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Every player is welcome, from a first-timer to a college-bound starter. Shane builds each session around the player in front of him, newer players learn the fundamentals before bad habits set in, and experienced players sharpen the details that move their game.</p>
+      </details>
+      <details class="faq">
+        <summary>Do you actually help players get recruited?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body"><span class="ph">PLACEHOLDER: confirm with Shane which players/commits can be named</span>. Shane coaches at the college level and has helped players in multiple positions move on to college soccer. He knows what recruiters look for and prepares players for the moment a coach is watching.</p>
+      </details>
+      <details class="faq">
+        <summary>My player lost confidence after a rough season. Can that be trained?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Yes. Confidence is a trainable skill, not something a player either has or doesn't. Shane works on the routine before the moment, the reset after a mistake, and the composure to keep competing, so one bad play stops becoming three and your player steps on the field expecting to do well.</p>
+      </details>
+      <details class="faq">
+        <summary>Do you coach all positions, or just goalkeepers?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">All positions, from defenders to attackers. Goalkeeping is his specialty, where he set NCAA records and coaches at the college level, but every player gets the same individual attention.</p>
+      </details>
+      <details class="faq">
+        <summary>Where do you train?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body"><span class="ph">PLACEHOLDER: add field / location(s)</span>. e.g. "Sessions are held at [field] in Mill Valley, with travel to your club's field available across Marin County."</p>
+      </details>
+      <details class="faq">
+        <summary>What ages and levels do you work with?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Players <span class="ph">PLACEHOLDER: confirm age range, e.g. ages 8 to 18</span>, across club and high school soccer, at every level.</p>
+      </details>
+      <details class="faq">
+        <summary>What should my player bring to a session?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body"><span class="ph">PLACEHOLDER: confirm what to bring</span>. e.g. "Cleats, shin guards, water, and a ball, plus gloves for goalkeepers. Shane brings the rest."</p>
+      </details>
+      <details class="faq">
+        <summary>How do we get started?<span class="chev" aria-hidden="true"></span></summary>
+        <p class="faq-body">Fill out the booking request below with your player's age, position, and what you want to work on. Shane will follow up to confirm a time and location and to talk through where your player is now and where they want to be.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK MODAL -->
+<div class="book-overlay" id="bookOverlay" aria-hidden="true">
+  <div class="book-modal" role="dialog" aria-modal="true" aria-labelledby="bookModalTitle">
+    <button class="book-close" id="bookClose" aria-label="Close booking form" type="button">&times;</button>
+    <p class="eyebrow">Marin County</p>
+    <h2 id="bookModalTitle">Book a private session.</h2>
+    <p class="book-intro">Tell Shane about your player and what you want to work on. He'll follow up to confirm a time.</p>
+
+    <div class="form-wrap">
+      <div class="form-row">
+        <div class="field">
+          <label for="parentName">Your name</label>
+          <input id="parentName" type="text" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="contact">Phone or email</label>
+          <input id="contact" type="text" autocomplete="email" placeholder="How should Shane reach you?">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="keeperName">Player's name</label>
+          <input id="keeperName" type="text">
+        </div>
+        <div class="field">
+          <label for="keeperAge">Player's age</label>
+          <input id="keeperAge" type="number" min="4" max="60" placeholder="e.g. 13">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label for="format">Session format</label>
+          <select id="format">
+            <option value="" disabled selected>Select…</option>
+            <!-- PLACEHOLDER: confirm formats Shane offers -->
+            <option>1-on-1 private</option>
+            <option>Small group (2 to 4 players)</option>
+            <option>Goalkeeper session (specialty)</option>
+            <option>Not sure yet, recommend for us</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="level">Current level</label>
+          <select id="level">
+            <option value="" disabled selected>Select…</option>
+            <option>New to the game</option>
+            <option>Recreational</option>
+            <option>Club / travel</option>
+            <option>High school</option>
+            <option>College-track</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field full">
+        <label for="focus">What do you want to work on?</label>
+        <textarea id="focus" placeholder="Technique, position-specific work, confidence after mistakes, college recruiting, goalkeeping…"></textarea>
+      </div>
+
+      <div class="field full">
+        <label for="availability">Preferred days &amp; times</label>
+        <input id="availability" type="text" placeholder="e.g. weekday evenings, Saturday mornings">
+      </div>
+
+      <button class="form-submit" id="bookBtn" type="button">Request My Session</button>
+      <p class="form-status" id="formStatus"></p>
+
+      <p class="triggers" style="margin-top:18px;text-align:center">
+        Prefer to reach out directly? <a href="tel:+14157133029" style="color:var(--signal-text);font-weight:600">(415) 713-3029</a> · <a href="mailto:dominatethebox@gmail.com" style="color:var(--signal-text);font-weight:600">dominatethebox@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var btn = document.getElementById('bookBtn');
+    var status = document.getElementById('formStatus');
+    function val(id){ return (document.getElementById(id).value || '').trim(); }
+    function setStatus(msg, ok){
+      status.textContent = msg;
+      status.className = 'form-status show ' + (ok ? 'ok' : 'err');
+    }
+    btn.addEventListener('click', function(){
+      var payload = {
+        parentName: val('parentName'),
+        contact: val('contact'),
+        keeperName: val('keeperName'),
+        keeperAge: val('keeperAge'),
+        format: val('format'),
+        level: val('level'),
+        focus: val('focus'),
+        availability: val('availability'),
+        submittedAt: new Date().toISOString()
+      };
+      // minimal validation
+      if(!payload.parentName || !payload.contact){
+        setStatus('Please add your name and a way to reach you.', false);
+        return;
+      }
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      // Replit backend endpoint: create a POST /api/book route to receive this
+      fetch('/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+      .then(function(res){
+        if(!res.ok) throw new Error('Request failed');
+        setStatus("Thanks, your request is in. Shane will follow up to confirm a time.", true);
+        btn.textContent = 'Request Sent ✓';
+      })
+      .catch(function(){
+        setStatus("Something went wrong. Please try again, or reach out directly above.", false);
+        btn.disabled = false;
+        btn.textContent = 'Request My Session';
+      });
+    });
+  })();
+</script>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">Shane Kennedy<span style="color:var(--signal-text)">·</span>Soccer</div>
+    <p>Private goalkeeper training with Shane Kennedy · Marin, California</p>
+    <p><a href="tel:+14157133029" style="color:var(--chalk-dim)">(415) 713-3029</a> · <a href="mailto:dominatethebox@gmail.com" style="color:var(--chalk-dim)">dominatethebox@gmail.com</a></p>
+    <div class="disclaimer">
+      <p>Individual results vary. Skill development depends on each athlete's effort, starting level, and consistency, and no specific outcome, playing time, team selection, scholarship, or recruitment result is guaranteed. The skill chart on this page is illustrative and does not represent measured data from any individual player.</p>
+      <p>Quotes and references to coaches, players, schools, and organizations describe Shane Kennedy's coaching and playing history and do not imply any endorsement, sponsorship, or current affiliation. Team, school, league, and organization names and marks are the property of their respective owners and are used for identification only.</p>
+      <p>Goalkeeper training involves physical activity and inherent risk of injury. Shane Kennedy is a licensed soccer coach, not a medical or strength-and-conditioning professional; consult a physician before beginning any training program.</p>
+      <p>© <span id="yr"></span> Shane Kennedy Soccer. All rights reserved.</p>
+    </div>
+    <p class="foot-links">
+      <a href="#privacy">Privacy Policy</a>·<a href="#terms">Terms of Service</a>
+    </p>
+  </div>
+</footer>
+
+<section id="privacy" class="legal-page">
+  <div class="wrap">
+    <p class="eyebrow">Shane Kennedy Soccer</p>
+    <h2>Privacy Policy</h2>
+    <p><span class="ph">PLACEHOLDER: replace with a reviewed privacy policy before launch.</span></p>
+    <p>This site collects the information you enter in the booking form (your name, contact details, and information about the player) for the sole purpose of responding to your inquiry and scheduling training. We do not sell your information or share it with third parties except as needed to operate this site.</p>
+    <p>For booking inquiries involving a minor, information should be submitted by a parent or legal guardian. To ask what information we hold or to request its deletion, contact <a href="mailto:dominatethebox@gmail.com" style="color:var(--chalk-dim)">dominatethebox@gmail.com</a>.</p>
+    <a href="#" class="close">Close</a>
+  </div>
+</section>
+
+<section id="terms" class="legal-page">
+  <div class="wrap">
+    <p class="eyebrow">Shane Kennedy Soccer</p>
+    <h2>Terms of Service</h2>
+    <p><span class="ph">PLACEHOLDER: replace with reviewed terms before launch.</span></p>
+    <p>Submitting the booking form is a request for training, not a confirmed booking. Sessions are scheduled only after direct confirmation from Shane Kennedy. Pricing, scheduling, and cancellation terms will be confirmed at that time.</p>
+    <p>Training involves physical activity and an inherent risk of injury. Participants take part at their own risk, and a waiver may be required before the first session. No specific athletic, competitive, or recruitment outcome is guaranteed. These terms are governed by the laws of the State of California.</p>
+    <a href="#" class="close">Close</a>
+  </div>
+</section>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('themeToggle');
+  var icon = btn ? btn.querySelector('.tt-icon') : null;
+  function currentTheme(){
+    var set = root.getAttribute('data-theme');
+    if(set) return set;
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  function setIcon(){ if(icon){ icon.textContent = currentTheme()==='dark' ? '☀' : '☾'; } }
+  try {
+    var saved = localStorage.getItem('sk-theme');
+    if(saved){ root.setAttribute('data-theme', saved); }
+  } catch(e){}
+  setIcon();
+  if(btn){
+    btn.addEventListener('click', function(){
+      var next = currentTheme()==='dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('sk-theme', next); } catch(e){}
+      setIcon();
+      if(window.__refreshChartTheme){ window.__refreshChartTheme(); }
+    });
+  }
+})();
+</script>
+<script>
+(function(){
+  var overlay = document.getElementById('bookOverlay');
+  var closeBtn = document.getElementById('bookClose');
+  if(!overlay) return;
+  var lastFocus = null;
+  function openModal(e){
+    if(e) e.preventDefault();
+    lastFocus = document.activeElement;
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');
+    var first = overlay.querySelector('input, select, textarea, button');
+    if(first) setTimeout(function(){ first.focus(); }, 30);
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  // any link pointing at #book opens the modal
+  document.querySelectorAll('a[href="#book"]').forEach(function(a){
+    a.addEventListener('click', openModal);
+  });
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && overlay.classList.contains('open')) closeModal();
+  });
+  // simple focus trap
+  overlay.addEventListener('keydown', function(e){
+    if(e.key !== 'Tab') return;
+    var f = overlay.querySelectorAll('button, input, select, textarea, a[href]');
+    if(!f.length) return;
+    var first = f[0], last = f[f.length-1];
+    if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+    else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+  });
+})();
+</script>
+</body>
+</html>
