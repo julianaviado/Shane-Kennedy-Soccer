@@ -483,7 +483,7 @@
 
   /* ---------- CTA / book ---------- */
   .book{position:relative;overflow:hidden;background:var(--pitch);border-top:3px solid var(--royal);color:#fff;text-align:center;padding:88px 0}
-  .book .book-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .book .book-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center bottom}
   .book::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.66);z-index:1}
   .book .wrap{position:relative;z-index:2}
   .book h2{font-size:clamp(2rem,5vw,3.2rem);color:#fff}
@@ -494,7 +494,7 @@
   .book .triggers span{margin:0 10px;white-space:nowrap}
 
   footer{background:var(--pitch-dark);padding:64px 0 36px;border-top:1px solid var(--line)}
-  footer .brand-logo{height:38px}
+  footer .brand-logo{height:34px;max-width:100%}
   .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;align-items:start}
   .foot-tag{color:var(--chalk-dim);font-size:.92rem;line-height:1.6;margin-top:18px;max-width:36ch}
   .foot-head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:600;color:var(--chalk);margin-bottom:6px}
@@ -502,10 +502,10 @@
   .foot-col a:hover{color:var(--signal-text)}
   .foot-col p{color:var(--chalk-dim);font-size:.92rem;margin-top:12px}
   .foot-col a.book-link{text-decoration:underline;text-underline-offset:3px}
-  .foot-note{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:var(--chalk-dim);font-size:.78rem;line-height:1.6;opacity:.8}
+  .foot-note{margin-top:48px;color:var(--chalk-dim);font-size:.78rem;line-height:1.6;opacity:.8}
   .foot-note a{color:var(--chalk-dim);text-decoration:underline;text-underline-offset:2px}
   .foot-note a:hover{color:var(--signal-text)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:14px;color:var(--chalk-dim);font-size:.82rem}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;padding-top:20px;border-top:1px solid var(--line);color:var(--chalk-dim);font-size:.82rem}
   .foot-bottom a{color:var(--chalk-dim);text-decoration:none;margin-left:16px}
   .foot-bottom a:hover{color:var(--signal-text)}
   .legal-page{display:none;max-width:720px;margin:0 auto;text-align:left}
