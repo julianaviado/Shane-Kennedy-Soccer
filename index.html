@@ -117,7 +117,7 @@
   .brand{display:inline-flex;align-items:center}
   .brand-logo{height:34px;width:auto;display:block;filter:var(--logo-filter);transition:filter .15s ease}
   .nav-links a.nav-cta{
-    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+    font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-size:.82rem;font-weight:600;
     background:var(--signal);color:var(--ink);
     padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
@@ -126,7 +126,7 @@
   .nav-links a.nav-cta:hover{background:var(--signal-deep);color:var(--ink);transform:translateY(-2px)}
   .nav-links{display:flex;align-items:center;gap:28px}
   .nav-links a{
-    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;
     font-size:.78rem;font-weight:500;color:var(--chalk-dim);text-decoration:none;
     transition:color .15s ease;
   }
@@ -336,7 +336,7 @@
   .faq{border-bottom:1px solid var(--line)}
   .faq summary{
     list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
-    padding:24px 0;font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.18rem);letter-spacing:.01em;
+    padding:24px 0;font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.18rem);letter-spacing:.01em;
     color:var(--chalk);transition:color .15s;
   }
   .faq summary::-webkit-details-marker{display:none}
@@ -388,6 +388,13 @@
     border:1px solid var(--line);border-radius:3px;padding:8px 14px;white-space:nowrap;
   }
   .aff-chip.gold{border-color:rgba(255,60,0,.45);color:var(--signal-text)}
+  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:14px}
+  .logo-card{
+    display:inline-flex;align-items:center;justify-content:center;
+    background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;
+    padding:12px 20px;box-shadow:0 1px 3px rgba(0,0,0,.12);
+  }
+  .logo-card img{height:36px;width:auto;max-width:150px;display:block;object-fit:contain}
   .logo-note{text-align:center;color:var(--chalk-dim);font-size:.82rem;margin-top:10px;font-style:italic}
   .logo-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:28px}
   .logo-ph{
@@ -563,12 +570,12 @@
     <p class="eyebrow">The track record</p>
     <div class="aff-group">
       <p class="aff-label">Coached &amp; played at</p>
-      <div class="aff-chips">
-        <span class="aff-chip">Tamalpais High School</span>
-        <span class="aff-chip">Dominican University</span>
-        <span class="aff-chip">Marin FC</span>
-        <span class="aff-chip">New York Cosmos (NASL)</span>
-        <span class="aff-chip">Babson College</span>
+      <div class="aff-logos">
+        <span class="logo-card"><img src="assets/images/Tamalpais%20High%20School.png" alt="Tamalpais High School" loading="lazy"></span>
+        <span class="logo-card"><img src="assets/images/Dominican%20University%20Athletics.svg" alt="Dominican University" loading="lazy"></span>
+        <span class="logo-card"><img src="assets/images/Marin%20FC.webp" alt="Marin FC" loading="lazy"></span>
+        <span class="logo-card"><img src="assets/images/New%20York%20Cosmos%20(NASL).svg" alt="New York Cosmos (NASL)" loading="lazy"></span>
+        <span class="logo-card"><img src="assets/images/Babson%20College.png" alt="Babson College" loading="lazy"></span>
       </div>
     </div>
     <div class="aff-group">
