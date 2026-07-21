@@ -138,8 +138,8 @@
   .hero .hero-sub{color:rgba(255,255,255,.85)}
   .hero .trigger{color:rgba(255,255,255,.85)}
   .hero .trigger b{color:#fff}
-  .hero .trigger .tick svg{color:#fff}
-  .hero .trigger .tick svg path{stroke:#0b0d10}
+  .hero .trigger .tick svg{color:var(--accent)}
+  .hero .trigger .tick svg path{stroke:#fff}
   .hero .btn-ghost{background:transparent;border-color:#fff;color:#fff}
   .hero .btn-ghost:hover{border-color:var(--signal);color:var(--signal);background:transparent}
   .hero h1{
