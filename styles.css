@@ -498,7 +498,7 @@
   footer .brand-logo{height:34px;max-width:100%}
   .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;align-items:start}
   .foot-tag{color:var(--chalk-dim);font-size:.92rem;line-height:1.6;margin-top:18px;max-width:36ch}
-  .foot-head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:600;color:var(--chalk);margin-bottom:6px}
+  .foot-col p.foot-head{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:600;color:var(--chalk);margin-top:0;margin-bottom:6px}
   .foot-col a{display:block;color:var(--chalk-dim);text-decoration:none;font-size:.92rem;margin-top:12px;transition:color .15s ease}
   .foot-col a:hover{color:var(--signal-text)}
   .foot-col p{color:var(--chalk-dim);font-size:.92rem;margin-top:12px}
