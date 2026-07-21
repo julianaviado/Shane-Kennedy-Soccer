@@ -274,12 +274,16 @@
 
   /* ---------- credentials ---------- */
   .creds{background:var(--pitch)}
-  .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px;border-radius:3px;overflow:hidden}
-  .cred{background:var(--pitch-dark);padding:30px 26px}
-  .cred .yr{font-family:'Oswald',sans-serif;color:var(--signal-text);font-weight:600;letter-spacing:.1em;font-size:.82rem}
-  .cred h3{font-size:clamp(1.05rem,2.2vw,1.12rem);margin-top:10px;line-height:1.15}
-  .cred p{color:var(--chalk-dim);font-size:.92rem;margin-top:8px}
-  .cosmos-note{margin-top:30px;color:var(--chalk-dim);font-size:.95rem;text-align:center;font-style:italic}
+  .cred-list{list-style:none;margin-top:38px;display:grid;grid-template-columns:1fr 1fr;gap:18px 48px}
+  .cred-list li{padding-left:26px;position:relative;color:var(--chalk-dim);line-height:1.55}
+  .cred-list li::before{content:"›";position:absolute;left:0;top:0;color:var(--signal-text);font-weight:700;font-size:1.1rem}
+  .cred-list b{color:var(--chalk)}
+  .honors{margin-top:36px;background:var(--pitch-dark);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:3px;padding:28px 30px}
+  .honors .honors-label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--accent)}
+  .honors ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:10px}
+  .honors li{font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--chalk);text-transform:uppercase;letter-spacing:.02em;padding-left:30px;position:relative;line-height:1.2}
+  .honors li::before{content:"★";position:absolute;left:0;top:.05em;color:var(--accent);font-size:1em}
+  .honors li span{color:var(--chalk-dim);font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:.85rem;font-weight:500;text-transform:none;letter-spacing:0;margin-left:8px}
   .phil-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
   .phil-stat{flex:1;min-width:120px}
   /* pillars */
@@ -487,7 +491,7 @@
     .stat{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
     .stat:nth-child(even){border-right:none}
     .pitch-grid{grid-template-columns:1fr;gap:34px}
-    .cred-grid{grid-template-columns:1fr}
+    .cred-list{grid-template-columns:1fr}
     .proof-grid{grid-template-columns:1fr}
     .voices-grid{grid-template-columns:1fr}
     .nav-links a:not(.nav-cta){display:none}
@@ -787,15 +791,22 @@
     <div class="img-ph" style="margin-top:28px;max-width:560px">
       <span><span class="ph">PHOTO OF SHANE</span><br>Headshot or coaching portrait. This is the trust anchor, so use a real, recent photo. Landscape 3:2</span>
     </div>
-    <div class="cred-grid">
-      <div class="cred"><span class="yr">Player</span><h3>New York Cosmos, NASL</h3><p>Drafted by the New York Cosmos in 1977 and signed with the Connecticut Yankees (ASL) the same year.</p></div>
-      <div class="cred"><span class="yr">College</span><h3>Babson College Keeper</h3><p>Starting goalkeeper at Babson, NCAA Division III national champions, with a BS in Communications.</p></div>
-      <div class="cred"><span class="yr">License</span><h3>NSCAA National Diploma</h3><p>Holds the NSCAA (United Soccer Coaches) National coaching license.</p></div>
-      <div class="cred"><span class="yr">2011–21</span><h3>Tam High Head Coach</h3><p>Head coach of both the boys and girls programs at Tamalpais High School.</p></div>
-      <div class="cred"><span class="yr">2012–21</span><h3>Dominican University</h3><p>Assistant men's coach and goalkeeper trainer at Dominican University.</p></div>
-      <div class="cred"><span class="yr">2013–25</span><h3>Marin FC GK Director</h3><p>Coach and Goalkeeper Director at Marin FC.</p></div>
+    <ul class="cred-list">
+      <li><b>New York Cosmos, NASL</b> — Drafted by the New York Cosmos in 1977 and signed with the Connecticut Yankees (ASL) the same year.</li>
+      <li><b>Babson College keeper</b> — Starting goalkeeper at Babson, NCAA Division III national champions, with a BS in Communications.</li>
+      <li><b>NSCAA National Diploma</b> — Holds the NSCAA (United Soccer Coaches) National coaching license.</li>
+      <li><b>Tam High head coach (2011–21)</b> — Head coach of both the boys and girls programs at Tamalpais High School.</li>
+      <li><b>Dominican University (2012–21)</b> — Assistant men's coach and goalkeeper trainer at Dominican University.</li>
+      <li><b>Marin FC GK Director (2013–25)</b> — Coach and Goalkeeper Director at Marin FC.</li>
+    </ul>
+    <div class="honors">
+      <p class="honors-label">Coach of the Year honors</p>
+      <ul>
+        <li>CIF Soccer Coach of the Year <span>2016–17</span></li>
+        <li>CIF Model Coach Award <span>2016–17</span></li>
+        <li>Prep2Prep Coach of the Year <span>2019–20</span></li>
+      </ul>
     </div>
-    <p class="cosmos-note">Coach of the Year honors: CIF Soccer Coach of the Year (2016–17), CIF Model Coach Award (2016–17), and Prep2Prep Coach of the Year (2019–20).</p>
   </div>
 </section>
 
