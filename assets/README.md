@@ -1,16 +1,15 @@
 # Assets
 
-## images/
+## logo/
 
-The logo and site photos go here:
+The brand wordmark:
 
 - `Shane Kennedy Soccer Wordmark.svg` — primary logo, used in the nav and footer
-- `Shane Kennedy Soccer Wordmark Black.png` / `Shane Kennedy Soccer Wordmark White.png` — flattened PNG variants of the logo
-- `hero.jpg` — Shane coaching a player (wide/landscape, used at the top of the page)
-- `shane.jpg` — headshot or coaching portrait (About section)
-- `action.jpg` — keeper making a save (full-width band)
+- `Shane Kennedy Soccer Wordmark Black.png` / `Shane Kennedy Soccer Wordmark White.png` — flattened PNG variants
 
-Reference images from the page like: `<img src="assets/images/hero.jpg" alt="...">`
+## images/
+
+Site photos (hero shot, headshot, action shots) — see `images/README.md`.
 
 ## Fonts
 
