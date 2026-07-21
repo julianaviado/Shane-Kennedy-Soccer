@@ -105,6 +105,7 @@
     box-shadow:0 10px 34px rgba(0,0,0,.12);
   }
   .brand{display:inline-flex;align-items:center}
+  .brand a{display:inline-flex;align-items:center}
   .brand-logo{height:34px;width:auto;display:block;filter:var(--logo-filter);transition:filter .15s ease}
   nav .brand-logo{height:20px}
   .nav-links a.nav-cta{
@@ -170,6 +171,7 @@
 
   /* ---------- record strip ---------- */
   .record{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .record-inline{display:grid;grid-template-columns:repeat(5,1fr);gap:0;text-align:center;margin-top:34px;background:var(--pitch-dark);border:1px solid var(--line);border-radius:8px;overflow:hidden}
   .record .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0;text-align:center}
   .stat{padding:34px 14px;border-right:1px solid var(--line)}
   .stat:last-child{border-right:none}
@@ -402,6 +404,7 @@
     display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
     color:var(--chalk-dim);font-size:.82rem}
   .aud .aud-img .ph{color:var(--signal-text);letter-spacing:.04em}
+  .aud img.aud-img{border:none;background:none;padding:0;object-fit:cover;display:block}
   .aud .cta-line{margin-top:32px}
 
   /* logo / affiliation strip */
@@ -452,6 +455,11 @@
     padding:16px;border-radius:999px;transition:background .15s ease;
   }
   .form-submit:hover{background:var(--signal-deep)}
+  /* booking page */
+  .book-page{padding:64px 0 88px}
+  .book-page .wrap{max-width:720px}
+  .book-page h2{font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;color:var(--chalk)}
+  .book-page .book-intro{margin:14px 0 8px;color:var(--chalk-dim);max-width:46ch}
   /* booking modal overlay */
   .book-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.6);backdrop-filter:blur(3px);
     display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:5vh 16px}
@@ -508,6 +516,7 @@
   @media(max-width:780px){
     .foot-grid{grid-template-columns:1fr;gap:34px}
     .record .wrap{grid-template-columns:1fr 1fr}
+    .record-inline{grid-template-columns:1fr 1fr}
     .stat{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
     .stat:nth-child(even){border-right:none}
     .pitch-grid{grid-template-columns:1fr;gap:34px}
