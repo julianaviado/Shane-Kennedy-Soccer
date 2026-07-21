@@ -363,6 +363,7 @@
   .img-ph.tall{aspect-ratio:4/5}
   .img-ph.wide{aspect-ratio:16/7}
   .img-ph.square{aspect-ratio:1/1}
+  .img-ph.photo{border:none;background:none;padding:0;object-fit:cover;display:block}
 
   /* hero image */
   .hero-photo{margin:34px auto 0;max-width:760px}
@@ -378,17 +379,8 @@
 
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
-  .logos .eyebrow{text-align:center;display:block}
-  .aff-group{margin-top:26px;text-align:center}
-  .aff-label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;color:var(--chalk-dim)}
-  .aff-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
-  .aff-chip{
-    font-family:'Oswald',sans-serif;font-weight:500;font-size:.85rem;letter-spacing:.02em;
-    color:var(--chalk);background:rgba(244,246,240,.04);
-    border:1px solid var(--line);border-radius:3px;padding:8px 14px;white-space:nowrap;
-  }
-  .aff-chip.gold{border-color:rgba(255,60,0,.45);color:var(--signal-text)}
-  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin-top:14px}
+  .aff-group{text-align:center}
+  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px}
   .logo-card{
     display:inline-flex;align-items:center;justify-content:center;
     background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:6px;
@@ -546,9 +538,7 @@
     </div>
     <p class="trigger"><b>Play with confidence.</b> 1-on-1 and small-group keeper training · All ages, all levels</p>
     <div class="hero-photo">
-      <div class="img-ph">
-        <span><span class="ph">HERO IMAGE</span><br>Shane coaching a player on the field · wide 16:8 · landscape</span>
-      </div>
+      <img class="img-ph photo" src="assets/images/IMG_0216.WEBP" alt="Goalkeeper making a full-extension diving save" loading="eager">
     </div>
   </div>
 </header>
@@ -567,9 +557,7 @@
 <!-- AFFILIATION STRIP -->
 <section class="logos">
   <div class="wrap">
-    <p class="eyebrow">The track record</p>
     <div class="aff-group">
-      <p class="aff-label">Coached &amp; played at</p>
       <div class="aff-logos">
         <span class="logo-card"><img src="assets/images/Tamalpais%20High%20School.png" alt="Tamalpais High School" loading="lazy"></span>
         <span class="logo-card"><img src="assets/images/Dominican%20University%20Athletics.svg" alt="Dominican University" loading="lazy"></span>
@@ -577,16 +565,7 @@
         <span class="logo-card"><img src="assets/images/New%20York%20Cosmos%20(NASL).svg" alt="New York Cosmos (NASL)" loading="lazy"></span>
         <span class="logo-card"><img src="assets/images/Babson%20College.png" alt="Babson College" loading="lazy"></span>
       </div>
-    </div>
-    <div class="aff-group">
-      <p class="aff-label">His players compete in</p>
-      <div class="aff-chips">
-        <span class="aff-chip gold">ECNL</span>
-        <span class="aff-chip gold">NPL</span>
-        <span class="aff-chip gold">NorCal Premier</span>
-        <span class="aff-chip gold">Club</span>
-        <span class="aff-chip gold">High school</span>
-      </div>
+      <p class="logo-note">His players compete in Elite Clubs National League (ECNL), National Premier Leagues (NPL), NorCal Premier, Club, and High school.</p>
     </div>
   </div>
 </section>
@@ -852,9 +831,7 @@
 
 <!-- FULL-BLEED ACTION BAND -->
 <section class="band">
-  <div class="img-ph">
-    <span><span class="ph">FULL-WIDTH ACTION IMAGE</span><br>A keeper fully extended for a save, or training in the box · wide cinematic crop</span>
-  </div>
+  <img class="img-ph photo" src="assets/images/IMG_0214.WEBP" alt="Goalkeeper making a save in a goalmouth scramble" loading="lazy">
 </section>
 
 <!-- MENTAL GAME -->
@@ -1032,7 +1009,7 @@
         <h3>The young player</h3><p>New to the game or just getting serious. Build a clean first touch, sound technique, and a love for the ball the right way, before bad habits set in.</p>
       </div>
       <div class="who">
-        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>club / HS player</span></div>
+        <img class="img-ph square photo" style="margin-bottom:18px;object-position:35% 35%" src="assets/images/IMG_0218.WEBP" alt="Club and high school player striking the ball in a match" loading="lazy">
         <h3>The club &amp; HS competitor</h3><p>Already competing and tired of plateauing. Sharper technique, smarter positioning, and the position-specific details that move a player from the bench toward the starting lineup.</p>
       </div>
       <div class="who">
@@ -1040,7 +1017,7 @@
         <h3>The college hopeful</h3><p>You've sent the emails and been to the camps, and you still don't know if a coach is watching. Train with someone who coaches at the college level, knows what recruiters look for in your position, and will tell you the truth about where you stand.</p>
       </div>
       <div class="who">
-        <div class="img-ph square" style="margin-bottom:18px"><span><span class="ph">IMAGE</span><br>goalkeeper</span></div>
+        <img class="img-ph square photo" style="margin-bottom:18px;object-position:50% 25%" src="assets/images/IMG_0216.WEBP" alt="Goalkeeper making a diving save" loading="lazy">
         <h3>The goalkeeper</h3><p>The specialty. Footwork, angles, command of the box, distribution, and the mental reset, coached by a record-setting NCAA keeper who develops the whole position most team coaches were never trained to teach.</p>
       </div>
     </div>
