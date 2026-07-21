@@ -10,16 +10,7 @@
 <meta property="og:description" content="Private soccer coaching in Marin County, all positions with a goalkeeper specialty, from a record-setting NCAA keeper and CIF Coach of the Year.">
 <meta property="og:type" content="website">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
-  @font-face{
-    font-family:'Vehicle';
-    src:url('assets/vehicle-webfont.woff2') format('woff2'),
-        url('assets/vehicle-webfont.woff') format('woff');
-    font-weight:100 900;
-    font-style:normal;
-    font-display:swap;
-  }
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
   :root{
     /* LIGHT MODE (default) */
@@ -89,7 +80,7 @@
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
     background:var(--ground);
     color:var(--chalk);
     line-height:1.5;
@@ -99,14 +90,14 @@
 
   /* ---------- chalk-line motif ---------- */
   .eyebrow{
-    font-family:'Vehicle','Oswald',sans-serif;
+    font-family:'Oswald',sans-serif;
     text-transform:uppercase;
     letter-spacing:.28em;
     font-size:.72rem;
     color:var(--royal);
     font-weight:600;
   }
-  h1,h2,h3{font-family:'Vehicle','Oswald',sans-serif;font-weight:700;line-height:1.02;text-transform:uppercase}
+  h1,h2,h3{font-family:'Oswald',sans-serif;font-weight:700;line-height:1.02;text-transform:uppercase}
 
   /* ---------- nav ---------- */
   nav{
@@ -126,7 +117,7 @@
   .brand{display:inline-flex;align-items:center}
   .brand-logo{height:34px;width:auto;display:block;filter:var(--logo-filter);transition:filter .15s ease}
   .nav-links a.nav-cta{
-    font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-size:.82rem;font-weight:600;
     background:var(--signal);color:var(--ink);
     padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
@@ -135,7 +126,7 @@
   .nav-links a.nav-cta:hover{background:var(--signal-deep);color:var(--ink);transform:translateY(-2px)}
   .nav-links{display:flex;align-items:center;gap:28px}
   .nav-links a{
-    font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;
     font-size:.78rem;font-weight:500;color:var(--chalk-dim);text-decoration:none;
     transition:color .15s ease;
   }
@@ -164,7 +155,7 @@
   }
   .hero-cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .btn{
-    font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-weight:600;font-size:.92rem;text-decoration:none;border-radius:999px;
     padding:15px 30px;display:inline-block;transition:transform .15s ease,background .15s ease;
   }
@@ -180,7 +171,7 @@
   .record .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:0;text-align:center}
   .stat{padding:34px 14px;border-right:1px solid var(--line)}
   .stat:last-child{border-right:none}
-  .stat .num{font-family:'Vehicle','Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3rem);color:var(--accent);line-height:1}
+  .stat .num{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,5vw,3rem);color:var(--accent);line-height:1}
   .stat .lab{font-size:.78rem;color:var(--chalk-dim);margin-top:8px;letter-spacing:.04em}
 
   /* ---------- generic section ---------- */
@@ -235,11 +226,11 @@
   .map-svg .zone:focus-visible rect,.map-svg .zone:focus-visible circle{stroke:var(--signal);stroke-width:3;fill:rgba(255,60,0,.14)}
   .map-chalk{stroke:var(--chalk);stroke-width:1.5;fill:none;opacity:.45}
   .map-dim{stroke:var(--chalk);stroke-width:1;fill:none;opacity:.3}
-  .zlabel{fill:var(--chalk);font-family:'Vehicle','Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.02em;pointer-events:none}
+  .zlabel{fill:var(--chalk);font-family:'Oswald',sans-serif;font-weight:600;font-size:12px;letter-spacing:.02em;pointer-events:none}
   .map-svg .zone.active .zlabel{fill:var(--signal)}
-  .ztick{fill:var(--chalk-dim);font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.02em;pointer-events:none;opacity:.55}
+  .ztick{fill:var(--chalk-dim);font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:.02em;pointer-events:none;opacity:.55}
   .map-readout{background:var(--pitch);border:1px solid var(--line);border-left:4px solid var(--signal);border-radius:3px;padding:28px;min-height:210px}
-  .map-readout .rtag{font-family:'Vehicle','Oswald',sans-serif;font-size:.72rem;letter-spacing:.1em;color:var(--signal-text);text-transform:uppercase}
+  .map-readout .rtag{font-family:'Oswald',sans-serif;font-size:.72rem;letter-spacing:.1em;color:var(--signal-text);text-transform:uppercase}
   .map-readout h3{font-size:clamp(1.25rem,2.6vw,1.4rem);color:var(--chalk);margin-top:8px}
   .map-readout p{color:var(--chalk-dim);margin-top:12px;line-height:1.55}
   .map-hint{font-size:.8rem;color:var(--chalk-dim);margin-top:16px;font-style:italic;opacity:.85}
@@ -257,7 +248,7 @@
   .radar-legend .sw-dash{width:16px;height:0;border-radius:0;border-top:2px dashed #8b9099;align-self:center}
   .radar-toggle{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 0;justify-content:center}
   .radar-toggle button{
-    font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.74rem;font-weight:600;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.74rem;font-weight:600;
     cursor:pointer;border:1px solid var(--line);background:transparent;color:var(--chalk-dim);
     padding:9px 18px;border-radius:2px;transition:all .15s;
   }
@@ -283,7 +274,7 @@
   .creds{background:var(--pitch)}
   .cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:42px;border-radius:3px;overflow:hidden}
   .cred{background:var(--pitch-dark);padding:30px 26px}
-  .cred .yr{font-family:'Vehicle','Oswald',sans-serif;color:var(--signal-text);font-weight:600;letter-spacing:.1em;font-size:.82rem}
+  .cred .yr{font-family:'Oswald',sans-serif;color:var(--signal-text);font-weight:600;letter-spacing:.1em;font-size:.82rem}
   .cred h3{font-size:clamp(1.05rem,2.2vw,1.12rem);margin-top:10px;line-height:1.15}
   .cred p{color:var(--chalk-dim);font-size:.92rem;margin-top:8px}
   .cosmos-note{margin-top:30px;color:var(--chalk-dim);font-size:.95rem;text-align:center;font-style:italic}
@@ -293,23 +284,23 @@
   .pillars{background:var(--pitch)}
   .pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:34px}
   .pillar{border:1px solid var(--line);border-radius:5px;padding:28px 24px;background:var(--pitch)}
-  .pillar .pnum{font-family:'Vehicle','Oswald',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--signal-text)}
+  .pillar .pnum{font-family:'Oswald',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--signal-text)}
   .pillar .pmotif{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,191,255,.12);color:var(--signal);margin-bottom:14px}
-  .pillar h3{font-family:'Vehicle','Oswald',sans-serif;font-size:clamp(1.2rem,2.6vw,1.45rem);color:var(--chalk);margin-top:10px}
+  .pillar h3{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,2.6vw,1.45rem);color:var(--chalk);margin-top:10px}
   .pillar p{color:var(--chalk-dim);font-size:.92rem;line-height:1.55;margin-top:10px}
-  .phil-stat .psn{font-family:'Vehicle','Oswald',sans-serif;font-weight:700;font-size:clamp(1.4rem,3.4vw,1.6rem);color:var(--signal-text);line-height:1}
+  .phil-stat .psn{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(1.4rem,3.4vw,1.6rem);color:var(--signal-text);line-height:1}
   .phil-stat .psl{font-size:.82rem;color:var(--chalk-dim);margin-top:7px;line-height:1.35}
 
   /* ---------- proof / coaching results ---------- */
   .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
   .proof{background:var(--pitch-dark);border:1px solid var(--line);border-radius:3px;padding:30px}
-  .proof .big{font-family:'Vehicle','Oswald',sans-serif;color:var(--accent);font-weight:700;font-size:clamp(1.8rem,4.5vw,2.2rem);line-height:1}
+  .proof .big{font-family:'Oswald',sans-serif;color:var(--accent);font-weight:700;font-size:clamp(1.8rem,4.5vw,2.2rem);line-height:1}
   .proof p{margin-top:12px;color:var(--chalk-dim)}
   .proof p b{color:var(--chalk)}
 
   /* ---------- quote ---------- */
   .quote{padding:90px 0;text-align:center;position:relative}
-  .quote blockquote{font-family:'Vehicle','Oswald',sans-serif;font-weight:500;text-transform:none;
+  .quote blockquote{font-family:'Oswald',sans-serif;font-weight:500;text-transform:none;
     font-size:clamp(1.5rem,4vw,2.4rem);line-height:1.25;max-width:24ch;margin:0 auto;letter-spacing:.005em}
   .quote .cite{margin-top:24px;color:var(--chalk-dim);font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
 
@@ -318,8 +309,8 @@
   .voices-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
   .voice{background:var(--pitch);border:1px solid var(--line);border-top:3px solid var(--signal);border-radius:3px;padding:30px}
   .voice p{font-size:1.08rem;line-height:1.45}
-  .voice .who-said{margin-top:18px;font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--signal-text)}
-  .voice .who-said span{display:block;color:var(--chalk-dim);letter-spacing:.04em;text-transform:none;font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:.82rem;margin-top:4px}
+  .voice .who-said{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--signal-text)}
+  .voice .who-said span{display:block;color:var(--chalk-dim);letter-spacing:.04em;text-transform:none;font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:.82rem;margin-top:4px}
   .voice-note{margin-top:30px;text-align:center;color:var(--chalk-dim);font-size:.9rem;font-style:italic}
 
   /* ---------- faq ---------- */
@@ -335,9 +326,9 @@
   .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:34px}
   .price-card{background:var(--pitch);border:1px solid var(--line);border-radius:5px;padding:26px 22px;display:flex;flex-direction:column}
   .price-card.feature{border-color:var(--signal-text);box-shadow:0 0 0 1px var(--signal) inset}
-  .price-tag{font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--signal-text);font-weight:600}
-  .price-name{font-family:'Vehicle','Oswald',sans-serif;font-size:clamp(1.15rem,2.4vw,1.35rem);color:var(--chalk);margin-top:8px;font-weight:600}
-  .price-amt{font-family:'Vehicle','Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,2.6rem);color:var(--signal-text);line-height:1;margin:14px 0 2px}
+  .price-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--signal-text);font-weight:600}
+  .price-name{font-family:'Oswald',sans-serif;font-size:clamp(1.15rem,2.4vw,1.35rem);color:var(--chalk);margin-top:8px;font-weight:600}
+  .price-amt{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(2rem,4.5vw,2.6rem);color:var(--signal-text);line-height:1;margin:14px 0 2px}
   .price-unit{font-size:.8rem;color:var(--chalk-dim);margin-bottom:14px}
   .price-desc{font-size:.9rem;color:var(--chalk-dim);line-height:1.5;flex:1}
   .price-meta{font-size:.78rem;color:var(--chalk-dim);margin-top:16px;padding-top:14px;border-top:1px solid var(--line);letter-spacing:.02em}
@@ -345,7 +336,7 @@
   .faq{border-bottom:1px solid var(--line)}
   .faq summary{
     list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
-    padding:24px 0;font-family:'Vehicle','Oswald',sans-serif;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.18rem);letter-spacing:.01em;
+    padding:24px 0;font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(1.05rem,2.4vw,1.18rem);letter-spacing:.01em;
     color:var(--chalk);transition:color .15s;
   }
   .faq summary::-webkit-details-marker{display:none}
@@ -364,7 +355,7 @@
     width:100%;aspect-ratio:3/2;border:2px dashed var(--line);border-radius:4px;
     display:flex;align-items:center;justify-content:center;text-align:center;
     background:repeating-linear-gradient(45deg,transparent 0 12px,rgba(244,246,240,.025) 12px 24px);
-    color:var(--chalk-dim);font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;
+    color:var(--chalk-dim);font-family:'Oswald',sans-serif;text-transform:uppercase;
     letter-spacing:.1em;font-size:.8rem;padding:24px;
   }
   .img-ph span{display:block}
@@ -389,10 +380,10 @@
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
   .logos .eyebrow{text-align:center;display:block}
   .aff-group{margin-top:26px;text-align:center}
-  .aff-label{font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;color:var(--chalk-dim)}
+  .aff-label{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;color:var(--chalk-dim)}
   .aff-chips{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:14px}
   .aff-chip{
-    font-family:'Vehicle','Oswald',sans-serif;font-weight:500;font-size:.85rem;letter-spacing:.02em;
+    font-family:'Oswald',sans-serif;font-weight:500;font-size:.85rem;letter-spacing:.02em;
     color:var(--chalk);background:rgba(244,246,240,.04);
     border:1px solid var(--line);border-radius:3px;padding:8px 14px;white-space:nowrap;
   }
@@ -402,7 +393,7 @@
   .logo-ph{
     flex:0 0 auto;width:130px;height:78px;border:1.5px dashed var(--line);border-radius:4px;
     display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;
-    color:var(--chalk-dim);font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;
+    color:var(--chalk-dim);font-family:'Oswald',sans-serif;text-transform:uppercase;
     letter-spacing:.06em;font-size:.66rem;line-height:1.25;
     background:repeating-linear-gradient(45deg,transparent 0 10px,rgba(244,246,240,.02) 10px 20px);
   }
@@ -410,7 +401,7 @@
 
   /* click triggers under CTA */
   .clicktriggers{margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .ct{font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;
+  .ct{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:600;
     background:rgba(255,255,255,.08);color:var(--chalk);padding:8px 14px;border-radius:2px;border:1px solid var(--line)}
 
   /* ---------- booking form ---------- */
@@ -418,11 +409,11 @@
   .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .field{margin-top:16px}
   .field.full{grid-column:1/-1}
-  .field label{display:block;font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;
+  .field label{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;
     font-size:.72rem;font-weight:600;color:var(--chalk);margin-bottom:6px}
   .field input,.field select,.field textarea{
     width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:3px;
-    background:var(--field-bg);color:var(--field-text);font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:1rem;
+    background:var(--field-bg);color:var(--field-text);font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:1rem;
   }
   .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--signal-text)}
   .field textarea{resize:vertical;min-height:90px}
@@ -430,7 +421,7 @@
   .form-submit{
     width:100%;margin-top:22px;border:none;cursor:pointer;
     background:var(--signal);color:var(--ink);
-    font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:1rem;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-weight:600;font-size:1rem;
     padding:16px;border-radius:999px;transition:background .15s ease;
   }
   .form-submit:hover{background:var(--signal-deep)}
@@ -466,7 +457,7 @@
   .book p{margin:18px auto 0;max-width:46ch;font-weight:500;color:var(--chalk-dim)}
   .book .btn-primary{background:var(--signal);color:var(--ink);margin-top:30px}
   .book .btn-primary:hover{background:var(--signal-deep)}
-  .book .triggers{margin-top:18px;font-family:'Vehicle','Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--chalk-dim);font-weight:600}
+  .book .triggers{margin-top:18px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;color:var(--chalk-dim);font-weight:600}
   .book .triggers span{margin:0 10px;white-space:nowrap}
 
   footer{background:var(--pitch-dark);padding:40px 0;border-top:1px solid var(--line);text-align:center}
@@ -951,7 +942,7 @@
           ticks:{display:false,stepSize:2.5},
           grid:{color:_tc.grid},
           angleLines:{color:_tc.grid},
-          pointLabels:{font:{size:14,family:'Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'},color:_tc.label,padding:6}
+          pointLabels:{font:{size:14,family:'Archivo, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'},color:_tc.label,padding:6}
         }},
         elements:{line:{tension:0}}
       };
