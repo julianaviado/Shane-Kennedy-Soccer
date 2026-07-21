@@ -137,13 +137,22 @@
   section[id], header{scroll-margin-top:74px}
 
   /* ---------- hero: the box ---------- */
-  .hero{position:relative;overflow:hidden;padding:84px 0 72px}
+  .hero{position:relative;overflow:hidden;padding:120px 0 110px}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
   .hero::before{
     content:"";position:absolute;inset:0;
-    background:radial-gradient(120% 90% at 50% 0%, rgba(255,255,255,.05), transparent 60%);
-    pointer-events:none;
+    background:rgba(0,0,0,.66);
+    z-index:1;pointer-events:none;
   }
   .hero-inner{position:relative;z-index:2;text-align:center}
+  .hero h1{color:#fff}
+  .hero .hero-sub{color:rgba(255,255,255,.85)}
+  .hero .trigger{color:rgba(255,255,255,.85)}
+  .hero .trigger b{color:#fff}
+  .hero .trigger .tick svg{color:#fff}
+  .hero .trigger .tick svg path{stroke:#0b0d10}
+  .hero .btn-ghost{background:transparent;border-color:#fff;color:#fff}
+  .hero .btn-ghost:hover{border-color:var(--signal);color:var(--signal);background:transparent}
   .hero h1{
     font-size:clamp(1.7rem,8.5vw,5.6rem);
     letter-spacing:.005em;
@@ -388,10 +397,6 @@
   .img-ph.square{aspect-ratio:1/1}
   .img-ph.photo{border:none;background:none;padding:0;object-fit:cover;display:block}
 
-  /* hero image */
-  .hero-photo{margin:34px auto 0;max-width:760px}
-  .hero-photo .img-ph{aspect-ratio:16/8;border-color:var(--line)}
-
   /* full-bleed band */
   .band{position:relative;padding:0}
   .band .img-ph{aspect-ratio:auto;height:340px;border-radius:0;border-left:none;border-right:none}
@@ -565,6 +570,7 @@
 
 <!-- HERO -->
 <header class="hero">
+  <img class="hero-bg" src="assets/images/IMG_0216.WEBP" alt="" aria-hidden="true" loading="eager">
   <div class="wrap hero-inner">
     <p class="eyebrow">Marin, CA · Limited spots</p>
     <h1><span class="line1">Play with confidence.</span><em>Train with Coach Shane.</em></h1>
@@ -578,9 +584,6 @@
       <span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M6 10.3l2.5 2.5L14 7.4" fill="none" stroke="var(--ground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Boys &amp; girls</span>
       <span class="tick"><svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="10" fill="currentColor"/><path d="M6 10.3l2.5 2.5L14 7.4" fill="none" stroke="var(--ground)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>All ages and levels</span>
     </p>
-    <div class="hero-photo">
-      <img class="img-ph photo" src="assets/images/IMG_0216.WEBP" alt="Goalkeeper making a full-extension diving save" loading="eager">
-    </div>
   </div>
 </header>
 
