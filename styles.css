@@ -246,7 +246,7 @@
 
   /* ---------- skill radar (open, full width) ---------- */
   .radar-open{margin-top:0}
-  .radar-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:.82rem;color:var(--chalk-dim);margin:0 0 4px;justify-content:center}
+  .radar-legend{display:flex;gap:22px;flex-wrap:wrap;font-size:.82rem;color:var(--chalk-dim);margin:10px 0 4px;justify-content:center}
   .radar-legend span{display:flex;align-items:center;gap:6px}
   .radar-legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
   .radar-legend .sw-solid{width:14px;height:14px}
