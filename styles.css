@@ -137,10 +137,6 @@
   .hero .eyebrow,.quote-band .eyebrow,.book .eyebrow{color:var(--signal)}
   .hero h1{color:#fff}
   .hero .hero-sub{color:rgba(255,255,255,.85)}
-  .hero .trigger{color:rgba(255,255,255,.85)}
-  .hero .trigger b{color:#fff}
-  .hero .trigger .tick svg{color:var(--accent)}
-  .hero .trigger .tick svg path{stroke:#fff}
   .hero .btn-ghost{background:transparent;border-color:#fff;color:#fff}
   .hero .btn-ghost:hover{border-color:var(--signal);color:var(--signal);background:transparent}
   .hero h1{
@@ -165,9 +161,11 @@
   .btn-primary:hover{transform:translateY(-2px);background:var(--signal-deep)}
   .btn-ghost{background:var(--card);border:1.5px solid var(--chalk);color:var(--chalk)}
   .btn-ghost:hover{border-color:var(--signal-text);color:var(--signal-text);background:var(--card)}
-  .trigger{margin-top:34px;font-size:.82rem;color:var(--chalk-dim);letter-spacing:.04em;display:flex;justify-content:center;gap:8px 20px;flex-wrap:wrap}
+  .trigger-bar{background:#0e1116;padding:15px 0}
+  .trigger{font-size:.9rem;color:rgba(255,255,255,.92);letter-spacing:.04em;display:flex;justify-content:center;gap:8px 26px;flex-wrap:wrap}
+  .trigger .tick svg{color:var(--accent)}
   .trigger .tick{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
-  .trigger .tick svg{width:16px;height:16px;flex:0 0 auto;color:var(--chalk)}
+  .trigger .tick svg{width:16px;height:16px;flex:0 0 auto}
   .trigger b{color:var(--chalk)}
 
   /* ---------- record strip ---------- */
