@@ -392,7 +392,6 @@
 
   /* split section image+text */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  .split.flip > .split-img{order:2}
   /* audience blocks */
   .audiences{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .audiences .aud{padding:26px 0}
@@ -536,6 +535,7 @@
     nav .brand-logo{height:16px}
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
+    .split > .split-img{order:-1}
     .band .img-ph{height:240px}
     .map-wrap{grid-template-columns:1fr;gap:24px}
   }
