@@ -503,7 +503,8 @@
   .foot-note{margin-top:48px;color:var(--chalk-dim);font-size:.78rem;line-height:1.6;opacity:.8}
   .foot-note a{color:var(--chalk-dim);text-decoration:underline;text-underline-offset:2px}
   .foot-note a:hover{color:var(--signal-text)}
-  .foot-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;padding-top:20px;border-top:1px solid var(--line);color:var(--chalk-dim);font-size:.82rem}
+  .foot-bottom{position:relative;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-top:16px;padding-top:20px;color:var(--chalk-dim);font-size:.82rem}
+  .foot-bottom::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:100vw;height:1px;background:var(--line)}
   .foot-bottom a{color:var(--chalk-dim);text-decoration:none;margin-left:16px}
   .foot-bottom a:hover{color:var(--signal-text)}
   .legal-page{display:none;max-width:720px;margin:0 auto;text-align:left}
