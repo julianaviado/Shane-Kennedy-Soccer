@@ -305,6 +305,10 @@
   .cred-cta{margin-top:40px}
   /* ---------- mission ---------- */
   .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .mission-quote{margin:0;border-left:3px solid var(--accent);padding:6px 0 6px 28px;max-width:64ch}
+  .mission-quote blockquote{font-family:'Oswald',sans-serif;font-weight:500;font-size:clamp(1.3rem,2.6vw,1.7rem);line-height:1.3;color:var(--chalk);margin:0}
+  .mission-quote figcaption{margin-top:20px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;color:var(--signal-text)}
+  .mission-quote figcaption span{display:block;color:var(--chalk-dim);letter-spacing:.02em;text-transform:none;font-family:'Archivo',sans-serif;font-size:.84rem;margin-top:4px}
   .phil-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
   .phil-stat{flex:1;min-width:120px}
   /* pillars */
