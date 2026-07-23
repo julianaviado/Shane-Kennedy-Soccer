@@ -278,7 +278,16 @@
   .about-title{font-size:clamp(1.9rem,5.4vw,3.4rem);margin-top:14px}
   .about-title span{display:block}
   .about-title em{display:block;font-style:normal;color:var(--accent)}
-  .bio-lead{color:var(--chalk-dim);font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.55;margin:22px 0 0}
+  .bio-lead{color:var(--chalk-dim);font-size:clamp(1.05rem,2vw,1.25rem);line-height:1.55;margin:22px 0 0;max-width:72ch}
+  /* mission banner */
+  .mission-banner{background:#0e1116;text-align:center;padding:80px 0}
+  .mission-banner .eyebrow{color:var(--signal)}
+  .mission-banner h2{color:#fff;font-size:clamp(2.2rem,6vw,4rem);margin-top:14px}
+  .mission-banner h2 span{display:block}
+  .mission-banner h2 em{display:block;font-style:normal;color:var(--accent)}
+  .mission-banner p{color:rgba(255,255,255,.82);margin:22px auto 0;max-width:52ch;font-size:1.08rem}
+  /* off the field */
+  .offfield-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
   .about-photo{width:100%;max-width:520px;border-radius:12px;display:block;object-fit:cover}
   .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
   .badge{display:inline-flex;align-items:center;gap:4px;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.04em;
@@ -550,6 +559,7 @@
     .stat-primary-grid{grid-template-columns:1fr}
     .cred-cols{grid-template-columns:1fr;gap:32px}
     .mission-grid{grid-template-columns:1fr;gap:32px}
+    .offfield-grid{grid-template-columns:1fr;gap:32px}
     .stat{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
     .stat:nth-child(even){border-right:none}
     .pitch-grid{grid-template-columns:1fr;gap:34px}
