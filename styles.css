@@ -152,9 +152,7 @@
     color:var(--chalk-dim);max-width:50ch;margin:22px auto 0;font-weight:400;
   }
   .hero-cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-  .hero-trigger{margin-top:20px;display:inline-flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;font-weight:500}
-  .hero-dot{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(255,60,0,.6);animation:heroPulse 2s infinite}
-  @keyframes heroPulse{0%{box-shadow:0 0 0 0 rgba(255,60,0,.55)}70%{box-shadow:0 0 0 8px rgba(255,60,0,0)}100%{box-shadow:0 0 0 0 rgba(255,60,0,0)}}
+  .hero-trigger{margin-top:20px;color:rgba(255,255,255,.9);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;font-weight:500}
   .btn{
     font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
     font-weight:600;font-size:.92rem;text-decoration:none;border-radius:999px;
@@ -322,7 +320,6 @@
   .pillar .pmotif{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,191,255,.12);color:var(--signal);margin-bottom:14px}
   /* positions: accordion left, swapping image right */
   .pos2-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
-  .pos2-intro{color:var(--chalk-dim);margin-top:16px;max-width:46ch;font-size:1.05rem}
   .pos2-accordion{margin-top:30px;border-top:1px solid var(--line)}
   .pos2-item{border-bottom:1px solid var(--line)}
   .pos2-item > summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 2px}
