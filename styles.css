@@ -317,6 +317,11 @@
   .pillar{border:1px solid var(--line);border-radius:5px;padding:28px 24px;background:var(--pitch)}
   .pillar .pnum{font-family:'Oswald',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--signal-text)}
   .pillar .pmotif{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,191,255,.12);color:var(--signal);margin-bottom:14px}
+  /* positions: label in box, body text below */
+  .pos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;margin-top:34px}
+  .pos-item{display:flex;flex-direction:column}
+  .pos-box{flex:1 0 auto}
+  .pos-item > p{color:var(--chalk-dim);font-size:.92rem;line-height:1.55;margin-top:14px}
   /* why private coaching (centered, borderless) */
   .why-head{text-align:center;margin:0 auto}
   .why-head h2{font-size:clamp(2rem,5vw,3rem);margin-top:14px}
