@@ -134,39 +134,45 @@
 </section>
 
 <!-- ALL POSITIONS -->
-<section class="pillars" id="allpositions">
-  <div class="wrap">
-    <p class="eyebrow">Every position on the field</p>
-    <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Attacking &amp; Defending</h2>
-    <div class="pos-grid">
-      <div class="pos-item">
-        <div class="pillar pos-box" style="background-image:url('assets/images/IMG_0214.WEBP')">
-          <span class="pnum">Defenders</span>
-          <h3>Back line</h3>
-        </div>
-        <p>Positioning, 1-v-1 defending, clean first touch under pressure, and playing out of the back with composure.</p>
+<section class="pillars positions2" id="allpositions">
+  <div class="wrap pos2-grid">
+    <div class="pos2-left">
+      <p class="eyebrow">Every position on the field</p>
+      <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px">Attacking &amp; Defending</h2>
+      <p class="pos2-intro">Every outfield position gets its own focused work, and every player builds the all-around game underneath it. Open a role to see what training looks like.</p>
+      <div class="pos2-accordion">
+        <details class="pos2-item" open data-img="assets/images/IMG_0214.WEBP" data-alt="Defender clearing the ball in a match">
+          <summary>
+            <span class="pos2-sum-text"><span class="pos2-cat">Defenders</span>Back line</span>
+            <span class="pos2-plus" aria-hidden="true"></span>
+          </summary>
+          <p>Positioning, 1-v-1 defending, clean first touch under pressure, and playing out of the back with composure.</p>
+        </details>
+        <details class="pos2-item" data-img="assets/images/IMG_0218.WEBP" data-alt="Midfielder driving the ball forward">
+          <summary>
+            <span class="pos2-sum-text"><span class="pos2-cat">Midfield</span>The engine</span>
+            <span class="pos2-plus" aria-hidden="true"></span>
+          </summary>
+          <p>Receiving on the half-turn, scanning before the ball arrives, passing range, and controlling tempo in both directions.</p>
+        </details>
+        <details class="pos2-item" data-img="assets/images/IMG_4512.JPG" data-alt="Attacker celebrating with a tournament trophy">
+          <summary>
+            <span class="pos2-sum-text"><span class="pos2-cat">Attackers</span>Final third</span>
+            <span class="pos2-plus" aria-hidden="true"></span>
+          </summary>
+          <p>First touch into space, finishing with both feet, movement off the ball, and the decision-making that creates chances.</p>
+        </details>
+        <details class="pos2-item" data-img="assets/images/IMG_6183.JPG" data-alt="Coach Shane with a group of goalkeepers after training">
+          <summary>
+            <span class="pos2-sum-text"><span class="pos2-cat">Every player</span>The whole game</span>
+            <span class="pos2-plus" aria-hidden="true"></span>
+          </summary>
+          <p>Technique, game intelligence, fitness, and the confidence to try things, the foundation every position is built on.</p>
+        </details>
       </div>
-      <div class="pos-item">
-        <div class="pillar pos-box" style="background-image:url('assets/images/IMG_0218.WEBP')">
-          <span class="pnum">Midfield</span>
-          <h3>The engine</h3>
-        </div>
-        <p>Receiving on the half-turn, scanning before the ball arrives, passing range, and controlling tempo in both directions.</p>
-      </div>
-      <div class="pos-item">
-        <div class="pillar pos-box" style="background-image:url('assets/images/IMG_4512.JPG')">
-          <span class="pnum">Attackers</span>
-          <h3>Final third</h3>
-        </div>
-        <p>First touch into space, finishing with both feet, movement off the ball, and the decision-making that creates chances.</p>
-      </div>
-      <div class="pos-item">
-        <div class="pillar pos-box" style="background-image:url('assets/images/IMG_6183.JPG')">
-          <span class="pnum">Every player</span>
-          <h3>The whole game</h3>
-        </div>
-        <p>Technique, game intelligence, fitness, and the confidence to try things, the foundation every position is built on.</p>
-      </div>
+    </div>
+    <div class="pos2-right">
+      <img id="pos2Media" class="pos2-media" src="assets/images/IMG_0214.WEBP" alt="Defender clearing the ball in a match" loading="lazy">
     </div>
   </div>
 </section>
@@ -309,6 +315,27 @@
 
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  var acc = document.querySelector('.pos2-accordion');
+  if(!acc) return;
+  var media = document.getElementById('pos2Media');
+  var items = acc.querySelectorAll('details.pos2-item');
+  items.forEach(function(d){
+    d.addEventListener('toggle', function(){
+      if(d.open){
+        items.forEach(function(o){ if(o!==d){ o.open = false; } });
+        if(media){
+          var src = d.getAttribute('data-img');
+          if(src){ media.src = src; }
+          media.alt = d.getAttribute('data-alt') || '';
+        }
+      }
+    });
+  });
+})();
+</script>
 
 <script>
 (function(){
