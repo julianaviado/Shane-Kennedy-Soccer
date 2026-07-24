@@ -538,7 +538,7 @@
   .foot-col a{display:block;color:var(--chalk-dim);text-decoration:none;font-size:.92rem;margin-top:12px;transition:color .15s ease}
   .foot-col a:hover{color:var(--signal-text)}
   .foot-col p{color:var(--chalk-dim);font-size:.92rem;margin-top:12px}
-  .foot-col a.book-link{text-decoration:underline;text-underline-offset:3px}
+  .foot-col a.book-link{text-decoration:none}
   .foot-note{margin-top:48px;color:var(--chalk-dim);font-size:.78rem;line-height:1.6;opacity:.8}
   .foot-note a{color:var(--chalk-dim);text-decoration:underline;text-underline-offset:2px}
   .foot-note a:hover{color:var(--signal-text)}
