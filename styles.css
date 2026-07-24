@@ -322,6 +322,11 @@
   .pillar{border:1px solid var(--line);border-radius:5px;padding:28px 24px;background:var(--pitch)}
   .pillar .pnum{font-family:'Oswald',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--signal-text)}
   .pillar .pmotif{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:rgba(0,191,255,.12);color:var(--signal);margin-bottom:14px}
+  /* offerings: category groups */
+  .offer-group{margin-top:46px}
+  .offer-group + .offer-group{margin-top:54px}
+  .offer-cat{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:1rem;font-weight:700;color:var(--signal-text);padding-bottom:10px;border-bottom:2px solid var(--signal-text);display:inline-block;margin:0}
+  .offer-group .pillar-grid{margin-top:22px}
   /* positions: accordion left, swapping image right */
   .pos2-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
   .pos2-accordion{margin-top:30px;border-top:1px solid var(--line)}
