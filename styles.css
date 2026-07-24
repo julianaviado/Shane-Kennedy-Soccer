@@ -452,7 +452,7 @@
   .aud p{color:var(--chalk-dim);margin-top:14px}
   .aud p.eyebrow{color:var(--signal-text);margin-top:0}
   .aud img.aud-img{width:100%;aspect-ratio:4/3;border-radius:8px;object-fit:cover;display:block;margin-bottom:22px}
-  .aud .cta-line{margin-top:auto;padding-top:28px}
+  .aud .cta-line{margin-top:auto;padding-top:28px;text-align:center}
   .aud-allcta{display:flex;justify-content:center;margin-top:44px}
 
   /* logo / affiliation strip */
