@@ -433,7 +433,7 @@
 
   /* split section image+text */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  /* audience blocks — 3-up cards, image on top */
+  /* audience blocks: 3-up cards, image on top */
   .audiences{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
   .audiences .aud{display:flex;flex-direction:column}
