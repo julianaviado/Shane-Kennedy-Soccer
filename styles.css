@@ -423,19 +423,15 @@
 
   /* split section image+text */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-  /* audience blocks */
+  /* audience blocks — 3-up cards, image on top */
   .audiences{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .audiences .aud{padding:26px 0}
-  .audiences .aud + .aud{border-top:1px solid var(--line)}
+  .aud-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+  .audiences .aud{display:flex;flex-direction:column}
   .aud h3{font-family:'Oswald',sans-serif;font-size:clamp(1.5rem,3.4vw,2.1rem);color:var(--chalk);margin-top:12px;line-height:1.08}
-  .aud p{color:var(--chalk-dim);margin-top:14px;max-width:52ch}
+  .aud p{color:var(--chalk-dim);margin-top:14px}
   .aud p.eyebrow{color:var(--signal-text);margin-top:0}
-  .aud .aud-img{width:100%;aspect-ratio:4/3;border:2px dashed var(--line);border-radius:8px;
-    display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
-    color:var(--chalk-dim);font-size:.82rem}
-  .aud .aud-img .ph{color:var(--signal-text);letter-spacing:.04em}
-  .aud img.aud-img{border:none;background:none;padding:0;object-fit:cover;display:block}
-  .aud .cta-line{margin-top:32px}
+  .aud img.aud-img{width:100%;aspect-ratio:4/3;border-radius:8px;object-fit:cover;display:block;margin-bottom:22px}
+  .aud .cta-line{margin-top:auto;padding-top:28px}
 
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
@@ -572,6 +568,7 @@
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
     .split > .split-img{order:-1}
+    .aud-grid{grid-template-columns:1fr;gap:44px}
     .band .img-ph{height:240px}
     .map-wrap{grid-template-columns:1fr;gap:24px}
   }
