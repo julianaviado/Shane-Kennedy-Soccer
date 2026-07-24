@@ -179,95 +179,45 @@
   </div>
 </section>
 
-<!-- INTERACTIVE SKILL MAP -->
+<!-- GOALKEEPER SPECIALTY -->
 <section class="map-section" id="skillmap">
   <div class="wrap">
     <p class="eyebrow">The goalkeeper specialty</p>
     <h2 style="font-size:clamp(1.9rem,4.4vw,2.8rem);margin-top:14px;max-width:22ch">Every part of the goal asks something different.</h2>
-    <span class="map-stamp">The goalkeeper's box · Tap a zone to explore</span>
-    <div class="map-wrap">
-      <svg class="map-svg" width="100%" viewBox="0 0 560 430" role="img" aria-label="Interactive map of the goal. Tap a zone to see the skill trained there.">
-        <line x1="20" y1="56" x2="540" y2="56" class="map-chalk"/>
-        <line x1="20" y1="56" x2="20" y2="384" class="map-chalk"/>
-        <line x1="540" y1="56" x2="540" y2="384" class="map-chalk"/>
-        <rect x="150" y="56" width="260" height="120" class="map-chalk"/>
-        <rect x="210" y="56" width="140" height="56" class="map-dim"/>
-        <rect x="170" y="46" width="220" height="10" class="map-dim"/>
-        <line x1="170" y1="40" x2="170" y2="56" class="map-chalk"/>
-        <line x1="390" y1="40" x2="390" y2="56" class="map-chalk"/>
-
-        <circle cx="280" cy="300" r="2.5" class="map-dim" fill="var(--chalk)" opacity=".4"/>
-        <text class="ztick" x="280" y="320" text-anchor="middle">Penalty spot</text>
-
-        <g class="zone active" data-skill="crosses" role="button" tabindex="0" aria-label="Command of the box" onclick="pickSkill('crosses',this)" onkeydown="zoneKey(event,'crosses',this)">
-          <rect x="170" y="64" width="220" height="40" rx="3"/>
-          <text class="zlabel" x="280" y="88" text-anchor="middle">Command of the box</text>
-        </g>
-        <g class="zone" data-skill="angles" role="button" tabindex="0" aria-label="Angles and set position" onclick="pickSkill('angles',this)" onkeydown="zoneKey(event,'angles',this)">
-          <rect x="208" y="120" width="144" height="38" rx="3"/>
-          <text class="zlabel" x="280" y="143" text-anchor="middle">Angles &amp; set</text>
-        </g>
-        <g class="zone" data-skill="onevone" role="button" tabindex="0" aria-label="One v one and breakaways" onclick="pickSkill('onevone',this)" onkeydown="zoneKey(event,'onevone',this)">
-          <circle cx="280" cy="240" r="34"/>
-          <text class="zlabel" x="280" y="244" text-anchor="middle">1-v-1</text>
-        </g>
-        <g class="zone" data-skill="footwork" role="button" tabindex="0" aria-label="Footwork" onclick="pickSkill('footwork',this)" onkeydown="zoneKey(event,'footwork',this)">
-          <rect x="56" y="150" width="106" height="120" rx="3"/>
-          <text class="zlabel" x="109" y="214" text-anchor="middle">Footwork</text>
-        </g>
-        <g class="zone" data-skill="distribution" role="button" tabindex="0" aria-label="Distribution" onclick="pickSkill('distribution',this)" onkeydown="zoneKey(event,'distribution',this)">
-          <rect x="398" y="150" width="106" height="120" rx="3"/>
-          <text class="zlabel" x="451" y="214" text-anchor="middle">Distribution</text>
-        </g>
-
-        <g id="mapBall" style="transform-origin:center">
-          <line x1="280" y1="330" x2="280" y2="318"/>
-          <circle cx="280" cy="312" r="6"/>
-        </g>
-
-        <g class="zone" data-skill="mental" role="button" tabindex="0" aria-label="The reset and mental game" onclick="pickSkill('mental',this)" onkeydown="zoneKey(event,'mental',this)">
-          <rect x="170" y="332" width="220" height="38" rx="3"/>
-          <text class="zlabel" x="280" y="355" text-anchor="middle">The reset</text>
-        </g>
-      </svg>
-
-      <div class="map-readout" aria-live="polite">
-        <p class="rtag">Technical</p>
-        <h3 id="skTitle">Command of the box</h3>
-        <p id="skBody">Crosses, corners and high balls. Footwork to attack the ball at its highest point, decide catch or punch, and own the six-yard box so a keeper rules the air with confidence.</p>
-        <p class="map-hint">Tap any zone to explore the skill.</p>
+    <div class="pillar-grid" style="margin-top:34px">
+      <div class="pillar">
+        <span class="pnum">Technical</span>
+        <h3>Command of the box</h3>
+        <p>Crosses, corners and high balls. Footwork to attack the ball at its highest point, decide catch or punch, and own the six-yard box so a keeper rules the air with confidence.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Tactical</span>
+        <h3>Angles &amp; the set</h3>
+        <p>Where to stand and when to set. Cutting down the shooter's angle, a balanced set position before every strike, and reading the play to be in position before the ball is hit.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Tactical</span>
+        <h3>1-v-1 &amp; breakaways</h3>
+        <p>The moment that decides games. Closing space, staying big, and timing the spread to win the breakaway with intention.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Technical</span>
+        <h3>Footwork</h3>
+        <p>The foundation under everything. Hands make the save, but feet get you there. Quick, balanced steps to get behind the ball and set in time, the fault most keepers never have corrected.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Technical</span>
+        <h3>Distribution</h3>
+        <p>Start the attack. Beat the press with a composed short pass and switch the field with an accurate long ball, the skill college coaches now check first.</p>
+      </div>
+      <div class="pillar">
+        <span class="pnum">Mental</span>
+        <h3>The reset &amp; mental game</h3>
+        <p>Confidence is a trainable skill. A pre-shot routine and a reset ritual so one goal doesn't become three, plus the voice to organize a back line under pressure.</p>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  (function(){
-    var SK = {
-      crosses:["Technical","Command of the box","Crosses, corners and high balls. Footwork to attack the ball at its highest point, decide catch or punch, and own the six-yard box so a keeper rules the air with confidence."],
-      angles:["Tactical","Angles & the set","Where to stand and when to set. Cutting down the shooter's angle, a balanced set position before every strike, and reading the play to be in position before the ball is hit."],
-      onevone:["Tactical","1-v-1 & breakaways","The moment that decides games. Closing space, staying big, and timing the spread to win the breakaway with intention."],
-      footwork:["Technical","Footwork","The foundation under everything. Hands make the save, but feet get you there. Quick, balanced steps to get behind the ball and set in time, the fault most keepers never have corrected."],
-      distribution:["Technical","Distribution","Start the attack. Beat the press with a composed short pass and switch the field with an accurate long ball, the skill college coaches now check first."],
-      mental:["Mental","The reset & mental game","Confidence is a trainable skill. A pre-shot routine and a reset ritual so one goal doesn't become three, plus the voice to organize a back line under pressure."]
-    };
-    var prev = document.querySelector('.map-svg .zone.active');
-    window.pickSkill = function(key, el){
-      var d = SK[key]; if(!d) return;
-      document.querySelector('.map-readout .rtag').textContent = d[0];
-      document.getElementById('skTitle').textContent = d[1];
-      document.getElementById('skBody').textContent = d[2];
-      if(prev) prev.classList.remove('active');
-      el.classList.add('active'); prev = el;
-    };
-    window.zoneKey = function(e, key, el){
-      if(e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar'){
-        e.preventDefault();
-        window.pickSkill(key, el);
-      }
-    };
-  })();
-</script>
 
 
 
