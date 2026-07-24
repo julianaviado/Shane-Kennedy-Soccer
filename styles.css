@@ -325,7 +325,7 @@
   .pos2-item{border-bottom:1px solid var(--line)}
   .pos2-item > summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:20px 2px}
   .pos2-item > summary::-webkit-details-marker{display:none}
-  .pos2-sum-text{font-family:'Oswald',sans-serif;font-size:clamp(1.2rem,2.6vw,1.55rem);text-transform:uppercase;letter-spacing:.02em;color:var(--chalk);line-height:1.1}
+  .pos2-sum-text{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(1.2rem,2.6vw,1.55rem);text-transform:uppercase;letter-spacing:.02em;color:var(--chalk);line-height:1.1}
   .pos2-cat{display:block;font-family:'JetBrains Mono','Oswald',monospace;font-size:.72rem;font-weight:700;letter-spacing:.14em;color:var(--signal-text);margin-bottom:5px}
   .pos2-plus{position:relative;flex:0 0 auto;width:20px;height:20px}
   .pos2-plus::before,.pos2-plus::after{content:"";position:absolute;top:50%;left:50%;background:var(--chalk-dim);transition:transform .2s ease}
