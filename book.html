@@ -60,13 +60,26 @@
           <label for="format">Session format</label>
           <select id="format">
             <option value="" disabled selected>Select…</option>
-            <!-- PLACEHOLDER: confirm formats Coach Shane offers -->
             <option>1-on-1 private</option>
             <option>Small group (2 to 4 players)</option>
-            <option>Goalkeeper session (specialty)</option>
             <option>Not sure yet, recommend for us</option>
           </select>
         </div>
+        <div class="field">
+          <label for="position">Position / focus</label>
+          <select id="position">
+            <option value="" disabled selected>Select…</option>
+            <option>Goalkeeper (specialty)</option>
+            <option>Defender / back line</option>
+            <option>Midfielder</option>
+            <option>Forward / attacker</option>
+            <option>All positions / all-around</option>
+            <option>Not sure yet, recommend for us</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-row">
         <div class="field">
           <label for="level">Current level</label>
           <select id="level">
@@ -76,6 +89,17 @@
             <option>Club / travel</option>
             <option>High school</option>
             <option>College-track</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="program">Program</label>
+          <select id="program">
+            <option value="" disabled selected>Select…</option>
+            <option>Club soccer</option>
+            <option>High school / school soccer</option>
+            <option>Collegiate / college</option>
+            <option>Off-season / summer training</option>
+            <option>Not sure yet, recommend for us</option>
           </select>
         </div>
       </div>
@@ -148,7 +172,9 @@
         keeperName: val('keeperName'),
         keeperAge: val('keeperAge'),
         format: val('format'),
+        position: val('position'),
         level: val('level'),
+        program: val('program'),
         focus: val('focus'),
         availability: val('availability'),
         submittedAt: new Date().toISOString()
