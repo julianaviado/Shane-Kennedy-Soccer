@@ -400,7 +400,7 @@
 
   /* ---------- proof / coaching results ---------- */
   .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:42px}
-  .proof{background:var(--pitch-dark);border:1px solid var(--line);border-radius:3px;padding:30px}
+  .proof{padding:4px 0}
   .proof .big{font-family:'Oswald',sans-serif;color:var(--accent);font-weight:700;font-size:clamp(1.8rem,4.5vw,2.2rem);line-height:1}
   .proof p{margin-top:12px;color:var(--chalk-dim)}
   .proof p b{color:var(--chalk)}
@@ -492,9 +492,9 @@
 
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
-  .aff-group{text-align:center}
-  .aff-label{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--chalk-dim);margin:0 0 28px}
-  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:48px}
+  .aff-group{display:flex;align-items:center;flex-wrap:wrap;gap:24px 52px;text-align:left}
+  .aff-label{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--chalk-dim);margin:0;flex:0 0 auto}
+  .aff-logos{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:40px 48px;flex:1 1 320px}
   .logo-card img.logo-white{filter:grayscale(1) var(--aff-logo-white-filter,invert(1))}
   .logo-card{display:inline-flex;align-items:center;justify-content:center}
   .logo-card img{
