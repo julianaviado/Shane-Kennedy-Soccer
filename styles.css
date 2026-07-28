@@ -327,6 +327,13 @@
   .video-cap{margin-top:14px}
   .video-cap b{display:block;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.02em;color:var(--chalk);font-size:1rem}
   .video-cap span{color:var(--chalk-dim);font-size:.9rem}
+  /* hall of fame timeline */
+  .hof-timeline{margin-top:44px}
+  .hof-item{display:grid;grid-template-columns:130px 1fr;gap:30px;padding:24px 0;border-top:1px solid var(--line);align-items:start}
+  .hof-item:last-child{border-bottom:1px solid var(--line)}
+  .hof-year{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(1.5rem,3.4vw,2rem);color:var(--accent);line-height:1.05}
+  .hof-body h3{font-family:'Oswald',sans-serif;font-size:clamp(1.15rem,2.6vw,1.45rem);color:var(--chalk)}
+  .hof-body p{color:var(--chalk-dim);margin-top:8px;max-width:64ch;line-height:1.55}
   .press-row{display:flex;flex-wrap:wrap;gap:22px 38px;margin-top:24px;align-items:center}
   .press-row .logo-card img{height:52px}
   .press-item{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem;color:var(--chalk-dim);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
@@ -631,6 +638,7 @@
     .split > .split-img{order:-1}
     .aud-grid{grid-template-columns:1fr;gap:44px}
     .formats-grid{grid-template-columns:1fr;gap:18px}
+    .hof-item{grid-template-columns:1fr;gap:6px}
     .pos2-grid{grid-template-columns:1fr;gap:28px}
     .pos2-right{position:static;order:-1}
     .band .img-ph{height:240px}
