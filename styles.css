@@ -355,6 +355,16 @@
   .spec-tab.is-active{color:var(--signal-text);border-bottom-color:var(--signal-text)}
   .spec-panel{margin-top:28px}
   .spec-panel[hidden]{display:none}
+  /* session formats benefits */
+  .formats-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:44px}
+  .format-card{border:1px solid var(--line);border-radius:10px;padding:32px 30px;background:var(--pitch)}
+  .format-card h3{font-family:'Oswald',sans-serif;font-size:clamp(1.4rem,3vw,1.85rem);color:var(--chalk)}
+  .format-card .fc-size{color:var(--chalk-dim);font-weight:500}
+  .format-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:.9rem;color:var(--signal-text);margin-top:6px}
+  .benefit-list{list-style:none;margin:24px 0 0;padding:0}
+  .benefit-list li{position:relative;padding-left:30px;margin-top:15px;color:var(--chalk-dim);line-height:1.5;font-size:.98rem}
+  .benefit-list li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:var(--accent)}
+  .benefit-list li::after{content:"";position:absolute;left:5.5px;top:6.5px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
   /* positions: accordion left, swapping image right */
   .pos2-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
   .pos2-accordion{margin-top:30px;border-top:1px solid var(--line)}
@@ -620,6 +630,7 @@
     .split{grid-template-columns:1fr;gap:28px}
     .split > .split-img{order:-1}
     .aud-grid{grid-template-columns:1fr;gap:44px}
+    .formats-grid{grid-template-columns:1fr;gap:18px}
     .pos2-grid{grid-template-columns:1fr;gap:28px}
     .pos2-right{position:static;order:-1}
     .band .img-ph{height:240px}
