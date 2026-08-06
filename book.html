@@ -175,34 +175,40 @@
       status.className = 'form-status show ' + (ok ? 'ok' : 'err');
     }
     btn.addEventListener('click', function(){
-      var payload = {
-        parentName: val('parentName'),
-        contact: val('contact'),
-        keeperName: val('keeperName'),
-        keeperAge: val('keeperAge'),
-        format: val('format'),
-        position: val('position'),
-        level: val('level'),
-        program: val('program'),
-        focus: val('focus'),
-        availability: val('availability'),
-        submittedAt: new Date().toISOString()
-      };
       // minimal validation
-      if(!payload.parentName || !payload.contact){
+      if(!val('parentName') || !val('contact')){
         setStatus('Please add your name and a way to reach you.', false);
         return;
       }
+      var payload = {
+        'Parent name': val('parentName'),
+        'Phone or email': val('contact'),
+        "Player's name": val('keeperName'),
+        "Player's age": val('keeperAge'),
+        'Session format': val('format'),
+        'Position / focus': val('position'),
+        'Current level': val('level'),
+        'Program': val('program'),
+        'What to work on': val('focus'),
+        'Preferred days & times': val('availability'),
+        _subject: 'New session request: Shane Kennedy Soccer',
+        _template: 'table',
+        _captcha: 'false'
+      };
       btn.disabled = true;
       btn.textContent = 'Sending…';
-      // Replit backend endpoint: create a POST /api/book route to receive this
-      fetch('/api/book', {
+      // Sends the request to dominatethebox@gmail.com via FormSubmit (no backend needed).
+      // NOTE: the first submission triggers a one-time activation email to that address; click the link to enable delivery.
+      fetch('https://formsubmit.co/ajax/dominatethebox@gmail.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(payload)
       })
       .then(function(res){
         if(!res.ok) throw new Error('Request failed');
+        return res.json();
+      })
+      .then(function(){
         setStatus("Thanks, your request is in. Coach Shane will follow up to confirm a time.", true);
         btn.textContent = 'Request Sent ✓';
       })
