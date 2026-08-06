@@ -55,8 +55,8 @@
 
       <div class="form-row">
         <div class="field">
-          <label for="phone">Phone <span class="opt">(optional)</span></label>
-          <input id="phone" type="tel" autocomplete="tel" placeholder="For a quicker reply">
+          <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+          <input id="phone" type="tel" autocomplete="tel" required placeholder="Best number for a quick reply">
         </div>
         <div class="field">
           <label for="keeperName">Player's name</label>
@@ -184,8 +184,8 @@
     btn.addEventListener('click', function(){
       // minimal validation
       var emailVal = val('email');
-      if(!val('parentName') || !emailVal || emailVal.indexOf('@') === -1){
-        setStatus('Please add your name and a valid email so Coach Shane can reply.', false);
+      if(!val('parentName') || !emailVal || emailVal.indexOf('@') === -1 || !val('phone')){
+        setStatus('Please add your name, a valid email, and a phone number so Coach Shane can reply.', false);
         return;
       }
       var payload = {
