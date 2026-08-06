@@ -539,6 +539,8 @@
   .field.full{grid-column:1/-1}
   .field label{display:block;font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em;
     font-size:.72rem;font-weight:700;color:var(--chalk);margin-bottom:6px}
+  .field label .opt{color:var(--chalk-dim);font-weight:400}
+  .field label .req{color:var(--accent)}
   .field input,.field select,.field textarea{
     width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:3px;
     background:var(--field-bg);color:var(--field-text);font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:1rem;

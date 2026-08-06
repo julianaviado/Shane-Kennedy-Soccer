@@ -48,23 +48,27 @@
           <input id="parentName" type="text" autocomplete="name">
         </div>
         <div class="field">
-          <label for="contact">Phone or email</label>
-          <input id="contact" type="text" autocomplete="email" placeholder="How should Coach Shane reach you?">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="email" type="email" autocomplete="email" required placeholder="Best email for Coach Shane to reply to">
         </div>
       </div>
 
       <div class="form-row">
+        <div class="field">
+          <label for="phone">Phone <span class="opt">(optional)</span></label>
+          <input id="phone" type="tel" autocomplete="tel" placeholder="For a quicker reply">
+        </div>
         <div class="field">
           <label for="keeperName">Player's name</label>
           <input id="keeperName" type="text">
         </div>
+      </div>
+
+      <div class="form-row">
         <div class="field">
           <label for="keeperAge">Player's age</label>
           <input id="keeperAge" type="number" min="4" max="60" placeholder="e.g. 13">
         </div>
-      </div>
-
-      <div class="form-row">
         <div class="field">
           <label for="format">Session format</label>
           <select id="format">
@@ -74,6 +78,9 @@
             <option>Not sure yet, recommend for us</option>
           </select>
         </div>
+      </div>
+
+      <div class="form-row">
         <div class="field">
           <label for="position">Position / focus</label>
           <select id="position">
@@ -86,9 +93,6 @@
             <option>Not sure yet, recommend for us</option>
           </select>
         </div>
-      </div>
-
-      <div class="form-row">
         <div class="field">
           <label for="level">Current level</label>
           <select id="level">
@@ -100,6 +104,9 @@
             <option>College-track</option>
           </select>
         </div>
+      </div>
+
+      <div class="form-row">
         <div class="field">
           <label for="program">Program</label>
           <select id="program">
@@ -176,13 +183,15 @@
     }
     btn.addEventListener('click', function(){
       // minimal validation
-      if(!val('parentName') || !val('contact')){
-        setStatus('Please add your name and a way to reach you.', false);
+      var emailVal = val('email');
+      if(!val('parentName') || !emailVal || emailVal.indexOf('@') === -1){
+        setStatus('Please add your name and a valid email so Coach Shane can reply.', false);
         return;
       }
       var payload = {
         'Parent name': val('parentName'),
-        'Phone or email': val('contact'),
+        email: emailVal,
+        'Phone': val('phone'),
         "Player's name": val('keeperName'),
         "Player's age": val('keeperAge'),
         'Session format': val('format'),
@@ -192,6 +201,8 @@
         'What to work on': val('focus'),
         'Preferred days & times': val('availability'),
         _subject: 'New session request: Shane Kennedy Soccer',
+        _replyto: emailVal,
+        _autoresponse: "Thanks for reaching out to Shane Kennedy Soccer! Your session request has been received, and Coach Shane will follow up personally to confirm a time and talk through your player's goals. If it's urgent, call or text (415) 713-3029.",
         _template: 'table',
         _captcha: 'false'
       };
