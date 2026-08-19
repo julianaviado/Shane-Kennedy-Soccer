@@ -23,7 +23,7 @@
 <body>
 <script>document.documentElement.classList.add('js-reveal');</script>
 
-<nav>
+<nav class="nav-on-hero">
   <div class="wrap">
     <div class="brand"><a href="index.html" aria-label="Shane Kennedy Soccer, home"><img class="brand-logo" src="assets/logo/Shane%20Kennedy%20Soccer%20Wordmark%20One%20Liner.svg" alt="Shane Kennedy Soccer" width="1686" height="176"></a></div>
     <div class="nav-links">
@@ -66,21 +66,31 @@
 </div>
 
 <!-- FEATURED IN -->
-<section class="logos" id="featured">
+<section class="logos logos-marquee" id="featured">
   <div class="wrap">
-    <div class="aff-group">
-      <p class="aff-label">Featured in &amp; Associated with</p>
-      <div class="aff-logos">
-        <span class="logo-card"><img src="assets/images/MarinIndependentJournal.svg" alt="Marin Independent Journal" loading="lazy"></span>
-        <span class="logo-card"><img class="logo-white" src="assets/images/P2PComboLogoWhite.png" alt="Prep2Prep" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/StaplesSoccer.png" alt="Staples Soccer" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/NASLSoccerUSA.png" alt="NASL" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/Tamalpais%20High%20School.png" alt="Tamalpais High School" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/Dominican%20University%20Athletics.svg" alt="Dominican University" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/Marin%20FC.webp" alt="Marin FC" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/New%20York%20Cosmos%20(NASL).svg" alt="New York Cosmos (NASL)" loading="lazy"></span>
-        <span class="logo-card"><img src="assets/images/Babson%20College.png" alt="Babson College" loading="lazy"></span>
-      </div>
+    <p class="aff-label">Featured in &amp; Associated with</p>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="logo-card"><img src="assets/images/MarinIndependentJournal.svg" alt="Marin Independent Journal" loading="lazy"></span>
+      <span class="logo-card"><img class="logo-white" src="assets/images/P2PComboLogoWhite.png" alt="Prep2Prep" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/StaplesSoccer.png" alt="Staples Soccer" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/NASLSoccerUSA.png" alt="NASL" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/Tamalpais%20High%20School.png" alt="Tamalpais High School" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/Dominican%20University%20Athletics.svg" alt="Dominican University" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/Marin%20FC.webp" alt="Marin FC" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/New%20York%20Cosmos%20(NASL).svg" alt="New York Cosmos (NASL)" loading="lazy"></span>
+      <span class="logo-card"><img src="assets/images/Babson%20College.png" alt="Babson College" loading="lazy"></span>
+      <!-- duplicate set for seamless loop -->
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/MarinIndependentJournal.svg" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img class="logo-white" src="assets/images/P2PComboLogoWhite.png" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/StaplesSoccer.png" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/NASLSoccerUSA.png" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/Tamalpais%20High%20School.png" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/Dominican%20University%20Athletics.svg" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/Marin%20FC.webp" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/New%20York%20Cosmos%20(NASL).svg" alt="" loading="lazy"></span>
+      <span class="logo-card" aria-hidden="true"><img src="assets/images/Babson%20College.png" alt="" loading="lazy"></span>
     </div>
   </div>
 </section>
