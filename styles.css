@@ -504,9 +504,20 @@
 
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
-  .aff-group{display:flex;align-items:center;flex-wrap:wrap;gap:24px 52px;text-align:left}
-  .aff-label{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--chalk-dim);margin:0;flex:0 0 auto}
-  .aff-logos{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:40px 48px;flex:1 1 320px}
+  .aff-group{text-align:center}
+  .aff-label{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--chalk-dim);margin:0 0 34px}
+  .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px 48px}
+  /* scroll reveal: label + logos rise from the bottom */
+  .js-reveal .aff-label{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .js-reveal .aff-logos .logo-card{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+  .js-reveal .logos.in-view .aff-label{opacity:1;transform:none}
+  .js-reveal .logos.in-view .aff-logos .logo-card{opacity:1;transform:none}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(1){transition-delay:.12s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(2){transition-delay:.19s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(3){transition-delay:.26s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(4){transition-delay:.33s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(5){transition-delay:.40s}
+  @media(prefers-reduced-motion:reduce){.js-reveal .aff-label,.js-reveal .aff-logos .logo-card{opacity:1!important;transform:none!important;transition:none!important}}
   .logo-card img.logo-white{filter:grayscale(1) var(--aff-logo-white-filter,invert(1))}
   .logo-card{display:inline-flex;align-items:center;justify-content:center}
   .logo-card img{

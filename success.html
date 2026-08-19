@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<script>document.documentElement.classList.add('js-reveal');</script>
 
 <nav>
   <div class="wrap">
@@ -225,6 +226,18 @@
 </footer>
 
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+
+<script>
+(function(){
+  var sections = document.querySelectorAll('.logos');
+  if(!sections.length) return;
+  if(!('IntersectionObserver' in window)){ sections.forEach(function(s){ s.classList.add('in-view'); }); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  sections.forEach(function(s){ io.observe(s); });
+})();
+</script>
 
 <script>
 (function(){
