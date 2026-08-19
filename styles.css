@@ -99,8 +99,6 @@
     transition:transform .32s cubic-bezier(.4,0,.2,1);
     will-change:transform;
   }
-  /* gap between the announcement bar and the nav (home only) */
-  body.home nav{margin-top:18px}
   nav.nav-hidden{transform:translateY(calc(-100% - 24px))}
   nav .wrap{
     display:flex;align-items:center;justify-content:space-between;
@@ -254,6 +252,14 @@
     transition:opacity .15s ease;
   }
   .announce-cta:hover{opacity:.7}
+  .announce-close{
+    position:absolute;top:50%;right:14px;transform:translateY(-50%);z-index:6;
+    width:26px;height:26px;padding:0;border:0;border-radius:6px;cursor:pointer;
+    display:inline-flex;align-items:center;justify-content:center;
+    background:transparent;color:rgba(255,255,255,.65);transition:color .15s ease,background .15s ease;
+  }
+  .announce-close svg{width:15px;height:15px}
+  .announce-close:hover{color:#fff;background:rgba(255,255,255,.1)}
   @keyframes announce-rotate{
     0%,27.78%    {transform:rotateX(0deg)}
     33.33%,61.11%{transform:rotateX(-120deg)}

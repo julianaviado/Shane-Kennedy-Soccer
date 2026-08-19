@@ -45,6 +45,9 @@
       <a class="announce-cta" href="book.html">Get Evaluated</a>
     </div>
   </div>
+  <button class="announce-close" id="announceClose" type="button" aria-label="Dismiss announcement">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
 </div>
 
 <nav class="nav-on-hero">
@@ -66,7 +69,7 @@
   <img class="hero-bg" src="assets/images/IMG_0216.WEBP" alt="" aria-hidden="true" loading="eager">
   <div class="wrap hero-inner hero-split">
     <div class="hero-left">
-      <h1><span class="line1">Play with confidence.</span><em>Train with Coach Shane.</em></h1>
+      <h1><span class="line1">Play with confidence.</span><em>Train with<br>Coach Shane.</em></h1>
     </div>
     <div class="hero-right">
       <p class="hero-sub">Get specialized goalkeeper coaching from a record-setting NCAA keeper, New York Cosmos draft pick, and CIF Coach of the Year.</p>
@@ -389,6 +392,19 @@
   }
   window.addEventListener('scroll',function(){ if(!ticking){ window.requestAnimationFrame(update); ticking=true; } },{passive:true});
   update();
+})();
+</script>
+<script>
+/* dismiss announcement bar */
+(function(){
+  var bar=document.querySelector('.announce');
+  var x=document.getElementById('announceClose');
+  if(!bar||!x) return;
+  try{ if(sessionStorage.getItem('sk-announce-closed')) bar.style.display='none'; }catch(e){}
+  x.addEventListener('click', function(){
+    bar.style.display='none';
+    try{ sessionStorage.setItem('sk-announce-closed','1'); }catch(e){}
+  });
 })();
 </script>
 </body>
