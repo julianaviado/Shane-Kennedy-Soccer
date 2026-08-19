@@ -205,16 +205,14 @@
   }
   .hero-cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
   .hero-trigger{margin-top:20px;color:rgba(255,255,255,.9);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;font-weight:500}
-  /* ---------- 3D rotating announcement bar (full-width strip atop the hero) ---------- */
+  /* ---------- 3D rotating announcement bar (full-width strip at the very top) ---------- */
   .announce{
     --ah:46px;
-    position:absolute;left:0;right:0;top:88px;z-index:3;
+    position:relative;z-index:40;
     width:100%;height:var(--ah);margin:0;
     overflow:hidden;perspective:1000px;
-    background:rgba(8,10,14,.5);
-    border-top:1px solid rgba(255,255,255,.12);
-    border-bottom:1px solid rgba(255,255,255,.12);
-    backdrop-filter:blur(6px);
+    background:#0b0d11;
+    border-bottom:1px solid var(--line);
   }
   .announce-stage{
     position:absolute;inset:0;transform-style:preserve-3d;
@@ -819,7 +817,7 @@
     /* hide the home page trigger bar on mobile (keep the About creds-bar) */
     .trigger-bar:not(.creds-bar){display:none}
     /* announcement bar: single concise line on mobile (headline only) */
-    .announce{--ah:42px;top:74px}
+    .announce{--ah:42px}
     .announce-desc{display:none}
     nav .brand{height:50px}
     nav.scrolled .brand{height:auto;padding:8px 16px}
