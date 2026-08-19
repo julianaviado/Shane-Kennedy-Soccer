@@ -112,6 +112,10 @@
 
 <!-- WHY PRIVATE COACHING -->
 <section id="approach" class="approach-bp">
+  <!-- staggered block-reveal overlay: wipes away when this section scrolls past the hero -->
+  <div class="block-reveal" id="approachReveal" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
   <div class="wrap">
     <div class="why-head">
       <p class="eyebrow">Why private coaching</p>
@@ -320,6 +324,21 @@
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
   }, { threshold: 0.2 });
   sections.forEach(function(s){ io.observe(s); });
+})();
+</script>
+
+<script>
+/* block-reveal: wipe the column overlay away once the section scrolls into view (fires once) */
+(function(){
+  var reveal = document.getElementById('approachReveal');
+  if(!reveal) return;
+  var section = reveal.closest('section') || reveal.parentElement;
+  function fire(){ reveal.classList.add('revealed'); }
+  if(!('IntersectionObserver' in window)){ fire(); return; }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ fire(); io.unobserve(e.target); } });
+  }, { threshold: 0.4 });
+  io.observe(section);
 })();
 </script>
 

@@ -341,7 +341,26 @@
   .win-card li::before{content:"›";position:absolute;left:0;color:var(--signal-text);font-weight:700}
 
   /* ---------- interactive skill map (clean) ---------- */
-  .approach-bp{background:transparent}
+  .approach-bp{background:transparent;position:relative;overflow:hidden}
+  /* staggered block-reveal overlay (vanilla port of the BlockReveal component) */
+  .block-reveal{position:absolute;inset:0;z-index:6;display:flex;pointer-events:none}
+  .block-reveal span{
+    flex:1 1 0;background:var(--chalk);
+    transform:scaleY(1);transform-origin:top;will-change:transform;
+    transition:transform .7s cubic-bezier(.22,1,.36,1);
+  }
+  /* hairline seam between columns so the wipe reads as distinct blocks */
+  .block-reveal span + span{border-left:1px solid var(--ground)}
+  .block-reveal.revealed span{transform:scaleY(0)}
+  .block-reveal.revealed span:nth-child(1){transition-delay:0s}
+  .block-reveal.revealed span:nth-child(2){transition-delay:.09s}
+  .block-reveal.revealed span:nth-child(3){transition-delay:.18s}
+  .block-reveal.revealed span:nth-child(4){transition-delay:.27s}
+  .block-reveal.revealed span:nth-child(5){transition-delay:.36s}
+  .block-reveal.revealed span:nth-child(6){transition-delay:.45s}
+  @media(prefers-reduced-motion:reduce){
+    .block-reveal span{transition:none;transform:scaleY(0)}
+  }
   .approach-single{max-width:760px}
   .bp-card{background:var(--pitch-dark);border-color:var(--line);border-left:4px solid var(--signal)}
   .bp-card h3{color:var(--signal-text);margin-top:6px}
