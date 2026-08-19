@@ -103,7 +103,7 @@
   nav .wrap{
     display:flex;align-items:center;justify-content:space-between;
     background:transparent;border:none;box-shadow:none;
-    max-width:none;width:100%;padding:0 clamp(20px,3vw,44px);
+    max-width:none;width:100%;padding:0 clamp(12px,1.6vw,22px);
   }
   /* logo sits bare — no chip, box, border, or shadow */
   .brand{
@@ -204,6 +204,16 @@
     color:var(--chalk-dim);max-width:50ch;margin:22px auto 0;font-weight:400;
   }
   .hero-cta-row{margin-top:34px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  /* desktop: headline bottom-left, sub + CTA bottom-right */
+  @media(min-width:781px){
+    body.home .hero{padding:150px 0 74px}
+    .hero-split{display:flex;align-items:flex-end;justify-content:space-between;gap:56px;text-align:left;min-height:44vh}
+    .hero-split .hero-left{flex:1 1 auto;max-width:60%}
+    .hero-split .hero-left h1{margin:0}
+    .hero-split .hero-right{flex:0 1 40%;display:flex;flex-direction:column;align-items:flex-start;text-align:left}
+    .hero-split .hero-sub{margin:0 0 24px;max-width:46ch;text-align:left}
+    .hero-split .hero-cta-row{margin:0;justify-content:flex-start;flex-wrap:wrap}
+  }
   .hero-trigger{margin-top:20px;color:rgba(255,255,255,.9);font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;font-weight:500}
   /* ---------- 3D rotating announcement bar (full-width strip at the very top) ---------- */
   .announce{
