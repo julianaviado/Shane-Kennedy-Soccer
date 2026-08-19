@@ -96,7 +96,10 @@
     position:sticky;top:14px;z-index:50;
     background:transparent;
     border-bottom:none;
+    transition:transform .32s cubic-bezier(.4,0,.2,1);
+    will-change:transform;
   }
+  nav.nav-hidden{transform:translateY(calc(-100% - 24px))}
   nav .wrap{
     display:flex;align-items:center;justify-content:space-between;
     background:transparent;border:none;box-shadow:none;
@@ -104,8 +107,9 @@
   }
   /* logo sits bare — no chip, box, border, or shadow */
   .brand{
-    display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;height:64px;
+    display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;height:64px;
     background:none;border:none;box-shadow:none;padding:0;filter:none;
+    transition:background .25s ease,box-shadow .25s ease,padding .25s ease,border-color .25s ease;
   }
   .brand-tag{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.14em;word-spacing:.22em;font-size:.75rem;color:var(--chalk-dim);white-space:nowrap;line-height:1}
   nav.nav-on-hero .brand-tag{color:rgba(255,255,255,.74)}
@@ -115,6 +119,32 @@
   nav .brand-logo{height:28px}
   /* over a dark hero the bare logo must stay white in any theme */
   nav.nav-on-hero .brand-logo{filter:none}
+  /* once scrolled past the hero, the brand gets the same pill/box as the right-side nav */
+  nav.scrolled .brand{
+    background:var(--nav-bg);backdrop-filter:blur(12px);
+    border:1px solid var(--line);border-radius:20px;
+    box-shadow:0 10px 34px rgba(0,0,0,.12);
+    padding:9px 22px;height:auto;justify-content:center;
+  }
+  nav.nav-on-hero.scrolled .brand-logo{filter:var(--logo-filter)}
+  nav.nav-on-hero.scrolled .brand-tag{color:var(--chalk-dim)}
+  /* hamburger toggle — hidden on desktop, shown on mobile */
+  .nav-toggle{
+    display:none;flex:0 0 auto;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+    width:46px;height:42px;padding:0;border-radius:13px;cursor:pointer;
+    background:var(--nav-bg);backdrop-filter:blur(12px);
+    border:1px solid var(--line);
+    transition:background .2s ease,border-color .2s ease;
+  }
+  .nav-toggle span{display:block;width:20px;height:2px;border-radius:2px;background:var(--chalk);
+    transition:transform .22s ease,opacity .18s ease}
+  nav.nav-on-hero:not(.scrolled) .nav-toggle{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.32)}
+  nav.nav-on-hero:not(.scrolled) .nav-toggle span{background:#fff}
+  .nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.is-open span:nth-child(2){opacity:0}
+  .nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  /* full-width sticky book bar — hidden on desktop, shown on mobile */
+  .mobile-book-bar{display:none}
   .nav-links a.nav-cta{
     display:inline-flex;align-items:center;gap:10px;
     font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;
@@ -537,6 +567,8 @@
 
   /* logo / affiliation strip */
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
+  /* home page: drop the grey divider lines between the dark bands */
+  body.home .logos,body.home .audiences{border-top:none;border-bottom:none}
   .aff-group{text-align:center}
   .aff-label{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--chalk-dim);margin:0 0 34px;text-align:center}
   /* one-line auto-scrolling logo carousel */
@@ -550,17 +582,17 @@
   .marquee-track .logo-card{flex:0 0 auto}
   @keyframes marquee-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   /* pop each logo up one-by-one when the carousel scrolls into view */
-  .js-reveal .marquee-track .logo-card{opacity:0;transform:translateY(26px);transition:opacity .5s ease,transform .5s ease}
+  .js-reveal .marquee-track .logo-card{opacity:0;transform:translateY(26px);transition:opacity .95s ease,transform .95s ease}
   .js-reveal .logos.in-view .marquee-track .logo-card{opacity:1;transform:none}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(1){transition-delay:.05s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(2){transition-delay:.12s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(3){transition-delay:.19s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(4){transition-delay:.26s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(5){transition-delay:.33s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(6){transition-delay:.40s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(7){transition-delay:.47s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(8){transition-delay:.54s}
-  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(9){transition-delay:.61s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(1){transition-delay:.10s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(2){transition-delay:.25s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(3){transition-delay:.40s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(4){transition-delay:.55s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(5){transition-delay:.70s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(6){transition-delay:.85s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(7){transition-delay:1.00s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(8){transition-delay:1.15s}
+  .js-reveal .logos.in-view .marquee-track .logo-card:nth-child(9){transition-delay:1.30s}
   @media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
   .aff-logos{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px 48px}
   /* scroll reveal: label + logos rise from the bottom */
@@ -705,13 +737,38 @@
     .pitch-grid{grid-template-columns:1fr;gap:34px}
     .proof-grid{grid-template-columns:1fr}
     .voices-grid{grid-template-columns:1fr}
-    .nav-links a:not(.nav-cta){display:none}
-    .nav-links{gap:10px;height:50px;padding:0 6px 0 10px}
-    .nav-links a.nav-cta{padding:4px 14px 4px 4px;font-size:.78rem}
-    .nav-links a.nav-cta .cta-ico{width:26px;height:26px}
-    .theme-toggle{margin-left:2px;width:34px;height:34px}
-    nav .wrap{gap:10px}
+    /* mobile: collapse links into a hamburger dropdown */
+    nav .wrap{gap:10px;position:relative}
+    .nav-toggle{display:inline-flex}
+    .nav-links{
+      position:absolute;top:calc(100% + 12px);right:0;
+      flex-direction:column;align-items:stretch;gap:2px;
+      height:auto;padding:8px;min-width:210px;
+      border-radius:16px;
+      opacity:0;visibility:hidden;transform:translateY(-8px) scale(.98);transform-origin:top right;
+      transition:opacity .18s ease,transform .2s ease,visibility .2s;
+    }
+    .nav-links.open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+    .nav-links a{padding:12px 16px;border-radius:11px;font-size:.98rem;color:var(--chalk)}
+    .nav-links a:hover{background:rgba(127,127,127,.12);color:var(--signal-text)}
+    .nav-links a.nav-cta{display:none}
+    /* full-width sticky book bar at the bottom */
+    .mobile-book-bar{
+      display:flex;align-items:center;justify-content:center;
+      position:fixed;left:0;right:0;bottom:0;z-index:56;
+      background:var(--signal);color:var(--ink);
+      font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+      font-weight:600;font-size:1rem;text-decoration:none;
+      padding:16px 16px calc(16px + env(safe-area-inset-bottom));
+      box-shadow:0 -6px 26px rgba(0,0,0,.22);
+    }
+    .mobile-book-bar:active{background:var(--signal-deep)}
+    body{padding-bottom:60px}
+    .theme-fab{bottom:76px}
+    /* hide the home page trigger bar on mobile (keep the About creds-bar) */
+    .trigger-bar:not(.creds-bar){display:none}
     nav .brand{height:50px}
+    nav.scrolled .brand{height:auto;padding:8px 16px}
     nav .brand-logo{height:20px}
     .brand-tag{display:none}
     .form-row{grid-template-columns:1fr}
@@ -729,9 +786,6 @@
   @media(max-width:430px){
     .wrap{padding-left:16px;padding-right:16px}
     nav .wrap{gap:8px}
-    nav .brand-logo{height:13px}
-    .nav-links{gap:8px;padding:0 5px 0 8px}
-    .nav-links a.nav-cta{padding:4px 11px 4px 4px;font-size:.72rem;letter-spacing:.03em}
-    .theme-toggle{width:32px;height:32px;margin-left:2px;font-size:.9rem}
+    nav .brand-logo{height:18px}
   }
   a:focus-visible,.btn:focus-visible,button:focus-visible,.tip:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
