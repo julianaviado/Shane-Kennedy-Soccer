@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 
 /** Cubic-bezier tuple or a named framer-motion easing keyword. */
 export type RevealEase =
@@ -80,6 +80,9 @@ export function BlockReveal({
   // `useInView` with an `amount` threshold + `once` is the trigger: the wipe
   // only initiates when enough of Section 2 is on screen — i.e. after the hero.
   const inView = useInView(ref, { amount, once });
+  // Accessibility: users who prefer reduced motion get the content revealed
+  // immediately, with the blocks already collapsed and no wipe animation.
+  const reduce = useReducedMotion();
 
   const last = Math.max(blockCount - 1, 0);
   const mid = last / 2;
@@ -113,9 +116,13 @@ export function BlockReveal({
             key={i}
             className="h-full flex-1 will-change-transform"
             style={{ backgroundColor: color, transformOrigin: origin }}
-            initial={{ scaleY: 1 }}
-            animate={inView ? { scaleY: 0 } : { scaleY: 1 }}
-            transition={{ duration, ease, delay: delayFor(i) }}
+            initial={{ scaleY: reduce ? 0 : 1 }}
+            animate={reduce || inView ? { scaleY: 0 } : { scaleY: 1 }}
+            transition={
+              reduce
+                ? { duration: 0 }
+                : { duration, ease, delay: delayFor(i) }
+            }
           />
         ))}
       </div>
