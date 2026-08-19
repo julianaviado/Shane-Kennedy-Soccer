@@ -104,13 +104,15 @@
   }
   /* logo sits bare — no chip, box, border, or shadow */
   .brand{
-    display:inline-flex;align-items:center;height:58px;
+    display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;height:64px;
     background:none;border:none;box-shadow:none;padding:0;filter:none;
   }
+  .brand-tag{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.58rem;color:var(--chalk-dim);white-space:nowrap;line-height:1}
+  nav.nav-on-hero .brand-tag{color:rgba(255,255,255,.74)}
   footer .brand{height:auto}
   .brand a{display:inline-flex;align-items:center}
   .brand-logo{height:34px;width:auto;display:block;filter:var(--logo-filter);transition:filter .15s ease}
-  nav .brand-logo{height:20px}
+  nav .brand-logo{height:28px}
   /* over a dark hero the bare logo must stay white in any theme */
   nav.nav-on-hero .brand-logo{filter:none}
   .nav-links a.nav-cta{
@@ -697,7 +699,8 @@
     .theme-toggle{margin-left:2px;width:34px;height:34px}
     nav .wrap{gap:10px}
     nav .brand{height:50px}
-    nav .brand-logo{height:16px}
+    nav .brand-logo{height:20px}
+    .brand-tag{display:none}
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
     .split > .split-img{order:-1}
