@@ -475,8 +475,8 @@
   .format-tag{font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;font-weight:600;font-size:.9rem;color:var(--signal-text);margin-top:6px}
   .benefit-list{list-style:none;margin:24px 0 0;padding:0}
   .benefit-list li{position:relative;padding-left:30px;margin-top:15px;color:var(--chalk-dim);line-height:1.5;font-size:.98rem}
-  .benefit-list li::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:var(--accent)}
-  .benefit-list li::after{content:"";position:absolute;left:5.5px;top:6.5px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+  .benefit-list li::before{content:"";position:absolute;left:0;top:50%;margin-top:-9px;width:18px;height:18px;border-radius:50%;background:var(--accent)}
+  .benefit-list li::after{content:"";position:absolute;left:5.5px;top:50%;margin-top:-4.5px;width:6px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
   /* positions: accordion left, swapping image right */
   .pos2-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:start}
   .pos2-accordion{margin-top:30px;border-top:1px solid var(--line)}
