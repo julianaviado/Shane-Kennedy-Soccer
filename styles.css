@@ -518,8 +518,8 @@
   .pos2-media{width:100%;aspect-ratio:4/3;border-radius:4px;object-fit:cover;display:block;border:1px solid var(--line)}
   /* why private coaching (centered, borderless) */
   .why-head{text-align:center;margin:0 auto}
-  .why-head h2{font-size:clamp(2rem,5vw,3rem);margin-top:14px}
-  .why-head .why-sub{color:var(--chalk-dim);margin:14px auto 0;font-size:1.05rem;font-weight:500;max-width:64ch}
+  .why-head h2{font-size:clamp(2rem,5vw,3rem);margin-top:1.25rem}
+  .why-head .why-sub{color:var(--chalk-dim);margin:2rem auto 0;font-size:1.05rem;font-weight:500;max-width:64ch}
   .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:44px 28px;margin-top:56px;text-align:center}
   .why-item .wicon{display:inline-flex;color:var(--signal);margin-bottom:20px}
   .why-item .wicon svg{width:64px;height:64px}
