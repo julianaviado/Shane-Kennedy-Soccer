@@ -98,27 +98,43 @@
     border-bottom:none;
   }
   nav .wrap{
-    display:flex;align-items:center;justify-content:space-between;height:58px;
-    background:var(--nav-bg);
-    backdrop-filter:blur(12px);
-    border:1px solid var(--line);
-    border-radius:999px;
-    padding:0 10px 0 24px;
+    display:flex;align-items:center;justify-content:space-between;
+    background:transparent;border:none;box-shadow:none;padding:0;
+  }
+  /* logo sits in its own chip on the left */
+  .brand{
+    display:inline-flex;align-items:center;height:58px;padding:0 24px;
+    background:var(--nav-bg);backdrop-filter:blur(12px);
+    border:1px solid var(--line);border-radius:999px;
     box-shadow:0 10px 34px rgba(0,0,0,.12);
   }
-  .brand{display:inline-flex;align-items:center}
   .brand a{display:inline-flex;align-items:center}
   .brand-logo{height:34px;width:auto;display:block;filter:var(--logo-filter);transition:filter .15s ease}
   nav .brand-logo{height:20px}
   .nav-links a.nav-cta{
-    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.1em;
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.08em;
     font-size:.82rem;font-weight:600;
-    background:var(--signal);color:var(--ink);
-    padding:11px 22px;border-radius:999px;text-decoration:none;white-space:nowrap;
-    transition:transform .15s ease,background .15s ease;
+    background:#f3f1ec;color:#14171a;
+    padding:5px 20px 5px 5px;border-radius:999px;text-decoration:none;white-space:nowrap;
+    border:1px solid rgba(0,0,0,.06);
+    transition:transform .15s ease,box-shadow .15s ease;
   }
-  .nav-links a.nav-cta:hover{background:var(--signal-deep);color:var(--ink);transform:translateY(-2px)}
-  .nav-links{display:flex;align-items:center;gap:28px}
+  .nav-links a.nav-cta .cta-ico{
+    display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+    width:30px;height:30px;border-radius:50%;
+    background:var(--signal);color:#fff;
+    transition:transform .2s ease;
+  }
+  .nav-links a.nav-cta .cta-ico svg{width:15px;height:15px}
+  .nav-links a.nav-cta:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+  .nav-links a.nav-cta:hover .cta-ico{transform:translateX(3px)}
+  .nav-links{
+    display:flex;align-items:center;gap:26px;height:58px;padding:0 8px 0 28px;
+    background:var(--nav-bg);backdrop-filter:blur(12px);
+    border:1px solid var(--line);border-radius:999px;
+    box-shadow:0 10px 34px rgba(0,0,0,.12);
+  }
   .nav-links a{
     font-family:'Archivo',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;letter-spacing:.02em;
     font-size:.875rem;font-weight:500;color:var(--chalk-dim);text-decoration:none;
@@ -517,6 +533,10 @@
   .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(3){transition-delay:.26s}
   .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(4){transition-delay:.33s}
   .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(5){transition-delay:.40s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(6){transition-delay:.47s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(7){transition-delay:.54s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(8){transition-delay:.61s}
+  .js-reveal .logos.in-view .aff-logos .logo-card:nth-child(9){transition-delay:.68s}
   @media(prefers-reduced-motion:reduce){.js-reveal .aff-label,.js-reveal .aff-logos .logo-card{opacity:1!important;transform:none!important;transition:none!important}}
   .logo-card img.logo-white{filter:grayscale(1) var(--aff-logo-white-filter,invert(1))}
   .logo-card{display:inline-flex;align-items:center;justify-content:center}
@@ -646,10 +666,12 @@
     .proof-grid{grid-template-columns:1fr}
     .voices-grid{grid-template-columns:1fr}
     .nav-links a:not(.nav-cta){display:none}
-    .nav-links{gap:10px}
-    .nav-links a.nav-cta{padding:9px 14px;font-size:.82rem}
-    .theme-toggle{margin-left:4px;width:34px;height:34px}
+    .nav-links{gap:10px;height:50px;padding:0 6px 0 10px}
+    .nav-links a.nav-cta{padding:4px 14px 4px 4px;font-size:.78rem}
+    .nav-links a.nav-cta .cta-ico{width:26px;height:26px}
+    .theme-toggle{margin-left:2px;width:34px;height:34px}
     nav .wrap{gap:10px}
+    nav .brand{height:50px;padding:0 16px}
     nav .brand-logo{height:16px}
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
@@ -666,9 +688,10 @@
   @media(max-width:430px){
     .wrap{padding-left:16px;padding-right:16px}
     nav .wrap{gap:8px}
+    nav .brand{padding:0 12px}
     nav .brand-logo{height:13px}
-    .nav-links{gap:8px}
-    .nav-links a.nav-cta{padding:8px 11px;font-size:.76rem;letter-spacing:.04em}
+    .nav-links{gap:8px;padding:0 5px 0 8px}
+    .nav-links a.nav-cta{padding:4px 11px 4px 4px;font-size:.72rem;letter-spacing:.03em}
     .theme-toggle{width:32px;height:32px;margin-left:2px;font-size:.9rem}
   }
   a:focus-visible,.btn:focus-visible,button:focus-visible,.tip:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
