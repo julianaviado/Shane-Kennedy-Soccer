@@ -131,19 +131,24 @@
   var lastY=window.pageYOffset||0, ticking=false;
   function update(){
     var y=window.pageYOffset||0;
-    var trigger=hero?Math.max(hero.offsetHeight-90,120):50;
-    if(y>trigger){
-      nav.classList.add('scrolled');
+    var h=hero?hero.offsetHeight:0;
+    var onEnter=h?Math.max(h-90,120):50;
+    var onExit=Math.max(onEnter-60,0); // hysteresis so the box doesn't flip-flop at the boundary
+    var scrolled=nav.classList.contains('scrolled');
+    if(scrolled){
+      if(y<onExit){ nav.classList.remove('scrolled'); nav.classList.remove('nav-hidden'); scrolled=false; }
+    } else if(y>onEnter){
+      nav.classList.add('scrolled'); scrolled=true;
+    }
+    if(scrolled){
       var menuOpen=navLinks&&navLinks.classList.contains('open');
       if(!menuOpen){
-        if(y>lastY+4) nav.classList.add('nav-hidden');
-        else if(y<lastY-4) nav.classList.remove('nav-hidden');
+        if(y>lastY+10) nav.classList.add('nav-hidden');
+        else if(y<lastY-10) nav.classList.remove('nav-hidden');
       }
-    } else {
-      nav.classList.remove('scrolled');
-      nav.classList.remove('nav-hidden');
     }
-    lastY=y; ticking=false;
+    if(Math.abs(y-lastY)>4) lastY=y; // deadzone: ignore sub-pixel/inertial jitter
+    ticking=false;
   }
   window.addEventListener('scroll',function(){ if(!ticking){ window.requestAnimationFrame(update); ticking=true; } },{passive:true});
   update();

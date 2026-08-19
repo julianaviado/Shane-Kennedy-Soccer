@@ -124,8 +124,9 @@
     background:var(--nav-bg);backdrop-filter:blur(12px);
     border:1px solid var(--line);border-radius:20px;
     box-shadow:0 10px 34px rgba(0,0,0,.12);
-    padding:9px 22px;height:auto;justify-content:center;
+    height:58px;padding:0 22px;gap:5px;justify-content:center;
   }
+  nav.scrolled .brand-logo{height:22px}
   nav.nav-on-hero.scrolled .brand-logo{filter:var(--logo-filter)}
   nav.nav-on-hero.scrolled .brand-tag{color:var(--chalk-dim)}
   /* hamburger toggle — hidden on desktop, shown on mobile */
@@ -842,8 +843,9 @@
     .announce{--ah:42px}
     .announce-desc,.announce-cta{display:none}
     nav .brand{height:50px}
-    nav.scrolled .brand{height:auto;padding:8px 16px}
+    nav.scrolled .brand{height:46px;padding:0 14px;gap:4px}
     nav .brand-logo{height:20px}
+    nav.scrolled .brand-logo{height:17px}
     .brand-tag{display:none}
     .form-row{grid-template-columns:1fr}
     .split{grid-template-columns:1fr;gap:28px}
