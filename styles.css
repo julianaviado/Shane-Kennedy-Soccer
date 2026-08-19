@@ -107,7 +107,7 @@
     display:inline-flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;height:64px;
     background:none;border:none;box-shadow:none;padding:0;filter:none;
   }
-  .brand-tag{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.12em;font-size:.58rem;color:var(--chalk-dim);white-space:nowrap;line-height:1}
+  .brand-tag{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.14em;word-spacing:.22em;font-size:.75rem;color:var(--chalk-dim);white-space:nowrap;line-height:1}
   nav.nav-on-hero .brand-tag{color:rgba(255,255,255,.74)}
   footer .brand{height:auto}
   .brand a{display:inline-flex;align-items:center}
