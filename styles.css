@@ -246,6 +246,16 @@
     font-size:clamp(.68rem,1.2vw,.8rem);color:rgba(255,255,255,.74);line-height:1;
   }
   .announce-desc::before{content:"—";margin:0 12px;color:rgba(255,255,255,.42)}
+  .announce-cta{
+    display:inline-flex;align-items:center;gap:6px;pointer-events:auto;
+    font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.06em;
+    font-weight:600;font-size:clamp(.7rem,1.3vw,.84rem);color:var(--signal);
+    text-decoration:none;white-space:nowrap;transition:color .15s ease;
+  }
+  .announce-cta::before{content:"—";margin:0 12px;color:rgba(255,255,255,.42)}
+  .announce-cta::after{content:"→";transition:transform .15s ease}
+  .announce-cta:hover{color:#fff}
+  .announce-cta:hover::after{transform:translateX(3px)}
   @keyframes announce-rotate{
     0%,27.78%    {transform:rotateX(0deg)}
     33.33%,61.11%{transform:rotateX(-120deg)}
@@ -627,6 +637,8 @@
   .logos{background:var(--pitch-dark);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:46px 0}
   /* home page: drop the grey divider lines between the dark bands */
   body.home .logos,body.home .audiences{border-top:none;border-bottom:none}
+  /* home page: match the gap above "Featured in" to the gap below the logos */
+  body.home .logos-marquee{padding-top:124px}
   .aff-group{text-align:center}
   .aff-label{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;color:var(--chalk-dim);margin:0 0 34px;text-align:center}
   /* one-line auto-scrolling logo carousel */
@@ -828,7 +840,7 @@
     .trigger-bar:not(.creds-bar){display:none}
     /* announcement bar: single concise line on mobile (headline only) */
     .announce{--ah:42px}
-    .announce-desc{display:none}
+    .announce-desc,.announce-cta{display:none}
     nav .brand{height:50px}
     nav.scrolled .brand{height:auto;padding:8px 16px}
     nav .brand-logo{height:20px}
