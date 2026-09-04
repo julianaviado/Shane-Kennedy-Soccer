@@ -40,8 +40,21 @@
   <div class="wrap">
     <p class="eyebrow">Marin County</p>
     <h2>Book a private session.</h2>
-    <p class="book-intro">Tell Coach Shane about your player and what you want to work on. He'll follow up to confirm a time.</p>
+    <p class="book-intro">Due to high demand and limited court/field availability, Coach Shane accepts new clients by request only.</p>
+    <p class="book-intro" style="margin-top:14px">To check current schedule availability, request a booking link, or discuss your player's goals, please reach out directly via email or phone.</p>
 
+    <div class="contact-methods">
+      <a class="contact-method" href="mailto:dominatethebox@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">dominatethebox@gmail.com</span>
+      </a>
+      <a class="contact-method" href="tel:+14157133029">
+        <span class="contact-label">Call / Text</span>
+        <span class="contact-value">(415) 713-3029</span>
+      </a>
+    </div>
+
+    <!-- BOOKING FORM — temporarily disabled by request. To reactivate: remove this comment opener and the matching close marker below, and re-enable the booking script near the bottom of the page.
     <div class="form-wrap">
       <div class="form-row">
         <div class="field">
@@ -139,7 +152,8 @@
         Prefer to reach out directly? <a href="tel:+14157133029" style="color:var(--signal-text);font-weight:600">(415) 713-3029</a> · <a href="mailto:dominatethebox@gmail.com" style="color:var(--signal-text);font-weight:600">dominatethebox@gmail.com</a>
       </p>
     </div>
-  
+    --><!-- /BOOKING FORM disabled -->
+
   </div>
 </section>
 
@@ -177,6 +191,7 @@
   (function(){
     var btn = document.getElementById('bookBtn');
     var status = document.getElementById('formStatus');
+    if(!btn || !status) return; // booking form is disabled; nothing to wire up
     function val(id){ return (document.getElementById(id).value || '').trim(); }
     function setStatus(msg, ok){
       status.textContent = msg;
